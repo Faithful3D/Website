@@ -1,0 +1,16 @@
+/*
+style.css
+---------
+by Juknum
+*/
+
+*
+{
+	font-family: Verdana, sans-serif;
+}
+
+.title
+{
+	text-align: center;
+	font-style: blink;
+}
