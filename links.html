@@ -3,15 +3,21 @@ title: Links
 description: Here you can find some links related to the project!
 ---
 <style>
-  .links-image, .links-content {
-    display: inline-block;
-  }
   .links-image {
-    margin-right: 15px;
-    width: 500px;
+    width: 100%;
+    margin: 0 0 15px 0;
   }
-  .links-content {
-    width: calc(100% - 545px);
+  @media (min-width: 992px) {
+    .links-image, .links-content {
+      display: inline-block;
+    }
+    .links-image {
+      margin: 0 15px 0 0;
+      width: 500px;
+    }
+    .links-content {
+      width: calc(100% - 545px);
+    }
   }
 </style>
 <img src="./image/links/minecraft.jpg" alt="Minecraft Screenshot" class="links-image">
