@@ -1,3 +1,4 @@
+/*Default from w3schools.com */
 .fakeimg {
   height: 200px;
   background: #2d2d33;
@@ -8,6 +9,8 @@
   width: 100%;
   height: 100%;
 }
+
+/* Darks color */
 .jumbotron {
   background-color: #16161d;
 }
