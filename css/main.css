@@ -30,5 +30,6 @@ body {
   }
   .links-content {
     width: calc(100% - 545px);
+    vertical-align: top;
   }
 }
