@@ -4,6 +4,36 @@ separatedTitle: Dis&shy;play
 description: Here you can find all blocks, items and entities in Faithful 3D!
 ---
 
+<script src="three.min.js"></script>
+<script src="js/GLTFLoader.js"></script>
+<script>
+	let scene, camera, renderer;
+
+	function init() {
+
+		scene = new THREE.Scene();
+		scene.background = new THREE.Color(0xdddddd);
+
+		camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+
+		hlight = new THREE.AmbientLight (0x404040,100);
+		scene.add(hlight);
+
+		renderer = new THREE.WebGLRenderer({antialias:true});
+		renderer.SetSize(window.innerWidth,window.innerHeight);
+		document.body.appendChild(renderer,domElement);
+
+		let loader = new THREE.GLTFLoader();
+		loader.load('gltf/barrel.gltf', function(gltf){
+			scene.add(gltf.scene);
+			renderer.render(scene,camera);
+		});
+	}
+
+	init();	
+</script>
+
+
 <div class="row">
 
   	<div class="col-sm-3">
