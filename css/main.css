@@ -36,3 +36,9 @@ body {
     vertical-align: top;
   }
 }
+
+/* Classes for cards */
+.links-card {
+  background: #2d2d33;
+  padding: 15px;
+}
