@@ -2,16 +2,34 @@
   height: 200px;
   background: #2d2d33;
 }
+
 /* Make the image fully responsive (carrousel) */
 .carousel-inner img {
   width: 100%;
   height: 100%;
 }
-.jumbotron
-{
+.jumbotron {
   background-color: #16161d;
 }
-body
-{
+body {
   background-color: #16161d;
+}
+
+/* Classes for images next to text */
+.links-image {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+@media (min-width: 992px) {
+  .links-image, .links-content {
+    display: inline-block;
+  }
+  .links-image {
+    margin: 0 15px 0 0;
+    width: 500px;
+  }
+  .links-content {
+    width: calc(100% - 545px);
+    vertical-align: top;
+  }
 }
