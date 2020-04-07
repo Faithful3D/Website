@@ -18,6 +18,11 @@
         height: 200px;
         background: #aaa;
         }
+        /* Make the image fully responsive (carrousel) */
+        .carousel-inner img {
+        width: 100%;
+        height: 100%;
+        }
     </style>
 
 </head>
@@ -56,7 +61,9 @@
         <div class="col-sm-4">
             <h2>Download Latest:</h2>
             <h5>GitHub:</h5>
-            <div class="fakeimg">gh_logo</div>
+            <div class="fakeimg">
+                <img src="image/home/github_banner.jpg" alt="GitHub Banner" height="200px" width="350px"/>
+            </div>
                 <p align="justify">In order to enjoy all that is presented on this website, it is better to download the GitHub version. Note that some older versions will no longer be compatible with newer versions. You'll have to complain to Mojang ;)</p>
                 <p align="right">Juknum</p>
                 <h3>Latest Versions</h3>
@@ -82,6 +89,56 @@
         </div>
 
         <div class="col-sm-8">
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                    <li data-target="#demo" data-slide-to="5"></li>
+                    <li data-target="#demo" data-slide-to="6"></li>
+                </ul>
+  
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/home/caroussel_1.png" alt="Los Angeles" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_2.png" alt="Chicago" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_3.gif" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_4.png" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_5.png" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_6.png" alt="New York" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/home/caroussel_7.png" alt="New York" width="1100" height="500">
+                    </div>
+                </div>
+  
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+
+            <br>
 
             <h2>RELEASE 1.15.2</h2>
             <h5>for 1.15.2, Feb 8, 2020</h5>
