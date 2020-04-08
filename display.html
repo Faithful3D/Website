@@ -4,31 +4,78 @@ separatedTitle: Dis&shy;play
 description: Here you can find all blocks, items and entities in Faithful 3D!
 ---
 
-<script src="js/three.min.js"></script>
-<script src="js/GLTFLoader.js"></script>
-<script>
-	let scene, camera, renderer;
+    <canvas id="myCanvas"></canvas>
 
-	function init() {
+    <script src="three.js"></script>
+    <script src="GLTFLoader.js"></script>
 
-		scene = new THREE.Scene();
-		scene.background = new THREE.Color(0xdddddd);
+    <script>
 
-		camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+    var renderer,
+    	scene,
+    	camera,
+    	myCanvas = document.getElementById('myCanvas');
 
-		hlight = new THREE.AmbientLight (0x404040,100);
-		scene.add(hlight);
+    //RENDERER
+    renderer = new THREE.WebGLRenderer({
+      canvas: myCanvas, 
+      antialias: true
+    });
+    renderer.setClearColor(0x000000);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-		renderer = new THREE.WebGLRenderer({antialias:true});
-		renderer.SetSize(window.innerWidth,window.innerHeight);
-		document.body.appendChild(renderer,domElement);
+    //CAMERA
+    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-		let loader = new THREE.GLTFLoader();
-		loader.load('gltf/barrel.gltf', function(gltf){
-			scene.add(gltf.scene);
-			renderer.render(scene,camera);
-		});
-	}
+    //SCENE
+    scene = new THREE.Scene();
 
-	init();
-</script>
+    //LIGHTS
+    var light = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(light);
+
+    var light2 = new THREE.PointLight(0xffffff, 0.5);
+    scene.add(light2);
+  
+    var loader = new THREE.GLTFLoader();
+
+    loader.load('barrel.gltf', handle_load);
+
+    var mesh;
+
+    function handle_load(gltf) {
+
+        console.log(gltf);
+        mesh = gltf.scene;
+        console.log(mesh.children[0]);
+        mesh.children[0].material = new THREE.MeshLambertMaterial();
+		scene.add( mesh );
+        mesh.position.z = -10;
+    }
+
+
+    //RENDER LOOP
+    render();
+
+    var delta = 0;
+    var prevTime = Date.now();
+
+    function render() {
+
+        delta += 0.1;
+
+        if (mesh) {
+        
+            mesh.rotation.y += 0.01;
+
+            //animation mesh
+            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
+        }
+
+    	renderer.render(scene, camera);
+
+    	requestAnimationFrame(render);
+    }
+
+    </script>
