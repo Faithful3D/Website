@@ -61,11 +61,9 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				        console.log(mesh.children[0]);
 
-				        cube = mesh.children[0];
-				        cube.scale.set(0.25,0.25,0.25);
-
 						scene.add( mesh );
 				        mesh.position.z = -10;
+				        mesh.scale.set(0.25,0.25,0.25);
 				    }
 
 				    //RENDER LOOP
