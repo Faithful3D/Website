@@ -23,7 +23,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     });
     renderer.setClearColor(0x000000);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth/2, window.innerHeight/2);
 
     //CAMERA
     camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -49,7 +49,6 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
         console.log(gltf);
         mesh = gltf.scene;
         console.log(mesh.children[0]);
-        mesh.children[0].material = new THREE.MeshLambertMaterial();
 		scene.add( mesh );
         mesh.position.z = -10;
     }
