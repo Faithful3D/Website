@@ -4,7 +4,8 @@ separatedTitle: Dis&shy;play
 description: Here you can find all blocks, items and entities in Faithful 3D!
 ---
 <div class="row">
-
+	
+	<!-- Barrel -->
   	<div class="col-sm-3">
 
 	    <div class="container text-white" style="margin-top:30px">
@@ -24,8 +25,8 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				    //RENDERER
 				    renderer = new THREE.WebGLRenderer({
-				      canvas: myCanvas,
-				      antialias: true
+				    	canvas: myCanvas,
+				    	antialias: true
 				    });
 				    renderer.setClearColor(0x17191D);
 				    renderer.setPixelRatio(window.devicePixelRatio);
@@ -51,7 +52,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 				    loader.load('gltf/barrel.gltf', handle_load);
 
 				    var mesh;
-            var pivot;
+            		var pivot;
 
 				    function handle_load(gltf) {
 
@@ -61,21 +62,21 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				        console.log(mesh.children[0]);
 
-                var box = new THREE.Box3().setFromObject( mesh );
-                box.getCenter( mesh.position );
-                mesh.position.multiplyScalar( - 1 );
+		                var box = new THREE.Box3().setFromObject( mesh );
+		                box.getCenter( mesh.position );
+		                mesh.position.multiplyScalar( - 1 );
 
-                pivot = new THREE.Group();
-                pivot.position.z = -8;
+		                pivot = new THREE.Group();
+		                pivot.position.z = -8;
 
-                // Start - This rotation is kind of weird
-                pivot.rotation.x = 0.625;
-                // End
+		                // Start - This rotation is kind of weird
+		                pivot.rotation.x = 0.625;
+		                // End
 
-				        pivot.scale.set(0.125,0.125,0.125);
+						        pivot.scale.set(0.125,0.125,0.125);
 
-                pivot.add( mesh );
-                scene.add( pivot );
+		                pivot.add( mesh );
+		                scene.add( pivot );
 				    }
 
 				    //RENDER LOOP
@@ -86,10 +87,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				    function render() {
 
-				      delta += 0.1;
-              if (pivot) {
-                pivot.rotation.y += 0.01;
-              }
+				      	delta += 0.1;
+			            if (pivot) {
+			            	pivot.rotation.y += 0.01;
+			            }
 
 				    	renderer.render(scene, camera);
 
@@ -105,20 +106,109 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	  	</div>
 
   	</div>
+	
+	<!-- beehive -->
   	<div class="col-sm-3">
 
 	    <div class="container text-white" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-	             	<img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+
+	             	<canvas id="myCanvas"></canvas>
+
+				    <script src="js/three.js"></script>
+				    <script src="js/GLTFLoader.js"></script>
+
+				    <script>
+				    var renderer,
+				    	scene,
+				    	camera,
+				    	myCanvas = document.getElementById('myCanvas');
+
+				    //RENDERER
+				    renderer = new THREE.WebGLRenderer({
+				    	canvas: myCanvas,
+				    	antialias: true
+				    });
+				    renderer.setClearColor(0x17191D);
+				    renderer.setPixelRatio(window.devicePixelRatio);
+
+				    //window size (default : renderer.setSize(window.innerWidth, window.innerHeight);) -- Juknum
+				    renderer.setSize(198, 198);
+
+				    //CAMERA (default THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );)
+				    camera = new THREE.PerspectiveCamera(45, 1, 1, 1000 );
+
+				    //SCENE
+				    scene = new THREE.Scene();
+
+				    //LIGHTS
+				    var light = new THREE.AmbientLight(0xffffff, 0.5);
+				    scene.add(light);
+
+				    var light2 = new THREE.PointLight(0xffffff, 0.5);
+				    scene.add(light2);
+
+				  	//model gltf made with Blockbench
+				    var loader = new THREE.GLTFLoader();
+				    loader.load('gltf/beehive_honey.gltf', handle_load);
+
+				    var mesh;
+            		var pivot;
+
+				    function handle_load(gltf) {
+
+				        console.log(gltf);
+
+				        mesh = gltf.scene;
+
+				        console.log(mesh.children[0]);
+
+		                var box = new THREE.Box3().setFromObject( mesh );
+		                box.getCenter( mesh.position );
+		                mesh.position.multiplyScalar( - 1 );
+
+		                pivot = new THREE.Group();
+		                pivot.position.z = -8;
+
+		                // Start - This rotation is kind of weird
+		                pivot.rotation.x = 0.625;
+		                // End
+
+						        pivot.scale.set(0.125,0.125,0.125);
+
+		                pivot.add( mesh );
+		                scene.add( pivot );
+				    }
+
+				    //RENDER LOOP
+				    render();
+
+				    var delta = 0;
+				    var prevTime = Date.now();
+
+				    function render() {
+
+				      	delta += 0.1;
+			            if (pivot) {
+			            	pivot.rotation.y += 0.01;
+			            }
+
+				    	renderer.render(scene, camera);
+
+				    	requestAnimationFrame(render);
+				    }
+				    </script>
+
 	             	<div class="card-body">
-	                 	<h5 class="card-title">Block</h5>
+	                 	<h5 class="card-title">Barrel</h5>
 	             	</div>
 	         	</div>
 	     	</div>
 	  	</div>
 
   	</div>
+
   	<div class="col-sm-3">
 
 	    <div class="container text-white" style="margin-top:30px">
