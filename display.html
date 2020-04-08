@@ -56,13 +56,17 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 				    function handle_load(gltf) {
 
 				        console.log(gltf);
+
 				        mesh = gltf.scene;
+
 				        console.log(mesh.children[0]);
+
+				        cube = mesh.children[0];
+				        cube.scale.set(0.5,0.5,0.5);
+
 						scene.add( mesh );
 				        mesh.position.z = 0;
 				    }
-
-				    
 
 				    //RENDER LOOP
 				    render();
