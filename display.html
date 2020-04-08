@@ -25,7 +25,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	  	</div>
   	</div>
 
-	<!-- beehive -->
+	<!-- Beehive -->
   	<div class="col-sm-3">
 
 	    <div class="container text-white" style="margin-top:30px">
@@ -40,7 +40,24 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	  	</div>
 
   	</div>
+  
+  <!-- Undefined -->
+  	<div class="col-sm-3">
 
+	    <div class="container text-white" style="margin-top:30px">
+	      	<div class="container">
+	         	<div class="card" style="width:200px">
+	             	<img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+	             	<div class="card-body">
+	                 	<h5 class="card-title">Block</h5>
+	             	</div>
+	         	</div>
+	     	</div>
+	  	</div>
+
+    </div>
+
+  <!-- Undefined -->
   	<div class="col-sm-3">
 
 	    <div class="container text-white" style="margin-top:30px">
@@ -55,21 +72,100 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	  	</div>
 
   	</div>
-  	<div class="col-sm-3">
 
-	    <div class="container text-white" style="margin-top:30px">
-	      	<div class="container">
-	         	<div class="card" style="width:200px">
-	             	<img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
-	             	<div class="card-body">
-	                 	<h5 class="card-title">Block</h5>
-	             	</div>
-	         	</div>
-	     	</div>
-	  	</div>
-
-  	</div>
+<!-- row end -->
 </div>
+
+<hr>
+
+<!-- row start w/ carousel -->
+<div class="row">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+
+      <!-- model 1 -->
+      <div class="carousel-item active">
+
+        <div class="container text-white" style="margin-top:30px">
+          <div class="container">
+            <div class="card" style="width:200px">
+              <canvas id="beehive"></canvas>
+                <div class="card-body">
+                  <h5 class="card-title">Bee Hive</h5>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- model 2 -->
+      <div class="carousel-item active">
+        <div class="container text-white" style="margin-top:30px">
+          <div class="container">
+            <div class="card" style="width:200px">
+              <img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+                <div class="card-body">
+                  <h5 class="card-title">Block</h5>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- model 3 -->
+      <div class="carousel-item active">
+        <div class="container text-white" style="margin-top:30px">
+          <div class="container">
+            <div class="card" style="width:200px">
+              <img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+                <div class="card-body">
+                  <h5 class="card-title">Block</h5>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- model 4 -->
+      <div class="carousel-item active">
+        <div class="container text-white" style="margin-top:30px">
+          <div class="container">
+            <div class="card" style="width:200px">
+              <img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+                <div class="card-body">
+                  <h5 class="card-title">Block</h5>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
+  </div>
+
+<!-- row carousel end -->    
+</div>
+
+<hr>
 
 <script>
   function loadModelToCanvas(canvas, model) {
