@@ -62,7 +62,21 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 				        mesh.position.z = -10;
 				    }
 
-				    /*
+				    var bbox = new THREE.Box3().setFromObject(scene);
+				    var cent = bbox.getCenter(new THREE.Vector3());
+				    var size = bbox.getSize(new THREE.Vector3());
+
+				    //Rescale the object to normalized space
+				    var maxAxis = Math.max(size.x, size.y, size.z);
+				    scene.scale.multiplyScalar(1.0 / maxAxis);
+				    bbox.setFromObject(scene);
+				    bbox.getCenter(cent);
+				    bbox.getSize(size);
+				    
+				    //Reposition to 0,halfY,0
+				    scene.position.copy(cent).multiplyScalar(-1);
+				    scene.position.y-= (size.y * 0.5);
+
 				    //RENDER LOOP
 				    render();
 
@@ -85,7 +99,6 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				    	requestAnimationFrame(render);
 				    }
-				    */
 
 				    </script>
 
