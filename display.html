@@ -40,7 +40,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	  	</div>
 
   	</div>
-  
+
   <!-- Undefined -->
   	<div class="col-sm-3">
 
@@ -162,7 +162,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
   </div>
 
-<!-- row carousel end -->    
+<!-- row carousel end -->
 </div>
 
 <hr>
@@ -186,10 +186,26 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     //SCENE
     scene = new THREE.Scene();
 
-    //LIGHT
-    var pointLight = new THREE.PointLight(0xFFFFFF, 2, 0, 2);
-    pointLight.position.set(0, 0, 0);
-    scene.add(pointLight);
+    //LIGHTS
+    var lightTop = new THREE.PointLight(0xFFFFFF, 1, 0, 2);
+    lightTop.position.set(0, 64, -64);
+    scene.add(lightTop);
+
+    var lightLeft = new THREE.PointLight(0xFFFFFF, 1, 0, 2);
+    lightLeft.position.set(-64, 0, -64);
+    scene.add(lightLeft);
+
+    var lightFront = new THREE.PointLight(0xFFFFFF, 1, 0, 2);
+    lightFront.position.set(0, 0, 0);
+    scene.add(lightFront);
+
+    var lightRight = new THREE.PointLight(0xFFFFFF, 1, 0, 2);
+    lightRight.position.set(64, 0, -64);
+    scene.add(lightRight);
+
+    var lightBottom = new THREE.PointLight(0xFFFFFF, 1, 0, 2);
+    lightBottom.position.set(0, -64, -64);
+    scene.add(lightBottom);
 
     //gltf made with Blockbench
     var loader = new THREE.GLTFLoader();
