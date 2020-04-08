@@ -26,6 +26,7 @@ body {
   width: 100%;
   margin: 0 0 15px 0;
 }
+
 @media (min-width: 992px) {
   .links-image, .links-content {
     display: inline-block;
@@ -53,7 +54,6 @@ body {
   z-index: 1020;
 }
 
-/* test carousel display */
 @media (min-width: 768px) {
   /* show 3 items */
   .carousel-inner .active,
