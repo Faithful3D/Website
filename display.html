@@ -91,8 +91,9 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     scene = new THREE.Scene();
 
     //LIGHT
-    var light = new THREE.AmbientLight(0xffffff, 5);
-    scene.add(light);
+    var pointLight = new THREE.PointLight( 0xFFFFFF, 2);
+    pointLight.position.set(0, 0, 0);
+    scene.add(pointLight); 
 
     //gltf made with Blockbench
     var loader = new THREE.GLTFLoader();
