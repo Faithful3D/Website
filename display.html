@@ -6,11 +6,11 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 <div class="row">
 
   	<div class="col-sm-3">
-  
+
 	    <div class="container text-white" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-	             	
+
 	             	<canvas id="myCanvas"></canvas>
 
 				    <script src="js/three.js"></script>
@@ -25,7 +25,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				    //RENDERER
 				    renderer = new THREE.WebGLRenderer({
-				      canvas: myCanvas, 
+				      canvas: myCanvas,
 				      antialias: true
 				    });
 				    renderer.setClearColor(0x000000);
@@ -46,7 +46,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				    var light2 = new THREE.PointLight(0xffffff, 0.5);
 				    scene.add(light2);
-				  
+
 				  	//model gltf made with Blockbench
 				    var loader = new THREE.GLTFLoader();
 				    loader.load('gltf/barrel.gltf', handle_load);
@@ -61,11 +61,19 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				        console.log(mesh.children[0]);
 
-						scene.add( mesh );
+                var box = new THREE.Box3().setFromObject( mesh );
+                box.center( mesh.position ); // this re-sets the mesh position
+                mesh.position.multiplyScalar( - 1 );
+
+                var pivot = new THREE.Group();
+                scene.add( pivot );
+                pivot.add( mesh );
+
+						    /*scene.add( mesh );
 				        mesh.position.z = -8;
 				        mesh.position.y = -1;
 				        mesh.position.x = 0;
-				        mesh.scale.set(0.25,0.125,0.25);
+				        mesh.scale.set(0.25,0.125,0.25);*/
 				    }
 
 				    //RENDER LOOP
@@ -78,13 +86,15 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 				        delta += 0.1;
 
-				        if (mesh) {
-				        
+                pivot.rotation.y += 0.01;
+
+				        /*if (mesh) {
+
 				            mesh.rotation.y += 0.01;
 
 				            //animation mesh
 				            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
-				        }
+				        }*/
 
 				    	renderer.render(scene, camera);
 
@@ -99,10 +109,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	         	</div>
 	     	</div>
 	  	</div>
-  	
+
   	</div>
   	<div class="col-sm-3">
-  
+
 	    <div class="container text-white" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
@@ -113,10 +123,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	         	</div>
 	     	</div>
 	  	</div>
-  	
+
   	</div>
   	<div class="col-sm-3">
-  
+
 	    <div class="container text-white" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
@@ -127,10 +137,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	         	</div>
 	     	</div>
 	  	</div>
-  	
+
   	</div>
   	<div class="col-sm-3">
-  
+
 	    <div class="container text-white" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
@@ -141,8 +151,6 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	         	</div>
 	     	</div>
 	  	</div>
-  	
+
   	</div>
 </div>
-
-    
