@@ -7,82 +7,93 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
   	<div class="col-sm-3">
   
-	    <canvas id="myCanvas"></canvas>
+	    <div class="container text-white" style="margin-top:30px">
+	      	<div class="container">
+	         	<div class="card" style="width:400px">
+	             	
+	             	<canvas id="myCanvas"></canvas>
 
-	    <script src="three.js"></script>
-	    <script src="GLTFLoader.js"></script>
+				    <script src="three.js"></script>
+				    <script src="GLTFLoader.js"></script>
 
-	    <script>
+				    <script>
 
-	    var renderer,
-	    	scene,
-	    	camera,
-	    	myCanvas = document.getElementById('myCanvas');
+				    var renderer,
+				    	scene,
+				    	camera,
+				    	myCanvas = document.getElementById('myCanvas');
 
-	    //RENDERER
-	    renderer = new THREE.WebGLRenderer({
-	      canvas: myCanvas, 
-	      antialias: true
-	    });
-	    renderer.setClearColor(0x000000);
-	    renderer.setPixelRatio(window.devicePixelRatio);
+				    //RENDERER
+				    renderer = new THREE.WebGLRenderer({
+				      canvas: myCanvas, 
+				      antialias: true
+				    });
+				    renderer.setClearColor(0x000000);
+				    renderer.setPixelRatio(window.devicePixelRatio);
 
-	    //window size (default : renderer.setSize(window.innerWidth, window.innerHeight);) -- Juknum
-	    renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+				    //window size (default : renderer.setSize(window.innerWidth, window.innerHeight);) -- Juknum
+				    renderer.setSize(window.innerWidth/2, window.innerHeight/2);
 
-	    //CAMERA
-	    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
+				    //CAMERA
+				    camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-	    //SCENE
-	    scene = new THREE.Scene();
+				    //SCENE
+				    scene = new THREE.Scene();
 
-	    //LIGHTS
-	    var light = new THREE.AmbientLight(0xffffff, 0.5);
-	    scene.add(light);
+				    //LIGHTS
+				    var light = new THREE.AmbientLight(0xffffff, 0.5);
+				    scene.add(light);
 
-	    var light2 = new THREE.PointLight(0xffffff, 0.5);
-	    scene.add(light2);
-	  
-	    var loader = new THREE.GLTFLoader();
+				    var light2 = new THREE.PointLight(0xffffff, 0.5);
+				    scene.add(light2);
+				  
+				    var loader = new THREE.GLTFLoader();
 
-	    loader.load('barrel.gltf', handle_load);
+				    loader.load('barrel.gltf', handle_load);
 
-	    var mesh;
+				    var mesh;
 
-	    function handle_load(gltf) {
+				    function handle_load(gltf) {
 
-	        console.log(gltf);
-	        mesh = gltf.scene;
-	        console.log(mesh.children[0]);
-			scene.add( mesh );
-	        mesh.position.z = -10;
-	    }
+				        console.log(gltf);
+				        mesh = gltf.scene;
+				        console.log(mesh.children[0]);
+						scene.add( mesh );
+				        mesh.position.z = -10;
+				    }
 
 
-	    //RENDER LOOP
-	    render();
+				    //RENDER LOOP
+				    render();
 
-	    var delta = 0;
-	    var prevTime = Date.now();
+				    var delta = 0;
+				    var prevTime = Date.now();
 
-	    function render() {
+				    function render() {
 
-	        delta += 0.1;
+				        delta += 0.1;
 
-	        if (mesh) {
-	        
-	            mesh.rotation.y += 0.01;
+				        if (mesh) {
+				        
+				            mesh.rotation.y += 0.01;
 
-	            //animation mesh
-	            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
-	        }
+				            //animation mesh
+				            // mesh.morphTargetInfluences[ 0 ] = Math.sin(delta) * 20.0;
+				        }
 
-	    	renderer.render(scene, camera);
+				    	renderer.render(scene, camera);
 
-	    	requestAnimationFrame(render);
-	    }
+				    	requestAnimationFrame(render);
+				    }
 
-	    </script>
+				    </script>
+    
+	             	<div class="card-body">
+	                 	<h5 class="card-title">Stone Block</h5>
+	             	</div>
+	         	</div>
+	     	</div>
+	  	</div>
   	
   	</div>
   	<div class="col-sm-3">
@@ -128,3 +139,5 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
   	
   	</div>
 </div>
+
+    
