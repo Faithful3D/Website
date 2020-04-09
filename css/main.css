@@ -1,4 +1,15 @@
-/*Default from w3schools.com */
+/* Header */
+header, footer {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  header, footer {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Default from w3schools.com */
 .fakeimg {
   height: 200px;
   background: #2d2d33;
@@ -11,14 +22,12 @@
 }
 
 /* Darks color */
-.jumbotron {
-  background-color: #16161d;
-}
 .card-body{
-  background-color: #2d2d33;
+  background: #2d2d33;
 }
 body {
-  background-color: #16161d;
+  background: #16161d;
+  color: #fff;
 }
 
 /* Classes for images next to text */
@@ -60,11 +69,9 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
 }
-
 .custom.carousel-item > .card {
   margin: 15px auto;
 }
-
 @media (min-width: 768px) {
 .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;
