@@ -351,8 +351,8 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(198, 198);
 
-    //CAMERA
-    camera = new THREE.PerspectiveCamera(45, 1, 1, 1000);
+    //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
+    camera = new THREE.PerspectiveCamera(45, 1, 1, 100);
 
     //SCENE
     scene = new THREE.Scene();
