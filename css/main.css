@@ -83,9 +83,9 @@ body {
     bottom: -45px;
   }
   .custom.carousel-control-prev {
-    left: -55px;
+    left: -80px;
   }
   .custom.carousel-control-next {
-    right: -55px;
+    right: -80px;
   }
 }
