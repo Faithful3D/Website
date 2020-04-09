@@ -79,100 +79,62 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 <hr>
 
 <!-- row start w/ carousel -->
-<div class="container-fluid">
+<h2 class="text-center mb-3 display-2">Tool Models</h2>
 
-  <h2 class="text-center mb-3 display-2">Tools Models</h2>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-    <div class="carousel-inner row w-100 mx-auto">
-
-      <div class="carousel-item col-sm-3 active">
-
-        <div class="card" style="width:200px">
-          <img class="card-img-top" src="image/display/wood_oak_boat.png" alt="Sword" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Sword</h4>
-          </div>
+    <div class="custom carousel-item active">
+  	  <div class="card" style="width:200px">
+        <canvas id="sword"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Sword</h5>
         </div>
       </div>
-
-      <div class="carousel-item col-sm-3">
-        <div class="card" style="width:200px">
-          <img class="card-img-top" src="image/display/wood_dark_oak_boat.png" alt="Pickaxe" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Pickaxe</h4>
-          </div>
+      <div class="card" style="width:200px">
+        <canvas id="pickaxe"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Pickaxe</h5>
         </div>
       </div>
-
-      <div class="carousel-item col-sm-3">
-        <div class="card" style="width:200px">
-          <img class="card-img-top" src="image/display/wood_jungle_boat.png" alt="Shovel" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Shovel</h4>
-          </div>
+      <div class="card" style="width:200px">
+        <canvas id="shovel"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Shovel</h5>
         </div>
       </div>
-
-      <div class="carousel-item col-sm-3">
-        <div class="card" style="width:200px">
-          <img class="card-img-top" src="image/display/wood_birch_boat.png" alt="Axe" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Axe</h4>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item col-sm-3">
-        <div class="card" style="width:200px">
-          <img class="card-img-top" src="image/display/wood_acacia_boat.png" alt="block_lambda" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">Hoe</h4>
-          </div>
-        </div>
-      </div>
-      
     </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+
+    <div class="custom carousel-item">
+      <div class="card" style="width:200px">
+        <canvas id="axe"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Axe</h5>
+        </div>
+      </div>
+      <div class="card" style="width:200px">
+        <canvas id="hoe"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Hoe</h5>
+        </div>
+      </div>
+    </div>
+
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
 <!-- row carousel end -->
-
-<!-- carousel script -->
-<script>
-  $(document).ready(function() {
-  $("#myCarousel").on("slide.bs.carousel", function(e) {
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 3;
-    var totalItems = $(".carousel-item").length;
-
-    if (idx >= totalItems - (itemsPerSlide - 1)) {
-      var it = itemsPerSlide - (totalItems - idx);
-      for (var i = 0; i < it; i++) {
-        // append slides to end
-        if (e.direction == "left") {
-          $(".carousel-item")
-            .eq(i)
-            .appendTo(".carousel-inner");
-        } else {
-          $(".carousel-item")
-            .eq(0)
-            .appendTo($(this).find(".carousel-inner"));
-          }
-        }
-      }
-    });
-  });
-</script>
 
 <!-- 3d models script -->
 <script>
@@ -255,4 +217,9 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
   loadModelToCanvas(document.getElementById("barrel"), "gltf/barrel.gltf");
   loadModelToCanvas(document.getElementById("beehive"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("sword"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("pickaxe"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("shovel"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("axe"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("hoe"), "gltf/beehive_honey.gltf");
 </script>
