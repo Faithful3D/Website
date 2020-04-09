@@ -196,7 +196,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       box.getCenter( mesh.position );
 
       // change (define) material to solve weird light issues
-      mesh.material = new THREE.MeshLambertMaterial();
+      mesh.material = new THREE.MeshPhongMaterial();
       
       mesh.position.multiplyScalar( - 1 );
 
