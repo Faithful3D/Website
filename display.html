@@ -163,24 +163,24 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     scene = new THREE.Scene();
 
     //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
-    var lightTop = new THREE.PointLight(0xFFFFFF, 1.125, 0, 2);
-    lightTop.position.set(0, 100, -100);
+    var lightTop = new THREE.PointLight(0xFFFFFF, 10, 0, 2);
+    lightTop.position.set(0, 1000, -1000);
     scene.add(lightTop);
 
-    var lightLeft = new THREE.PointLight(0xFFFFFF, 1.125, 0, 2);
-    lightLeft.position.set(-100, 0, -100);
+    var lightLeft = new THREE.PointLight(0xFFFFFF, 10, 0, 2);
+    lightLeft.position.set(-1000, 0, -1000);
     scene.add(lightLeft);
 
-    var lightFront = new THREE.PointLight(0xFFFFFF, 1.125, 0, 2);
+    var lightFront = new THREE.PointLight(0xFFFFFF, 10, 0, 2);
     lightFront.position.set(0, 0, 0);
     scene.add(lightFront);
 
-    var lightRight = new THREE.PointLight(0xFFFFFF, 1.125, 0, 2);
-    lightRight.position.set(100, 0, -100);
+    var lightRight = new THREE.PointLight(0xFFFFFF, 10, 0, 2);
+    lightRight.position.set(1000, 0, -1000);
     scene.add(lightRight);
 
-    var lightBottom = new THREE.PointLight(0xFFFFFF, 1.125, 0, 2);
-    lightBottom.position.set(0, -100, -100);
+    var lightBottom = new THREE.PointLight(0xFFFFFF, 10, 0, 2);
+    lightBottom.position.set(0, -1000, -1000);
     scene.add(lightBottom);
 
     //gltf made with Blockbench
