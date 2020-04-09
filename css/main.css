@@ -58,4 +58,15 @@ body {
 .custom.carousel-item.active {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.custom.carousel-item.active > .card {
+  margin: 15px auto;
+}
+
+@media (min-width: 768px) {
+  .custom.carousel-item.active {
+    flex-direction: row;
+  }
 }
