@@ -55,11 +55,8 @@ body {
 }
 
 /* Custom carousel */
-.custom.carousel-item.active {
+.custom.carousel-item.active, .custom.carousel-item.next {
   display: flex;
-}
-
-.custom.carousel-item {
   justify-content: space-evenly;
   flex-direction: column;
 }
@@ -69,7 +66,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .custom.carousel-item {
+.custom.carousel-item.active, .custom.carousel-item.next {
     flex-direction: row;
   }
 }
