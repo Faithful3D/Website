@@ -67,7 +67,7 @@ body {
 }
 
 /* Custom carousel */
-.custom.carousel-item.active, .custom.carousel-item-next {
+.custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -76,7 +76,7 @@ body {
   margin: 15px auto;
 }
 @media (min-width: 768px) {
-  .custom.carousel-item.active, .custom.carousel-item-next {
+  .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;
   }
   .custom.carousel-indicators {
