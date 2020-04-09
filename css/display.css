@@ -3,7 +3,9 @@
   .carousel-inner .active,
   .carousel-inner .active + .carousel-item,
   .carousel-inner .active + .carousel-item + .carousel-item {
+    position: right;
     display: block;
+    float: right;
   }
 
   .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
