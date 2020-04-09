@@ -358,7 +358,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     scene = new THREE.Scene();
 
     //GLOBAL LIGHT
-    var directionalLight = new THREE.directionalLight(0xF0F0F0, 100);
+    directionalLight = new THREE.directionalLight(0xF0F0F0, 100);
     directionalLight.position.set(0, 1000, -1000);
     directionalLight.castShadow = true;
     scene.add(directionalLight);
