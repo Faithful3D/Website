@@ -125,7 +125,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       <div class="card" style="width:200px">
         <canvas id="third"></canvas>
         <div class="card-body">
-          <h5 class="card-title">Third Item</h5>
+          <h5 class="card-title">Bow</h5>
         </div>
       </div>
     </div>
@@ -221,12 +221,14 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     }
   }
 
-  loadModelToCanvas(document.getElementById("barrel"), "gltf/barrel.gltf");
-  loadModelToCanvas(document.getElementById("beehive"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("sword"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("pickaxe"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("shovel"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("axe"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("hoe"), "gltf/beehive_honey.gltf");
-  loadModelToCanvas(document.getElementById("third"), "gltf/beehive_honey.gltf");
+  loadModelToCanvas(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
+  loadModelToCanvas(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
+
+  // Tools models
+  loadModelToCanvas(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
+  loadModelToCanvas(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
+  loadModelToCanvas(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
+  loadModelToCanvas(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
+  loadModelToCanvas(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
+  loadModelToCanvas(document.getElementById("third"), "gltf/items/bow_pulling_2.gltf");
 </script>
