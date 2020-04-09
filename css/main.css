@@ -76,7 +76,16 @@ body {
   margin: 15px auto;
 }
 @media (min-width: 768px) {
-.custom.carousel-item.active, .custom.carousel-item-next {
+  .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;
+  }
+  .custom.carousel-indicators {
+    bottom: -45px;
+  }
+  .custom.carousel-control-prev {
+    left: -45px;
+  }
+  .custom.carousel-control-next {
+    right: -45px;
   }
 }
