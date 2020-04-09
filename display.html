@@ -89,45 +89,67 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
   <div class="carousel-inner">
 
     <div class="custom carousel-item active">
+
   	  <div class="card" style="width:200px">
         <canvas id="sword"></canvas>
         <div class="card-body">
           <h5 class="card-title">Sword</h5>
         </div>
       </div>
+
       <div class="card" style="width:200px">
         <canvas id="pickaxe"></canvas>
         <div class="card-body">
           <h5 class="card-title">Pickaxe</h5>
         </div>
       </div>
+
       <div class="card" style="width:200px">
         <canvas id="shovel"></canvas>
         <div class="card-body">
           <h5 class="card-title">Shovel</h5>
         </div>
       </div>
-    </div>
 
-    <div class="custom carousel-item">
       <div class="card" style="width:200px">
         <canvas id="axe"></canvas>
         <div class="card-body">
           <h5 class="card-title">Axe</h5>
         </div>
       </div>
+
+    </div>
+
+    <div class="custom carousel-item">
+
       <div class="card" style="width:200px">
         <canvas id="hoe"></canvas>
         <div class="card-body">
           <h5 class="card-title">Hoe</h5>
         </div>
       </div>
+
       <div class="card" style="width:200px">
-        <canvas id="third"></canvas>
+        <canvas id="bow_pulling_2"></canvas>
         <div class="card-body">
           <h5 class="card-title">Bow</h5>
         </div>
       </div>
+
+      <div class="card" style="width:200px">
+        <canvas id="fishing_rod"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Fishing Rod</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width:200px">
+        <canvas id="flint_and_steel"></canvas>
+        <div class="card-body">
+          <h5 class="card-title">Flint and Steel</h5>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -222,14 +244,18 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     }
   }
 
+  // Crash test
   loadModelToCanvas(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
   loadModelToCanvas(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
 
-  // Tools models
+  // Tools models slide 1
   loadModelToCanvas(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
   loadModelToCanvas(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
   loadModelToCanvas(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
   loadModelToCanvas(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
+  // Tools models slide 2
   loadModelToCanvas(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
-  loadModelToCanvas(document.getElementById("third"), "gltf/items/bow_pulling_2.gltf");
+  loadModelToCanvas(document.getElementById("bow_pulling_2"), "gltf/items/bow_pulling_2.gltf");
+  loadModelToCanvas(document.getElementById("fishing_rod"), "gltf/items/barrel.gltf");
+  loadModelToCanvas(document.getElementById("flint_and_steel"), "gltf/items/barrel.gltf");
 </script>
