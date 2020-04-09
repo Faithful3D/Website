@@ -57,16 +57,19 @@ body {
 /* Custom carousel */
 .custom.carousel-item.active {
   display: flex;
+}
+
+.custom.carousel-item {
   justify-content: space-evenly;
   flex-direction: column;
 }
 
-.custom.carousel-item.active > .card {
+.custom.carousel-item > .card {
   margin: 15px auto;
 }
 
 @media (min-width: 768px) {
-  .custom.carousel-item.active {
+  .custom.carousel-item {
     flex-direction: row;
   }
 }
