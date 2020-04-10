@@ -79,7 +79,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 <hr>
 
 <!-- row start w/ carousel -->
-<h4 class="text-center mb-3 display-4">Tool Models</h4>
+<h4 class="text-center mb-3 display-4">Tools & Weapons Models</h4>
 
 <div id="carouselTools" class="carousel slide" data-ride="carousel">
   <ol class="custom carousel-indicators">
@@ -209,30 +209,30 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item">
 
       <div class="card" style="width:200px">
-        <canvas id="hoe"></canvas>
+        <canvas id="rail"></canvas>
         <div class="card-body">
-          <h5 class="card-title">Hoe</h5>
+          <h5 class="card-title">Rail</h5>
         </div>
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="bow_pulling_2"></canvas>
+        <canvas id="activator_rail"></canvas>
         <div class="card-body">
-          <h5 class="card-title">Bow</h5>
+          <h5 class="card-title">Activator Rail</h5>
         </div>
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="fishing_rod"></canvas>
+        <canvas id="powered_rail"></canvas>
         <div class="card-body">
-          <h5 class="card-title">Fishing Rod</h5>
+          <h5 class="card-title">Powered Rail</h5>
         </div>
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="flint_and_steel"></canvas>
+        <canvas id="detector_rail"></canvas>
         <div class="card-body">
-          <h5 class="card-title">Flint and Steel</h5>
+          <h5 class="card-title">Detector Rail</h5>
         </div>
       </div>
 
@@ -352,7 +352,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     renderer.setSize(198, 198);
 
     //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
-    camera = new THREE.PerspectiveCamera(45, 1, 1, 100);
+    camera = new THREE.PerspectiveCamera(90, 1, 1, 1000);
 
     //SCENE
     scene = new THREE.Scene();
@@ -443,4 +443,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
   loadModelToCanvas(document.getElementById("piston"), "gltf/blocks/piston.gltf");
   loadModelToCanvas(document.getElementById("sticky_piston"), "gltf/blocks/sticky_piston.gltf");
   loadModelToCanvas(document.getElementById("redstone_lamp_on"), "gltf/blocks/redstone_lamp_on.gltf");
+  // Redstone slide 1
+  loadModelToCanvas(document.getElementById("rail"), "gltf/blocks/rail.gltf");
+  loadModelToCanvas(document.getElementById("activator_rail"), "gltf/blocks/activator_rail.gltf");
+  loadModelToCanvas(document.getElementById("powered_rail"), "gltf/blocks/powered_rail.gltf");
+  loadModelToCanvas(document.getElementById("detector_rail"), "gltf/blocks/detector_rail.gltf");
+
 </script>
