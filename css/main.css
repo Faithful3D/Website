@@ -75,6 +75,9 @@ body {
 .custom.carousel-item > .card {
   margin: 15px auto;
 }
+.custom img {
+  height: auto;
+}
 @media (min-width: 768px) {
   .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;

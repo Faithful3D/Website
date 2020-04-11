@@ -7,6 +7,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 <script src="js/three.js"></script>
 <script src="js/GLTFLoader.js"></script>
 
+<canvas id="hiddenCanvas" style="display: none;"></canvas>
 
 <div class="row">
 
@@ -16,7 +17,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	    <div class="container" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-	             	<canvas id="barrel"></canvas>
+	             	<img id="barrel" class="card-img-top" src="image/display/loading.png" alt="Barrel">
 	             	<div class="card-body">
 	                 	<h5 class="card-title">Barrel</h5>
 	             	</div>
@@ -31,7 +32,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	    <div class="container" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-              <canvas id="beehive"></canvas>
+	             	<img id="beehive" class="card-img-top" src="image/display/loading.png" alt="Bee Hive">
 	             	<div class="card-body">
 	                 	<h5 class="card-title">Bee Hive</h5>
 	             	</div>
@@ -47,7 +48,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	    <div class="container" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-	             	<img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+	             	<img class="card-img-top" src="image/display/loading.png" alt="block_lambda">
 	             	<div class="card-body">
 	                 	<h5 class="card-title">Block</h5>
 	             	</div>
@@ -63,7 +64,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 	    <div class="container" style="margin-top:30px">
 	      	<div class="container">
 	         	<div class="card" style="width:200px">
-	             	<img class="card-img-top" src="image/display/wood_oak_boat.png" alt="block_lambda" style="width:100%">
+	             	<img class="card-img-top" src="image/display/loading.png" alt="block_lambda">
 	             	<div class="card-body">
 	                 	<h5 class="card-title">Block</h5>
 	             	</div>
@@ -91,7 +92,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item active">
 
   	  <div class="card" style="width:200px">
-        <canvas id="sword"></canvas>
+        <img id="sword" class="card-img-top" src="image/display/loading.png" alt="Sword">
         <div class="card-body">
           <h5 class="card-title">Sword</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -99,7 +100,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="pickaxe"></canvas>
+        <img id="pickaxe" class="card-img-top" src="image/display/loading.png" alt="Pickaxe">
         <div class="card-body">
           <h5 class="card-title">Pickaxe</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -107,7 +108,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="shovel"></canvas>
+        <img id="shovel" class="card-img-top" src="image/display/loading.png" alt="Shovel">
         <div class="card-body">
           <h5 class="card-title">Shovel</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -115,7 +116,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="axe"></canvas>
+        <img id="axe" class="card-img-top" src="image/display/loading.png" alt="Axe">
         <div class="card-body">
           <h5 class="card-title">Axe</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -127,7 +128,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item">
 
       <div class="card" style="width:200px">
-        <canvas id="hoe"></canvas>
+        <img id="hoe" class="card-img-top" src="image/display/loading.png" alt="Hoe">
         <div class="card-body">
           <h5 class="card-title">Hoe</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -135,7 +136,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="bow_pulling_2"></canvas>
+        <img id="bow" class="card-img-top" src="image/display/loading.png" alt="Bow">
         <div class="card-body">
           <h5 class="card-title">Bow</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -143,7 +144,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="crossbow_arrow"></canvas>
+        <img id="crossbow" class="card-img-top" src="image/display/loading.png" alt="Crossbow">
         <div class="card-body">
           <h5 class="card-title">Crossbow</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -151,7 +152,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="flint_and_steel"></canvas>
+        <img id="flint_and_steel" class="card-img-top" src="image/display/loading.png" alt="Flint and Steel">
         <div class="card-body">
           <h5 class="card-title">Flint and Steel</h5>
           <p class="card-text"><small class="text-muted">Created by Howler</small></p>
@@ -185,7 +186,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item active">
 
       <div class="card" style="width:200px">
-        <canvas id="redstone_torch"></canvas>
+        <img id="redstone_torch" class="card-img-top" src="image/display/loading.png" alt="Redstone Torch">
         <div class="card-body">
           <h5 class="card-title">Redstone Torch</h5>
           <p class="card-text"><small class="text-muted">Created by Juknum & Progical</small></p>
@@ -193,7 +194,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="piston"></canvas>
+        <img id="piston" class="card-img-top" src="image/display/loading.png" alt="Piston">
         <div class="card-body">
           <h5 class="card-title">Piston</h5>
           <p class="card-text"><small class="text-muted">Created by Juknum</small></p>
@@ -201,7 +202,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="sticky_piston"></canvas>
+        <img id="sticky_piston" class="card-img-top" src="image/display/loading.png" alt="Sticky Piston">
         <div class="card-body">
           <h5 class="card-title">Sticky Piston</h5>
           <p class="card-text"><small class="text-muted">Created by Juknum</small></p>
@@ -209,7 +210,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="redstone_lamp_on"></canvas>
+        <img id="redstone_lamp" class="card-img-top" src="image/display/loading.png" alt="Redstone Lamp">
         <div class="card-body">
           <h5 class="card-title">Redstone Lamp</h5>
           <p class="card-text"><small class="text-muted">Created by Bubminer (community)</small></p>
@@ -221,7 +222,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item">
 
       <div class="card" style="width:200px">
-        <canvas id="rail"></canvas>
+        <img id="rail" class="card-img-top" src="image/display/loading.png" alt="Rail">
         <div class="card-body">
           <h5 class="card-title">Rail</h5>
           <p class="card-text"><small class="text-muted">Created by Progical</small></p>
@@ -229,7 +230,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="activator_rail"></canvas>
+        <img id="activator_rail" class="card-img-top" src="image/display/loading.png" alt="Activator Rail">
         <div class="card-body">
           <h5 class="card-title">Activator Rail</h5>
           <p class="card-text"><small class="text-muted">Created by Progical</small></p>
@@ -237,7 +238,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="powered_rail"></canvas>
+        <img id="powered_rail" class="card-img-top" src="image/display/loading.png" alt="Powered Rail">
         <div class="card-body">
           <h5 class="card-title">Powered Rail</h5>
           <p class="card-text"><small class="text-muted">Created by Progical</small></p>
@@ -245,7 +246,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="detector_rail"></canvas>
+        <img id="detector_rail" class="card-img-top" src="image/display/loading.png" alt="Detector Rail">
         <div class="card-body">
           <h5 class="card-title">Detector Rail</h5>
           <p class="card-text"><small class="text-muted">Created by Progical</small></p>
@@ -279,7 +280,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item active">
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -287,7 +288,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -295,7 +296,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -303,7 +304,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -315,7 +316,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     <div class="custom carousel-item">
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -323,7 +324,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -331,7 +332,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -339,7 +340,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       </div>
 
       <div class="card" style="width:200px">
-        <canvas id="###"></canvas>
+        <img id="###" class="card-img-top" src="image/display/loading.png" alt="###">
         <div class="card-body">
           <h5 class="card-title">###</h5>
           <p class="card-text"><small class="text-muted">Created by ###</small></p>
@@ -363,49 +364,62 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
 <!-- 3d models script -->
 <script>
-  function loadModelToCanvas(canvas, model) {
-    var renderer, scene, camera;
+  var occupied = false;
 
-    //RENDERER
-    renderer = new THREE.WebGLRenderer({
-      canvas: canvas,
-      antialias: true
-    });
-    renderer.setClearColor(0x17191D);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(198, 198);
+  var hiddenCanvas = document.getElementById("hiddenCanvas");
 
-    //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
-    camera = new THREE.PerspectiveCamera(25, 1, 1, 1000);
+  //RENDERER
+  var renderer = new THREE.WebGLRenderer({
+    canvas: hiddenCanvas,
+    antialias: true
+  });
+  renderer.setClearColor(0x17191D);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(198, 198);
+
+  //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
+  var camera = new THREE.PerspectiveCamera(25, 1, 1, 1000);
+
+  //GLOBAL LIGHT
+  var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+  var ambientLight = new THREE.AmbientLight(0x404040); // soft white light
+
+  //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
+  var lightTop = new THREE.PointLight(0xffffff, 1, 0, 2);
+  lightTop.position.set(0, 1000, -1000);
+
+  var lightLeft = new THREE.PointLight(0xffffff, 1, 0, 2);
+  lightLeft.position.set(-1000, 0, -1000);
+
+  var lightFront = new THREE.PointLight(0xffffff, 1, 0, 2);
+  lightFront.position.set(0, 0, 0);
+
+  var lightRight = new THREE.PointLight(0xffffff, 1, 0, 2);
+  lightRight.position.set(1000, 0, -1000);
+
+  var lightBottom = new THREE.PointLight(0xffffff, 1, 0, 2);
+  lightBottom.position.set(0, -1000, -1000);
+
+  //FUNCTION
+  function loadModelToImg(img, model) {
+    if (occupied == true) {
+      setTimeout(function(){ loadModelToImg(img, model) }, 50);
+      return;
+    }
+    occupied = true;
 
     //SCENE
-    scene = new THREE.Scene();
+    var scene = new THREE.Scene();
 
     //GLOBAL LIGHT
-    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     scene.add(directionalLight);
-    var ambientLight = new THREE.AmbientLight(0x404040); // soft white light
     scene.add(ambientLight);
 
     //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
-    var lightTop = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightTop.position.set(0, 1000, -1000);
     scene.add(lightTop);
-
-    var lightLeft = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightLeft.position.set(-1000, 0, -1000);
     scene.add(lightLeft);
-
-    var lightFront = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightFront.position.set(0, 0, 0);
     scene.add(lightFront);
-
-    var lightRight = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightRight.position.set(1000, 0, -1000);
     scene.add(lightRight);
-
-    var lightBottom = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightBottom.position.set(0, -1000, -1000);
     scene.add(lightBottom);
 
     //gltf made with Blockbench
@@ -439,38 +453,41 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     function render() {
       delta += 0.1;
       if (pivot) {
-        pivot.rotation.y += 0.01;
+        //pivot.rotation.y += 0.01;
+        renderer.render(scene, camera);
+        img.src = hiddenCanvas.toDataURL("image/png");
+        console.log({"id": img.id, "src": img.src});
+        occupied = false;
+      } else {
+        requestAnimationFrame(render);
       }
-
-      renderer.render(scene, camera);
-      requestAnimationFrame(render);
     }
   }
 
   // Crash test
-  loadModelToCanvas(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
-  loadModelToCanvas(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
+  loadModelToImg(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
+  loadModelToImg(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
 
-  // Tools models slide 1
-  loadModelToCanvas(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
-  loadModelToCanvas(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
-  loadModelToCanvas(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
-  loadModelToCanvas(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
-  // Tools models slide 2
-  loadModelToCanvas(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
-  loadModelToCanvas(document.getElementById("bow_pulling_2"), "gltf/items/bow_pulling_2.gltf");
-  loadModelToCanvas(document.getElementById("crossbow_arrow"), "gltf/items/crossbow_arrow.gltf");
-  loadModelToCanvas(document.getElementById("flint_and_steel"), "gltf/items/flint_and_steel.gltf");
+  // Tool models slide 1
+  loadModelToImg(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
+  loadModelToImg(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
+  loadModelToImg(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
+  loadModelToImg(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
+  // Tool models slide 2
+  loadModelToImg(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
+  loadModelToImg(document.getElementById("bow"), "gltf/items/bow_pulling_2.gltf");
+  loadModelToImg(document.getElementById("crossbow"), "gltf/items/crossbow_arrow.gltf");
+  loadModelToImg(document.getElementById("flint_and_steel"), "gltf/items/flint_and_steel.gltf");
 
   // Redstone slide 1
-  loadModelToCanvas(document.getElementById("redstone_torch"), "gltf/blocks/redstone_torch.gltf");
-  loadModelToCanvas(document.getElementById("piston"), "gltf/blocks/piston.gltf");
-  loadModelToCanvas(document.getElementById("sticky_piston"), "gltf/blocks/sticky_piston.gltf");
-  loadModelToCanvas(document.getElementById("redstone_lamp_on"), "gltf/blocks/redstone_lamp_on.gltf");
+  loadModelToImg(document.getElementById("redstone_torch"), "gltf/blocks/redstone_torch.gltf");
+  loadModelToImg(document.getElementById("piston"), "gltf/blocks/piston.gltf");
+  loadModelToImg(document.getElementById("sticky_piston"), "gltf/blocks/sticky_piston.gltf");
+  loadModelToImg(document.getElementById("redstone_lamp"), "gltf/blocks/redstone_lamp_on.gltf");
   // Redstone slide 1
-  loadModelToCanvas(document.getElementById("rail"), "gltf/blocks/rail.gltf");
-  loadModelToCanvas(document.getElementById("activator_rail"), "gltf/blocks/activator_rail.gltf");
-  loadModelToCanvas(document.getElementById("powered_rail"), "gltf/blocks/powered_rail.gltf");
-  loadModelToCanvas(document.getElementById("detector_rail"), "gltf/blocks/detector_rail.gltf");
+  loadModelToImg(document.getElementById("rail"), "gltf/blocks/rail.gltf");
+  loadModelToImg(document.getElementById("activator_rail"), "gltf/blocks/activator_rail.gltf");
+  loadModelToImg(document.getElementById("powered_rail"), "gltf/blocks/powered_rail.gltf");
+  loadModelToImg(document.getElementById("detector_rail"), "gltf/blocks/detector_rail.gltf");
 
 </script>
