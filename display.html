@@ -376,10 +376,13 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     renderer.setSize(198, 198);
 
     //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
-    const camera = new THREE.PerspectiveCamera(30, 1, 1, 1000);
+    const camera = new THREE.PerspectiveCamera(30, 1, 1, 128);
+    camera.position.z = 64;
 
     //SCENE
     const templateScene = new THREE.Scene();
+    templateScene.rotation.y = 135 * Math.PI / 180;
+    templateScene.rotation.x = 0.625;
 
     //GLOBAL LIGHT
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -388,32 +391,24 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     templateScene.add(ambientLight);
 
     //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
-    const lightTop = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightTop.position.set(0, 1000, -1000);
+    const lightTop = new THREE.PointLight(0xffffff, 2, 160, 2);
+    lightTop.position.set(0, 64, 0);
     templateScene.add(lightTop);
 
-    const lightLeft = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightLeft.position.set(-1000, 0, -1000);
+    const lightLeft = new THREE.PointLight(0xffffff, 2, 160, 2);
+    lightLeft.position.set(0, 0, -64);
     templateScene.add(lightLeft);
 
-    const lightFront = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightFront.position.set(0, 0, 0);
-    templateScene.add(lightFront);
-
-    const lightRight = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightRight.position.set(1000, 0, -1000);
+    const lightRight = new THREE.PointLight(0xffffff, 2, 160, 2);
+    lightRight.position.set(-64, 0, 0);
     templateScene.add(lightRight);
 
-    const lightBottom = new THREE.PointLight(0xffffff, 1, 0, 2);
-    lightBottom.position.set(0, -1000, -1000);
+    const lightBottom = new THREE.PointLight(0xffffff, 2, 160, 2);
+    lightBottom.position.set(0, -64, 0);
     templateScene.add(lightBottom);
 
     //GLTF LOADER
     const loader = new THREE.GLTFLoader();
-    const templatePivot = new THREE.Group();
-    templatePivot.position.z = -64;
-    templatePivot.rotation.y = 135 * Math.PI / 180;
-    templatePivot.rotation.x = 0.625;
 
     //FUNCTION
     function loadModelToImg(img, model) {
@@ -429,25 +424,22 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       //gltf made with Blockbench
       loader.load(model, handle_load);
 
-      var pivot;
+      var mesh;
 
       function handle_load(gltf) {
-        const mesh = gltf.scene;
+        mesh = gltf.scene;
 
         const box = new THREE.Box3().setFromObject(mesh);
         box.getCenter(mesh.position);
         mesh.position.multiplyScalar(-1);
-        pivot = templatePivot.clone();
-
-        pivot.add(mesh);
-        scene.add(pivot);
+        scene.add(mesh);
       }
 
       //RENDER LOOP
       render();
 
       function render() {
-        if (pivot) {
+        if (mesh) {
           renderer.render(scene, camera);
           img.src = hiddenCanvas.toDataURL("image/png");
           console.log({"id": img.id, "src": img.src});
