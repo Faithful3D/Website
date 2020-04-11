@@ -436,6 +436,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
         const box = new THREE.Box3().setFromObject(mesh);
         box.getCenter(mesh.position);
+        mesh.position.multiplyScalar(-1);
         pivot = templatePivot.clone();
 
         pivot.add(mesh);
