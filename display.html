@@ -410,6 +410,10 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
     //GLTF LOADER
     const loader = new THREE.GLTFLoader();
+    const templatePivot = new THREE.Group();
+    templatePivot.position.z = -64;
+    templatePivot.rotation.y = 135 * Math.PI / 180;
+    templatePivot.rotation.x = 0.625;
 
     //FUNCTION
     function loadModelToImg(img, model) {
@@ -432,13 +436,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
         const box = new THREE.Box3().setFromObject(mesh);
         box.getCenter(mesh.position);
-
-        mesh.position.multiplyScalar(-1);
-
-        pivot = new THREE.Group();
-        pivot.position.z = -64;
-        pivot.rotation.y = 135 * Math.PI / 180;
-        pivot.rotation.x = 0.625;
+        pivot = templatePivot.clone();
 
         pivot.add(mesh);
         scene.add(pivot);
