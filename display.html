@@ -417,7 +417,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       occupied = true;
 
       //SCENE
-      const scene = templateScene
+      const scene = templateScene.clone();
 
       //gltf made with Blockbench
       const loader = new THREE.GLTFLoader();
