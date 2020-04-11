@@ -408,6 +408,9 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     lightBottom.position.set(0, -1000, -1000);
     templateScene.add(lightBottom);
 
+    //GLTF LOADER
+    const loader = new THREE.GLTFLoader();
+
     //FUNCTION
     function loadModelToImg(img, model) {
       if (occupied == true) {
@@ -420,16 +423,15 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
       const scene = templateScene.clone();
 
       //gltf made with Blockbench
-      const loader = new THREE.GLTFLoader();
       loader.load(model, handle_load);
 
-      var mesh, pivot;
+      var pivot;
 
       function handle_load(gltf) {
-        mesh = gltf.scene;
+        const mesh = gltf.scene;
 
         const box = new THREE.Box3().setFromObject(mesh);
-        box.getCenter( mesh.position );
+        box.getCenter(mesh.position);
 
         mesh.position.multiplyScalar(-1);
 
@@ -438,8 +440,8 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
         pivot.rotation.y = 135 * Math.PI / 180;
         pivot.rotation.x = 0.625;
 
-        pivot.add( mesh );
-        scene.add( pivot );
+        pivot.add(mesh);
+        scene.add(pivot);
       }
 
       //RENDER LOOP
