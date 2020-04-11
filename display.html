@@ -438,6 +438,7 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 
       pivot = new THREE.Group();
       pivot.position.z = -64;
+      pivot.rotation.y = 135 * Math.PI / 180;
       pivot.rotation.x = 0.625;
 
       pivot.add( mesh );
@@ -453,7 +454,6 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
     function render() {
       delta += 0.1;
       if (pivot) {
-        //pivot.rotation.y += 0.01;
         renderer.render(scene, camera);
         img.src = hiddenCanvas.toDataURL("image/png");
         console.log({"id": img.id, "src": img.src});
