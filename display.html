@@ -3,10 +3,6 @@ title: Display
 separatedTitle: Dis&shy;play
 description: Here you can find all blocks, items and entities in Faithful 3D!
 ---
-
-<script src="js/three.js"></script>
-<script src="js/GLTFLoader.js"></script>
-
 <canvas id="hiddenCanvas" style="display: none;"></canvas>
 
 <div class="row">
@@ -363,131 +359,128 @@ description: Here you can find all blocks, items and entities in Faithful 3D!
 <hr>
 
 <!-- 3d models script -->
+<script src="js/three.js"></script>
+<script src="js/GLTFLoader.js"></script>
 <script>
-  var occupied = false;
+  document.addEventListener("DOMContentLoaded", () => {
+    var occupied = false;
+    const hiddenCanvas = document.getElementById("hiddenCanvas");
 
-  var hiddenCanvas = document.getElementById("hiddenCanvas");
+    //RENDERER
+    const renderer = new THREE.WebGLRenderer({
+      canvas: hiddenCanvas,
+      antialias: true
+    });
+    renderer.setClearColor(0x17191D);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(198, 198);
 
-  //RENDERER
-  var renderer = new THREE.WebGLRenderer({
-    canvas: hiddenCanvas,
-    antialias: true
-  });
-  renderer.setClearColor(0x17191D);
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(198, 198);
-
-  //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
-  var camera = new THREE.PerspectiveCamera(30, 1, 1, 1000);
-
-  //GLOBAL LIGHT
-  var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-  var ambientLight = new THREE.AmbientLight(0x404040); // soft white light
-
-  //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
-  var lightTop = new THREE.PointLight(0xffffff, 1, 0, 2);
-  lightTop.position.set(0, 1000, -1000);
-
-  var lightLeft = new THREE.PointLight(0xffffff, 1, 0, 2);
-  lightLeft.position.set(-1000, 0, -1000);
-
-  var lightFront = new THREE.PointLight(0xffffff, 1, 0, 2);
-  lightFront.position.set(0, 0, 0);
-
-  var lightRight = new THREE.PointLight(0xffffff, 1, 0, 2);
-  lightRight.position.set(1000, 0, -1000);
-
-  var lightBottom = new THREE.PointLight(0xffffff, 1, 0, 2);
-  lightBottom.position.set(0, -1000, -1000);
-
-  //FUNCTION
-  function loadModelToImg(img, model) {
-    if (occupied == true) {
-      setTimeout(function(){ loadModelToImg(img, model) }, 50);
-      return;
-    }
-    occupied = true;
+    //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
+    const camera = new THREE.PerspectiveCamera(30, 1, 1, 1000);
 
     //SCENE
-    var scene = new THREE.Scene();
+    const templateScene = new THREE.Scene();
 
     //GLOBAL LIGHT
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     scene.add(directionalLight);
+    const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
     scene.add(ambientLight);
 
     //LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
+    const lightTop = new THREE.PointLight(0xffffff, 1, 0, 2);
+    lightTop.position.set(0, 1000, -1000);
     scene.add(lightTop);
+
+    const lightLeft = new THREE.PointLight(0xffffff, 1, 0, 2);
+    lightLeft.position.set(-1000, 0, -1000);
     scene.add(lightLeft);
+
+    const lightFront = new THREE.PointLight(0xffffff, 1, 0, 2);
+    lightFront.position.set(0, 0, 0);
     scene.add(lightFront);
+
+    const lightRight = new THREE.PointLight(0xffffff, 1, 0, 2);
+    lightRight.position.set(1000, 0, -1000);
     scene.add(lightRight);
+
+    const lightBottom = new THREE.PointLight(0xffffff, 1, 0, 2);
+    lightBottom.position.set(0, -1000, -1000);
     scene.add(lightBottom);
 
-    //gltf made with Blockbench
-    var loader = new THREE.GLTFLoader();
-    loader.load(model, handle_load);
+    //FUNCTION
+    function loadModelToImg(img, model) {
+      if (occupied == true) {
+        setTimeout(function(){ loadModelToImg(img, model) }, 50);
+        return;
+      }
+      occupied = true;
 
-    var mesh, pivot;
+      //SCENE
+      const scene = templateScene
 
-    function handle_load(gltf) {
-      mesh = gltf.scene;
+      //gltf made with Blockbench
+      const loader = new THREE.GLTFLoader();
+      loader.load(model, handle_load);
 
-      var box = new THREE.Box3().setFromObject( mesh );
-      box.getCenter( mesh.position );
+      var mesh, pivot;
 
-      mesh.position.multiplyScalar( - 1 );
+      function handle_load(gltf) {
+        mesh = gltf.scene;
 
-      pivot = new THREE.Group();
-      pivot.position.z = -64;
-      pivot.rotation.y = 135 * Math.PI / 180;
-      pivot.rotation.x = 0.625;
+        const box = new THREE.Box3().setFromObject(mesh);
+        box.getCenter( mesh.position );
 
-      pivot.add( mesh );
-      scene.add( pivot );
-    }
+        mesh.position.multiplyScalar(-1);
 
-    //RENDER LOOP
-    render();
+        pivot = new THREE.Group();
+        pivot.position.z = -64;
+        pivot.rotation.y = 135 * Math.PI / 180;
+        pivot.rotation.x = 0.625;
 
-    var delta = 0;
-    var prevTime = Date.now();
+        pivot.add( mesh );
+        scene.add( pivot );
+      }
 
-    function render() {
-      delta += 0.1;
-      if (pivot) {
-        renderer.render(scene, camera);
-        img.src = hiddenCanvas.toDataURL("image/png");
-        console.log({"id": img.id, "src": img.src});
-        occupied = false;
-      } else {
-        requestAnimationFrame(render);
+      //RENDER LOOP
+      render();
+
+      function render() {
+        if (pivot) {
+          renderer.render(scene, camera);
+          img.src = hiddenCanvas.toDataURL("image/png");
+          console.log({"id": img.id, "src": img.src});
+          occupied = false;
+        } else {
+          requestAnimationFrame(render);
+        }
       }
     }
-  }
 
-  // Crash test
-  loadModelToImg(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
-  loadModelToImg(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
+    // Crash test
+    loadModelToImg(document.getElementById("barrel"), "gltf/blocks/barrel.gltf");
+    loadModelToImg(document.getElementById("beehive"), "gltf/blocks/beehive_honey.gltf");
 
-  // Tool models slide 1
-  loadModelToImg(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
-  loadModelToImg(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
-  loadModelToImg(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
-  loadModelToImg(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
-  // Tool models slide 2
-  loadModelToImg(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
-  loadModelToImg(document.getElementById("bow"), "gltf/items/bow_pulling_2.gltf");
-  loadModelToImg(document.getElementById("crossbow"), "gltf/items/crossbow_arrow.gltf");
-  loadModelToImg(document.getElementById("flint_and_steel"), "gltf/items/flint_and_steel.gltf");
+    // Tool models slide 1
+    loadModelToImg(document.getElementById("sword"), "gltf/items/netherite_sword.gltf");
+    loadModelToImg(document.getElementById("pickaxe"), "gltf/items/netherite_pickaxe.gltf");
+    loadModelToImg(document.getElementById("shovel"), "gltf/items/netherite_shovel.gltf");
+    loadModelToImg(document.getElementById("axe"), "gltf/items/netherite_axe.gltf");
+    // Tool models slide 2
+    loadModelToImg(document.getElementById("hoe"), "gltf/items/netherite_hoe.gltf");
+    loadModelToImg(document.getElementById("bow"), "gltf/items/bow_pulling_2.gltf");
+    loadModelToImg(document.getElementById("crossbow"), "gltf/items/crossbow_arrow.gltf");
+    loadModelToImg(document.getElementById("flint_and_steel"), "gltf/items/flint_and_steel.gltf");
 
-  // Redstone slide 1
-  loadModelToImg(document.getElementById("redstone_torch"), "gltf/blocks/redstone_torch.gltf");
-  loadModelToImg(document.getElementById("piston"), "gltf/blocks/piston.gltf");
-  loadModelToImg(document.getElementById("sticky_piston"), "gltf/blocks/sticky_piston.gltf");
-  loadModelToImg(document.getElementById("redstone_lamp"), "gltf/blocks/redstone_lamp_on.gltf");
-  // Redstone slide 1
-  loadModelToImg(document.getElementById("rail"), "gltf/blocks/rail.gltf");
-  loadModelToImg(document.getElementById("activator_rail"), "gltf/blocks/activator_rail.gltf");
-  loadModelToImg(document.getElementById("powered_rail"), "gltf/blocks/powered_rail.gltf");
-  loadModelToImg(document.getElementById("detector_rail"), "gltf/blocks/detector_rail.gltf");
-
+    // Redstone slide 1
+    loadModelToImg(document.getElementById("redstone_torch"), "gltf/blocks/redstone_torch.gltf");
+    loadModelToImg(document.getElementById("piston"), "gltf/blocks/piston.gltf");
+    loadModelToImg(document.getElementById("sticky_piston"), "gltf/blocks/sticky_piston.gltf");
+    loadModelToImg(document.getElementById("redstone_lamp"), "gltf/blocks/redstone_lamp_on.gltf");
+    // Redstone slide 1
+    loadModelToImg(document.getElementById("rail"), "gltf/blocks/rail.gltf");
+    loadModelToImg(document.getElementById("activator_rail"), "gltf/blocks/activator_rail.gltf");
+    loadModelToImg(document.getElementById("powered_rail"), "gltf/blocks/powered_rail.gltf");
+    loadModelToImg(document.getElementById("detector_rail"), "gltf/blocks/detector_rail.gltf");
+  });
 </script>
