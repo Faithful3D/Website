@@ -31,6 +31,7 @@ imgScene.rotation.y = 135 * Math.PI / 180;
 imgScene.rotation.x = 0.625;
 
 const modalScene = new THREE.Scene();
+modalScene.rotation.y = Math.PI;
 
 //GLOBAL LIGHT
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -214,7 +215,5 @@ loadModelsToImgs(inputArray);
 
 // Modal
 $('#modelModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget);
-  var model = button.data("model");
-  window.loadModelToModal(model);
+  window.loadModelToModal($(event.relatedTarget).data("model"));
 })
