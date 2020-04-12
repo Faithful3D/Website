@@ -206,9 +206,90 @@ const inputArray = [
     img: document.getElementById("detector_rail"),
     model: "gltf/redstone/detector_rail.gltf"
   },
+  // Farming slide 1
   {
     img: document.getElementById("beehive_honey"),
     model: "gltf/farming/beehive_honey.gltf"
+  },
+  {
+    img: document.getElementById("bee_nest_honey"),
+    model: "gltf/farming/bee_nest_honey.gltf"
+  },
+  {
+    img: document.getElementById("hay_block"),
+    model: "gltf/farming/hay_block.gltf"
+  },
+  {
+    img: document.getElementById("dried_kelp_block"),
+    model: "gltf/farming/dried_kelp_block.gltf"
+  }
+  // Farming slide 2
+   {
+    img: document.getElementById("beetroots_stage3"),
+    model: "gltf/farming/beetroots_stage3.gltf"
+  },
+  {
+    img: document.getElementById("carrots_stage3"),
+    model: "gltf/farming/carrots_stage3.gltf"
+  },
+  {
+    img: document.getElementById("potatoes_stage3"),
+    model: "gltf/farming/potatoes_stage3.gltf"
+  },
+  {
+    img: document.getElementById("cocoa_stage2"),
+    model: "gltf/farming/cocoa_stage2.gltf"
+  },
+  // Farming slide 3
+  {
+    img: document.getElementById("brown_mushroom"),
+    model: "gltf/farming/brown_mushroom.gltf"
+  },
+  {
+    img: document.getElementById("red_mushroom"),
+    model: "gltf/farming/red_mushroom.gltf"
+  },
+  {
+    img: document.getElementById("crimson_fungus"),
+    model: "gltf/farming/crimson_fungus.gltf"
+  },
+  {
+    img: document.getElementById("warped_fungus"),
+    model: "gltf/farming/warped_fungus.gltf"
+  },
+  // Farming slide 4
+  {
+    img: document.getElementById("cactus"),
+    model: "gltf/farming/cactus.gltf"
+  },
+  {
+    img: document.getElementById("pumpkin"),
+    model: "gltf/farming/pumpkin.gltf"
+  },
+  {
+    img: document.getElementById("carved_pumpkin"),
+    model: "gltf/farming/carved_pumpkin.gltf"
+  },
+  {
+    img: document.getElementById("jack_o_lantern"),
+    model: "gltf/farming/jack_o_lantern.gltf"
+  },
+  // Farming slide 5
+  {
+    img: document.getElementById("farmland"),
+    model: "gltf/farming/farmland.gltf"
+  },
+  {
+    img: document.getElementById("lily_pad_1"),
+    model: "gltf/farming/lily_pad_1.gltf"
+  },
+  {
+    img: document.getElementById("sugar_cane"),
+    model: "gltf/farming/sugar_cane.gltf"
+  },
+  {
+    img: document.getElementById("wheat_stage7"),
+    model: "gltf/farming/wheat_stage7.gltf"
   }
 ]
 loadModelsToImgs(inputArray);
