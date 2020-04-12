@@ -224,7 +224,7 @@ const inputArray = [
     model: "gltf/farming/dried_kelp_block.gltf"
   },
   // Farming slide 2
-   {
+  {
     img: document.getElementById("beetroots_stage3"),
     model: "gltf/farming/beetroots_stage3.gltf"
   },
