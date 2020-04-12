@@ -137,66 +137,61 @@ window.loadModelToModal = function(model) {
 }
 
 const inputArray = [
-  // Undefined Element :
-  {
-    img: document.getElementById("undefined"),
-    model: "../undefined.gltf"
-  },
   // Tool models slide 1
   {
     img: document.getElementById("sword"),
-    model: "../tools_and_weapons/netherite_sword.gltf"
+    model: "gltf/tools_and_weapons/netherite_sword.gltf"
   },
   {
     img: document.getElementById("pickaxe"),
-    model: "../tools_and_weapons/netherite_pickaxe.gltf"
+    model: "gltf/tools_and_weapons/netherite_pickaxe.gltf"
   },
   {
     img: document.getElementById("shovel"),
-    model: "../tools_and_weapons/netherite_shovel.gltf"
+    model: "gltf/tools_and_weapons/netherite_shovel.gltf"
   },
   {
     img: document.getElementById("axe"),
-    model: "../tools_and_weapons/netherite_axe.gltf"
+    model: "gltf/tools_and_weapons/netherite_axe.gltf"
   },
   // Tool models slide 2
   {
     img: document.getElementById("hoe"),
-    model: "../tools_and_weapons/netherite_hoe.gltf"
+    model: "gltf/tools_and_weapons/netherite_hoe.gltf"
   },
   {
     img: document.getElementById("bow"),
-    model: "../tools_and_weapons/bow_pulling_2.gltf"
+    model: "gltf/tools_and_weapons/bow_pulling_2.gltf"
   },
   {
     img: document.getElementById("crossbow"),
-    model: "../tools_and_weapons/crossbow_arrow.gltf"
+    model: "gltf/tools_and_weapons/crossbow_arrow.gltf"
   },
   {
     img: document.getElementById("flint_and_steel"),
-    model: "../tools_and_weapons/flint_and_steel.gltf"
+    model: "gltf/tools_and_weapons/flint_and_steel.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("redstone_torch"),
-    model: "../redstone/redstone_torch.gltf"
+    model: "gltf/redstone/redstone_torch.gltf"
   },
   {
     img: document.getElementById("piston"),
-    model: "../redstone/piston.gltf"
+    model: "gltf/redstone/piston.gltf"
   },
   {
     img: document.getElementById("sticky_piston"),
-    model: "../redstone/sticky_piston.gltf"
+    model: "gltf/redstone/sticky_piston.gltf"
   },
   {
     img: document.getElementById("redstone_lamp"),
-    model: "../redstone/redstone_lamp_on.gltf"
+    model: "gltf/redstone/redstone_lamp_on.gltf"
   },
-  // Redstone slide 1
+  // Redstone slide 2
   {
     img: document.getElementById("rail"),
-    model: "../redstone/rail.gltf"
+    model: "gltf/redstone/rail.gltf"
   },
   {
     img: document.getElementById("activator_rail"),
@@ -209,6 +204,10 @@ const inputArray = [
   {
     img: document.getElementById("detector_rail"),
     model: "gltf/redstone/detector_rail.gltf"
+  },
+  {
+    img: document.getElementById("beehive_honey"),
+    model: "gltf/farming/beehive_honey.gltf"
   }
 ]
 loadModelsToImgs(inputArray);
