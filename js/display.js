@@ -2,7 +2,6 @@ import * as THREE from './build/three.module.js';
 import { GLTFLoader } from './examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from './examples/jsm/controls/OrbitControls.js';
 
-var counter = 0;
 const hiddenCanvas = document.getElementById("hiddenCanvas");
 
 //RENDERER
