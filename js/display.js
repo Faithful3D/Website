@@ -222,7 +222,7 @@ const inputArray = [
   {
     img: document.getElementById("dried_kelp_block"),
     model: "gltf/farming/dried_kelp_block.gltf"
-  }
+  },
   // Farming slide 2
    {
     img: document.getElementById("beetroots_stage3"),
