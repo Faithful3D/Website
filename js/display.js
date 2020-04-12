@@ -140,63 +140,63 @@ const inputArray = [
   // Undefined Element :
   {
     img: document.getElementById("undefined"),
-    model: "../gltf/undefined.gltf"
+    model: "../undefined.gltf"
   },
   // Tool models slide 1
   {
     img: document.getElementById("sword"),
-    model: "../gltf/tools_and_weapons/netherite_sword.gltf"
+    model: "../tools_and_weapons/netherite_sword.gltf"
   },
   {
     img: document.getElementById("pickaxe"),
-    model: "../gltf/tools_and_weapons/netherite_pickaxe.gltf"
+    model: "../tools_and_weapons/netherite_pickaxe.gltf"
   },
   {
     img: document.getElementById("shovel"),
-    model: "../gltf/tools_and_weapons/netherite_shovel.gltf"
+    model: "../tools_and_weapons/netherite_shovel.gltf"
   },
   {
     img: document.getElementById("axe"),
-    model: "../gltf/tools_and_weapons/netherite_axe.gltf"
+    model: "../tools_and_weapons/netherite_axe.gltf"
   },
   // Tool models slide 2
   {
     img: document.getElementById("hoe"),
-    model: "../gltf/tools_and_weapons/netherite_hoe.gltf"
+    model: "../tools_and_weapons/netherite_hoe.gltf"
   },
   {
     img: document.getElementById("bow"),
-    model: "../gltf/tools_and_weapons/bow_pulling_2.gltf"
+    model: "../tools_and_weapons/bow_pulling_2.gltf"
   },
   {
     img: document.getElementById("crossbow"),
-    model: "../gltf/tools_and_weapons/crossbow_arrow.gltf"
+    model: "../tools_and_weapons/crossbow_arrow.gltf"
   },
   {
     img: document.getElementById("flint_and_steel"),
-    model: "../gltf/tools_and_weapons/flint_and_steel.gltf"
+    model: "../tools_and_weapons/flint_and_steel.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("redstone_torch"),
-    model: "../gltf/redstone/redstone_torch.gltf"
+    model: "../redstone/redstone_torch.gltf"
   },
   {
     img: document.getElementById("piston"),
-    model: "../gltf/redstone/piston.gltf"
+    model: "../redstone/piston.gltf"
   },
   {
     img: document.getElementById("sticky_piston"),
-    model: "../gltf/redstone/sticky_piston.gltf"
+    model: "../redstone/sticky_piston.gltf"
   },
   {
     img: document.getElementById("redstone_lamp"),
-    model: "../gltf/redstone/redstone_lamp_on.gltf"
+    model: "../redstone/redstone_lamp_on.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("rail"),
-    model: "../gltf/redstone/rail.gltf"
+    model: "../redstone/rail.gltf"
   },
   {
     img: document.getElementById("activator_rail"),
