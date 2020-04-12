@@ -140,79 +140,84 @@ const inputArray = [
   // Crash test
   {
     img: document.getElementById("barrel"),
-    model: "gltf/blocks/barrel.gltf"
+    model: "gltf/utilities/barrel.gltf"
   },
   {
-    img: document.getElementById("beehive"),
-    model: "gltf/blocks/beehive_honey.gltf"
+    img: document.getElementById("beehive_honey"),
+    model: "gltf/farming/beehive_honey.gltf"
+  },
+  // Undefined Element
+  {
+    img: document.getElementById("undefined"),
+    model: "gltf/undefined.gltf"
   },
   // Tool models slide 1
   {
     img: document.getElementById("sword"),
-    model: "gltf/items/netherite_sword.gltf"
+    model: "gltf/tools_and_weapons/netherite_sword.gltf"
   },
   {
     img: document.getElementById("pickaxe"),
-    model: "gltf/items/netherite_pickaxe.gltf"
+    model: "gltf/tools_and_weapons/netherite_pickaxe.gltf"
   },
   {
     img: document.getElementById("shovel"),
-    model: "gltf/items/netherite_shovel.gltf"
+    model: "gltf/tools_and_weapons/netherite_shovel.gltf"
   },
   {
     img: document.getElementById("axe"),
-    model: "gltf/items/netherite_axe.gltf"
+    model: "gltf/tools_and_weapons/netherite_axe.gltf"
   },
   // Tool models slide 2
   {
     img: document.getElementById("hoe"),
-    model: "gltf/items/netherite_hoe.gltf"
+    model: "gltf/tools_and_weapons/netherite_hoe.gltf"
   },
   {
     img: document.getElementById("bow"),
-    model: "gltf/items/bow_pulling_2.gltf"
+    model: "gltf/tools_and_weapons/bow_pulling_2.gltf"
   },
   {
     img: document.getElementById("crossbow"),
-    model: "gltf/items/crossbow_arrow.gltf"
+    model: "gltf/tools_and_weapons/crossbow_arrow.gltf"
   },
   {
     img: document.getElementById("flint_and_steel"),
-    model: "gltf/items/flint_and_steel.gltf"
+    model: "gltf/tools_and_weapons/flint_and_steel.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("redstone_torch"),
-    model: "gltf/blocks/redstone_torch.gltf"
+    model: "gltf/redstone/redstone_torch.gltf"
   },
   {
     img: document.getElementById("piston"),
-    model: "gltf/blocks/piston.gltf"
+    model: "gltf/redstone/piston.gltf"
   },
   {
     img: document.getElementById("sticky_piston"),
-    model: "gltf/blocks/sticky_piston.gltf"
+    model: "gltf/redstone/sticky_piston.gltf"
   },
   {
     img: document.getElementById("redstone_lamp"),
-    model: "gltf/blocks/redstone_lamp_on.gltf"
+    model: "gltf/redstone/redstone_lamp_on.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("rail"),
-    model: "gltf/blocks/rail.gltf"
+    model: "gltf/redstone/rail.gltf"
   },
   {
     img: document.getElementById("activator_rail"),
-    model: "gltf/blocks/activator_rail.gltf"
+    model: "gltf/redstone/activator_rail.gltf"
   },
   {
     img: document.getElementById("powered_rail"),
-    model: "gltf/blocks/powered_rail.gltf"
+    model: "gltf/redstone/powered_rail.gltf"
   },
   {
     img: document.getElementById("detector_rail"),
-    model: "gltf/blocks/detector_rail.gltf"
+    model: "gltf/redstone/detector_rail.gltf"
   }
 ]
 loadModelsToImgs(inputArray);
