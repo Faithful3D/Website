@@ -137,16 +137,7 @@ window.loadModelToModal = function(model) {
 }
 
 const inputArray = [
-  // Crash test
-  {
-    img: document.getElementById("barrel"),
-    model: "gltf/utilities/barrel.gltf"
-  },
-  {
-    img: document.getElementById("beehive_honey"),
-    model: "gltf/farming/beehive_honey.gltf"
-  },
-  // Undefined Element
+  // Undefined Element :
   {
     img: document.getElementById("undefined"),
     model: "gltf/undefined.gltf"
