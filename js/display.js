@@ -206,6 +206,23 @@ const inputArray = [
     img: document.getElementById("detector_rail"),
     model: "gltf/redstone/detector_rail.gltf"
   },
+  // Redstone slide 3
+  {
+    img: document.getElementById("dispenser"),
+    model: "gltf/redstone/dispenser.gltf"
+  },
+  {
+    img: document.getElementById("dropper"),
+    model: "gltf/redstone/dropper.gltf"
+  },
+  {
+    img: document.getElementById("redstone_dust_dot"),
+    model: "gltf/redstone/redstone_dust_dot.gltf"
+  },
+  {
+    img: document.getElementById("tripwire_hook_attached_on"),
+    model: "gltf/redstone/tripwire_hook_attached_on.gltf"
+  },
   // Farming slide 1
   {
     img: document.getElementById("beehive_honey"),
