@@ -307,7 +307,72 @@ const inputArray = [
   {
     img: document.getElementById("wheat_stage7"),
     model: "gltf/farming/wheat_stage7.gltf"
+  },
+  // Utilities slide 1
+  {
+    img: document.getElementById("barrel"),
+    model: "gltf/utilities/barrel.gltf"
+  },
+  {
+    img: document.getElementById("blast_furnace_on"),
+    model: "gltf/utilities/blast_furnace_on.gltf"
+  },
+  {
+    img: document.getElementById("bookshelf"),
+    model: "gltf/utilities/bookshelf.gltf"
+  },
+  {
+    img: document.getElementById("brewing_stand"),
+    model: "gltf/utilities/brewing_stand.gltf"
+  },
+  // Utilities slide 2
+  {
+    img: document.getElementById("cartography_table"),
+    model: "gltf/utilities/cartography_table.gltf"
+  },
+  {
+    img: document.getElementById("composter"),
+    model: "gltf/utilities/composter.gltf"
+  },
+  {
+    img: document.getElementById("enchanting_table"),
+    model: "gltf/utilities/enchanting_table.gltf"
+  },
+  {
+    img: document.getElementById("end_portal_frame_filled"),
+    model: "gltf/utilities/end_portal_frame_filled.gltf"
+  },
+  // Utilities slide 3
+  {
+    img: document.getElementById("furnace_on"),
+    model: "gltf/utilities/furnace_on.gltf"
+  },
+  {
+    img: document.getElementById("lectern"),
+    model: "gltf/utilities/lectern.gltf"
+  },
+  {
+    img: document.getElementById("lodestone"),
+    model: "gltf/utilities/lodestone.gltf"
+  },
+  {
+    img: document.getElementById("loom"),
+    model: "gltf/utilities/loom.gltf"
+  },
+  // Utilities slide 4
+  {
+    img: document.getElementById("smoker_on"),
+    model: "gltf/utilities/smoker_on.gltf"
+  },
+  {
+    img: document.getElementById("spawner"),
+    model: "gltf/utilities/spawner.gltf"
+  },
+  {
+    img: document.getElementById("stonecutter"),
+    model: "gltf/utilities/stonecutter.gltf"
   }
+
 ]
 loadModelsToImgs(inputArray);
 
