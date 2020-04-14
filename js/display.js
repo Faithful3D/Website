@@ -33,42 +33,16 @@ imgScene.rotation.x = 0.625;
 const modalScene = new THREE.Scene();
 modalScene.rotation.y = Math.PI;
 
-//GLOBAL LIGHT
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-imgScene.add(directionalLight);
-modalScene.add(directionalLight.clone());
-const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
-imgScene.add(ambientLight);
-modalScene.add(ambientLight.clone());
+//LIGHT
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.5);
+hemiLight.position.set(0, 0, 0);
+imgScene.add(hemiLight);
+modalScene.add(hemiLight.clone());
 
-//LIGHTS PointLight( color : Integer, intensity : Float, distance : Number, decay : Float )
-const lightTop = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightTop.position.set(0, 64, 0);
-imgScene.add(lightTop);
-modalScene.add(lightTop.clone());
-
-const lightNorth = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightNorth.position.set(0, 0, -64);
-imgScene.add(lightNorth);
-modalScene.add(lightNorth.clone());
-
-const lightEast = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightEast.position.set(-64, 0, 0);
-imgScene.add(lightEast);
-modalScene.add(lightEast.clone());
-
-const lightSouth = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightSouth.position.set(0, 0, 64);
-modalScene.add(lightSouth);
-
-const lightWest = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightWest.position.set(64, 0, 0);
-modalScene.add(lightWest);
-
-const lightBottom = new THREE.PointLight(0xffffff, 2, 160, 2);
-lightBottom.position.set(0, -64, 0);
-imgScene.add(lightBottom);
-modalScene.add(lightBottom.clone());
+const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+dirLight.position.set(64, 64, -64);
+imgScene.add(dirLight);
+modalScene.add(dirLight.clone());
 
 //GLTF LOADER
 const loader = new GLTFLoader();
