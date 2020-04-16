@@ -34,8 +34,13 @@ body {
 }
 
 /* Classes for images next to text */
-.links-image {
+.links-image, .links-block {
   width: 100%;
+  margin: 0 0 15px 0;
+}
+.links-card {
+  background: #2d2d33;
+  padding: 15px;
   margin: 0 0 15px 0;
 }
 
@@ -53,10 +58,20 @@ body {
   }
 }
 
-/* Classes for cards */
-.links-card {
-  background: #2d2d33;
-  padding: 15px;
+@media (min-width: 576px) {
+  .links-block, .links-card {
+    display: inline-block;
+  }
+  .links-block {
+    margin: 0 15px 0 0;
+    padding: 15px;
+    width: 33%;
+  }
+  .links-card {
+    margin-top: 15px;
+    width: calc(67% - 30px);
+    vertical-align: top;
+  }
 }
 
 /* navbar */
