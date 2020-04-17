@@ -20,7 +20,7 @@ main {
 
 /* Dark colors */
 .card-body, .modal-content {
-  background: #2d2d33;
+  background: #333333;
 }
 body {
   background: #141519;
@@ -30,10 +30,10 @@ p {
   color: rgba(255, 255, 255, .6);
 }
 .modal-header {
-  border-bottom: 1px solid #2d2d33;
+  border-bottom: 1px solid #333333;
 }
 .modal-footer {
-  border-top: 1px solid #2d2d33;
+  border-top: 1px solid #333333;
 }
 h2 {
   font-weight: 300;
