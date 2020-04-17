@@ -23,14 +23,20 @@ main {
   background: #2d2d33;
 }
 body {
-  background: #16161d;
+  background: #000;
   color: #fff;
 }
+p {
+  color: rgba(0, 0, 0, 0.6);
+}
 .modal-header {
-  border-bottom: 1px solid #16161d;
+  border-bottom: 1px solid #2d2d33;
 }
 .modal-footer {
-  border-top: 1px solid #16161d;
+  border-top: 1px solid #2d2d33;
+}
+h2 {
+  font-weight: 300;
 }
 
 /* Classes for images next to text */
