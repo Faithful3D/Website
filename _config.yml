@@ -1,5 +1,11 @@
+prefix: ""
+
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "article"
+    values:
+      layout: "article"
