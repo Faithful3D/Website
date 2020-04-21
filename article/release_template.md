@@ -5,9 +5,9 @@ description: x Changelog
 
 imgURL: x
 added:
-  - blocks:
+  - Blocks:
     - x
-  - items:
+  - Items:
     - x
 changed:
   - x
