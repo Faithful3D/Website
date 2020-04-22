@@ -4,7 +4,7 @@ separatedTitle: Release 20w17a
 description: 20w17a Changelog
 
 imgURL: ../image/release/release_20w17a.jpg
-text: Congrats and Happy Birthday everyone! We are about to reach 30K downlaods! The pack will be 1 year old within 2 days!
+text: Congrats and Happy Birthday everyone! We are about to reach 30K downloads! The pack will be 1 year old within 2 days!
 added:
   - Blocks:
     - Cake (with his candle of course)
