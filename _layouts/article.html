@@ -2,7 +2,9 @@
 layout: default
 ---
 <img src="{{ page.imgURL }}" class="img-fluid mx-auto d-block" alt="Minecraft Screenshot">
-<hr>
+<p>
+	{{ page.text }}
+</p>
 <h2>Added</h2>
 {% for item in page.added %}
 <h2><small>{{ item.first | pop}}</h2></small>

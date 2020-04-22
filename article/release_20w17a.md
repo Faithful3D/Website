@@ -4,6 +4,7 @@ separatedTitle: Release 20w17a
 description: 20w17a Changelog
 
 imgURL: ../image/release/release_20w17a.jpg
+text: Ahahahaha test
 added:
   - Blocks:
     - Cake (Happy Birthday to Faithful 3D !!)
@@ -27,7 +28,7 @@ added:
     - Crossbow
     - Netherite Tools
     - Soul Lantern (GUI)
-  - Entities [Optifine]:
+  - Entities [Optifine 1.15.2]:
     - Skeleton
     - Stray
     - Wither Skeleton
