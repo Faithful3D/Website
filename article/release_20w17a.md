@@ -4,10 +4,10 @@ separatedTitle: Release 20w17a
 description: 20w17a Changelog
 
 imgURL: ../image/release/release_20w17a.jpg
-text: Ahahahaha test
+text: Congrats and Happy Birthday everyone! We are about to reach 30K downlaods! The pack will be 1 year old within 2 days!
 added:
   - Blocks:
-    - Cake (Happy Birthday to Faithful 3D !!)
+    - Cake (with his candle of course)
     - Chains
     - Cocoa Beans
     - Crimson Fungi
