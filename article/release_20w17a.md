@@ -34,8 +34,9 @@ added:
     - Wither Skeleton
     - Skeleton Skull
 changed:
-  - End Portal Frame, texture fixed
+  - Bookshelf (less details)
   - Changed Axes
+  - End Portal Frame, texture fixed
   - Fireworks fixed
 removed:
   - End Portal Frame texture (unused)
