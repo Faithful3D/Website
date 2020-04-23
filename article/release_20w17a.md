@@ -40,5 +40,5 @@ changed:
   - Fireworks fixed
 removed:
   - End Portal Frame texture (unused)
-downloadURL: https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2937780
+downloadURL: https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2938021
 ---
