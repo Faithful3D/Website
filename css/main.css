@@ -40,13 +40,8 @@ h2 {
 }
 
 /* Classes for images next to text */
-.links-image, .links-block {
+.links-image {
   width: 100%;
-  margin: 0 0 15px 0;
-}
-.links-card {
-  background: #2D2E32;
-  padding: 15px;
   margin: 0 0 15px 0;
 }
 
@@ -60,22 +55,6 @@ h2 {
   }
   .links-content {
     width: calc(100% - 545px);
-    vertical-align: top;
-  }
-}
-
-@media (min-width: 576px) {
-  .links-block, .links-card {
-    display: inline-block;
-  }
-  .links-block {
-    margin: 0 15px 0 0;
-    padding: 15px;
-    width: 33%;
-  }
-  .links-card {
-    margin-top: 15px;
-    width: calc(67% - 30px);
     vertical-align: top;
   }
 }
