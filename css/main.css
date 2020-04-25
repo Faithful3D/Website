@@ -19,7 +19,7 @@ main {
 }
 
 /* Dark colors */
-.card-body, .modal-content {
+.card, .modal-content {
   background: #2D2E32;
 }
 body {
