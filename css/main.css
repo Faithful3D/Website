@@ -35,7 +35,7 @@ p {
 .modal-footer {
   border-top: 1px solid #2D2E32;
 }
-h2 {
+h2, h5 {
   font-weight: 300;
 }
 
@@ -44,7 +44,6 @@ h2 {
   width: 100%;
   margin: 0 0 15px 0;
 }
-
 @media (min-width: 992px) {
   .links-image, .links-content {
     display: inline-block;
@@ -98,20 +97,12 @@ h2 {
 .custom img {
   height: auto;
 }
-.heading-button {
-  display: block;
-  background: none;
-  border: 0;
-  margin: 0 0 .75rem 0;
-  padding: 0;
-  text-align: left;
-  color: #fff;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 1.25rem;
+.card {
+  cursor: pointer;
+  transition-duration:.3s;
 }
-.heading-button:hover {
-  text-decoration: underline;
+.card:hover {
+  box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5)
 }
 @media (min-width: 768px) {
   .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
