@@ -67,11 +67,30 @@ h2 {
   z-index: 1020;
 }
 
+/* Header images*/
+.header-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  border-radius: .25rem;
+}
+@media (min-width: 768px) {
+  .header-image {
+    max-width: 75%;
+  }
+}
+
 /* Custom carousel */
+.custom.carousel {
+  margin-bottom: 45px;
+}
 .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+}
+.custom.carousel-indicators {
+  bottom: -45px;
 }
 .custom.carousel-item > .card {
   margin: 15px auto;
@@ -97,9 +116,6 @@ h2 {
 @media (min-width: 768px) {
   .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;
-  }
-  .custom.carousel-indicators {
-    bottom: -45px;
   }
   .custom.carousel-control-prev {
     left: -100px;
