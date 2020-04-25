@@ -12,6 +12,7 @@ const imgRenderer = new THREE.WebGLRenderer({
 imgRenderer.setClearColor(0x17191D);
 imgRenderer.setPixelRatio(window.devicePixelRatio);
 imgRenderer.setSize(198, 198);
+imgRenderer.outputEncoding = THREE.sRGBEncoding
 
 const modalRenderer = new THREE.WebGLRenderer({
   canvas: document.getElementById("modalCanvas"),
@@ -20,6 +21,7 @@ const modalRenderer = new THREE.WebGLRenderer({
 modalRenderer.setClearColor(0x17191D);
 modalRenderer.setPixelRatio(window.devicePixelRatio);
 modalRenderer.setSize(1080, 1080);
+modalRenderer.outputEncoding = THREE.sRGBEncoding
 
 //CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
 const camera = new THREE.PerspectiveCamera(30, 1, 1, 128);
@@ -47,6 +49,9 @@ modalScene.add(dirLight.clone());
 //GLTF LOADER
 const loader = new GLTFLoader();
 
+//MESH
+var imgMesh
+
 //FUNCTION
 function loadModelsToImgs(array) {
   if (array.length <= 0) return;
@@ -57,15 +62,13 @@ function loadModelsToImgs(array) {
   //gltf made with Blockbench
   loader.load(array[0].model, handle_load);
 
-  var mesh;
-
   function handle_load(gltf) {
-    mesh = gltf.scene;
+    imgMesh = gltf.scene;
 
-    const box = new THREE.Box3().setFromObject(mesh);
-    box.getCenter(mesh.position);
-    mesh.position.multiplyScalar(-1);
-    scene.add(mesh);
+    const box = new THREE.Box3().setFromObject(imgMesh);
+    box.getCenter(imgMesh.position);
+    imgMesh.position.multiplyScalar(-1);
+    scene.add(imgMesh);
 
     imgRenderer.render(scene, camera);
     array[0].img.src = hiddenCanvas.toDataURL("image/png");
@@ -80,7 +83,7 @@ window.loadModelToModal = function(model) {
   const modalCamera = camera.clone();
 
   //CONTROLS
-  const controls = new OrbitControls( modalCamera, modalRenderer.domElement );
+  const controls = new OrbitControls(modalCamera, modalRenderer.domElement);
   controls.addEventListener('change', render);
   controls.minDistance = 16;
   controls.maxDistance = 64;
