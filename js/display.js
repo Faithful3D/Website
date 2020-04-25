@@ -36,7 +36,7 @@ const modalScene = new THREE.Scene();
 modalScene.rotation.y = Math.PI;
 
 //LIGHT
-const ambiLight = new THREE.AmbientLight(0xffffff, 0.75);
+const ambiLight = new THREE.AmbientLight(0xffffff, 1);
 ambiLight.position.set(0, 0, 0);
 imgScene.add(ambiLight);
 modalScene.add(ambiLight.clone());
