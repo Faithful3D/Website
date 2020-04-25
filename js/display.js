@@ -41,11 +41,6 @@ hemiLight.position.set(0, 0, 0);
 imgScene.add(hemiLight);
 modalScene.add(hemiLight.clone());
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
-dirLight.position.set(64, 64, -64);
-imgScene.add(dirLight);
-modalScene.add(dirLight.clone());
-
 //GLTF LOADER
 const loader = new GLTFLoader();
 
