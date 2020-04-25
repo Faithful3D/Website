@@ -36,12 +36,12 @@ const modalScene = new THREE.Scene();
 modalScene.rotation.y = Math.PI;
 
 //LIGHT
-const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.5);
-hemiLight.position.set(0, 0, 0);
-imgScene.add(hemiLight);
-modalScene.add(hemiLight.clone());
+const ambiLight = new THREE.AmbientLight(0xffffff, 0.8);
+ambiLight.position.set(0, 0, 0);
+imgScene.add(ambiLight);
+modalScene.add(ambiLight.clone());
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+const dirLight = new THREE.DirectionalLight(0xffffff, 0.2);
 dirLight.position.set(64, 64, -64);
 imgScene.add(dirLight);
 modalScene.add(dirLight.clone());
