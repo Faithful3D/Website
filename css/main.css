@@ -54,8 +54,20 @@ p {
 .modal-footer {
   border-top: 1px solid #2D2E32;
 }
-h2, h5 {
+h2, h4, h5 {
   font-weight: 300;
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+  }
 }
 
 /* Classes for images next to text */
@@ -116,11 +128,11 @@ h2, h5 {
 .custom img {
   height: auto;
 }
-.card {
+.carousel .card {
   cursor: pointer;
   transition-duration:.3s;
 }
-.card:hover {
+.carousel .card:hover {
   box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5)
 }
 @media (min-width: 768px) {
