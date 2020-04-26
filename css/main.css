@@ -63,15 +63,11 @@ h2, h4, h5 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .flex-container > .card {
   margin: 15px auto;
-}
-@media (min-width: 992px) {
-  .flex-container {
-    flex-direction: row;
-  }
 }
 
 /* Classes for images next to text */
