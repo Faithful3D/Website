@@ -5,3 +5,4 @@ This is the official repository of the Faithful 3D Website. It is build using Je
 - Bootstrap
 - jQuery
 - Three.js
+- Chart.js
