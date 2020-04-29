@@ -10,13 +10,14 @@ layout: default
   <a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
 </p>
 
-<hr>
-
 {% if page.text %}
+  <br>
   <p align="justify">
     {{ page.text }}
   </p>
 {% endif %}
+
+<hr>
 
 <h2>Added</h2>
 {% for item in page.added %}
