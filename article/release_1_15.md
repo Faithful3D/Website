@@ -8,7 +8,7 @@ date: Dec 11, 2019
 author: Juknum
 
 imgURL: ../image/release/release_1_15.jpg
-text:
+
 added:
   - Blocks:
     - Sugar Cane
