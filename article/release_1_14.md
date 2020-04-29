@@ -2,6 +2,7 @@
 title: Release 1.14
 separatedTitle: Release 1.14
 description: 1.14 Changelog
+comments: true
 
 imgURL: ../image/release/release_1_14.jpg
 added:

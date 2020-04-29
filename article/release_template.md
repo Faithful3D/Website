@@ -2,6 +2,7 @@
 title: Release x
 separatedTitle: Release x
 description: x Changelog
+comments: true
 
 imgURL: x
 added:

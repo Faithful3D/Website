@@ -2,6 +2,7 @@
 title: Release 1.15
 separatedTitle: Release 1.15
 description: 1.15 Changelog
+comments: true
 
 imgURL: ../image/release/release_1_15.jpg
 added:

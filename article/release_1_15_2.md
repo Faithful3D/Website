@@ -2,6 +2,7 @@
 title: Release 1.15.2
 separatedTitle: Release 1.15.2
 description: 1.15.2 Changelog
+comments: true
 
 imgURL: ../image/release/release_1_15_2.jpg
 added:
