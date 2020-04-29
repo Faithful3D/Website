@@ -4,6 +4,7 @@ separatedTitle: Release 1.14
 description: 1.14 Changelog
 comments: true
 id: 1.14
+date: Nov 11, 2019
 
 imgURL: ../image/release/release_1_14.jpg
 added:

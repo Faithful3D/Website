@@ -4,6 +4,7 @@ separatedTitle: Release 20w17a
 description: 20w17a Changelog
 comments: true
 id: 20w17a
+date: Apr 22, 2020
 
 imgURL: ../image/release/release_20w17a.jpg
 text: Congrats and Happy Birthday everyone! We are about to reach 30K downloads! The pack will be 1 year old within 2 days!
