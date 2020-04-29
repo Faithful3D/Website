@@ -8,7 +8,7 @@ date: Feb 8, 2020
 author: Juknum
 
 imgURL: ../image/release/release_1_15_2.jpg
-text: empty
+text:
 added:
   - Blocks:
     - Cactus
