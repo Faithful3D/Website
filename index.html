@@ -86,7 +86,7 @@ description: There it is! The official Website made by hand!
 <hr>
 
 {% for article in site.pages %}
-  {% if {{ article.path }} contain "article" %}
+  {% if "{{ article.path }}" contain "article" %}
     <h2>{{ article.title }}</h2>
   {% endif %}
 {% endfor %}
