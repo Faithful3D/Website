@@ -31,6 +31,6 @@ cards:
     imgAlt: Logo
     title: Sublime Text
     text: Text editing software used by Juknum.
-    btnURL: hhttps://www.sublimetext.com/
+    btnURL: https://www.sublimetext.com/
     btnText: Official Website
 ---
