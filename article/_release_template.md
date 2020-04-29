@@ -1,11 +1,14 @@
 ---
-title: Release x
-separatedTitle: Release x
-description: x Changelog
-comments: false
-id: 1.2.5
+title: Release 1.14
+separatedTitle: Release 1.14
+description: 1.14 Changelog
+comments: true
+id: 1.14
+date: Nov 11, 2019
+author: x
 
 imgURL: x
+text: x
 added:
   - Blocks:
     - x

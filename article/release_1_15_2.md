@@ -5,8 +5,10 @@ description: 1.15.2 Changelog
 comments: true
 id: 1.15.2
 date: Feb 8, 2020
+author: Juknum
 
 imgURL: ../image/release/release_1_15_2.jpg
+text:
 added:
   - Blocks:
     - Cactus

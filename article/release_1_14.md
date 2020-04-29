@@ -5,8 +5,10 @@ description: 1.14 Changelog
 comments: true
 id: 1.14
 date: Nov 11, 2019
+author: Juknum
 
 imgURL: ../image/release/release_1_14.jpg
+text:
 added:
   - Blocks:
     - Blast Furnace

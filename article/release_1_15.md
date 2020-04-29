@@ -5,8 +5,10 @@ description: 1.15 Changelog
 comments: true
 id: 1.15
 date: Dec 11, 2019
+author: Juknum
 
 imgURL: ../image/release/release_1_15.jpg
+text:
 added:
   - Blocks:
     - Sugar Cane

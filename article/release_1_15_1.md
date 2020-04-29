@@ -5,8 +5,10 @@ description: 1.15.1 Changelog
 comments: true
 id: 1.15.1
 date: Dec 25, 2019
+author: Juknum
 
 imgURL: ../image/release/release_1_15_1.jpg
+text:
 added:
   - Blocks:
     - Redstone Lamp @BubMiner
