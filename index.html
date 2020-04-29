@@ -85,9 +85,10 @@ description: There it is! The official Website made by hand!
 
 <hr>
 
-{% for article in site.pages %}
+{% assign sorted = site.pages | reverse %}
+{% for article in sorted %}
   {% if article.path contains "article/" %}
-    <h2 style="display:none;">{{ article.path }}</h2>
+    <h2>{{ article.title }}</h2>
   {% endif %}
 {% endfor %}
 
