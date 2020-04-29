@@ -4,7 +4,6 @@ separatedTitle: Release 1.15.1
 description: 1.15.1 Changelog
 comments: true
 id: 1.15.1
-author: Juknum
 
 imgURL: ../image/release/release_1_15_1.jpg
 added:

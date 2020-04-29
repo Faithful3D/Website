@@ -85,17 +85,17 @@ description: There it is! The official Website made by hand!
 
 <hr>
 
-{% for post in site.posts %}
-<img src="{{ post.imgURL }}" alt="Minecraft Screenshot {{ post.id }}" class="links-image">
+{% for page in page.article %}
+<img src="{{ page.imgURL }}" alt="Minecraft Screenshot {{ page.id }}" class="links-image">
 <div class="links-content">
-  <h2>Release {{ post.id }}</h2>
+  <h2>Release {{ page.id }}</h2>
   <p>
-    for {{ post.id }}, {{ post.date }} -
+    for {{ page.id }}, {{ page.date }} -
     <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="">
-    <a href="{{ post.URL }}#disqus_thread" data-disqus-identifier="{{ post.id }}"></a>
+    <a href="{{ page.URL }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
   </p>
   <p>
-    <a class="btn btn-primary" href="{{ post.URL }}">Read</a>
+    <a class="btn btn-primary" href="{{ page.URL }}">Read</a>
   </p>
 </div>
 {% endfor %}

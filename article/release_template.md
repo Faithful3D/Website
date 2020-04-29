@@ -4,7 +4,6 @@ separatedTitle: Release x
 description: x Changelog
 comments: false
 id: 1.2.5
-author: username
 
 imgURL: x
 added:

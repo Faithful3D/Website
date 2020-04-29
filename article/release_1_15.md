@@ -4,7 +4,6 @@ separatedTitle: Release 1.15
 description: 1.15 Changelog
 comments: true
 id: 1.15
-author: Juknum
 
 imgURL: ../image/release/release_1_15.jpg
 added:

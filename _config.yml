@@ -6,6 +6,6 @@ defaults:
     values:
       layout: "default"
   - scope:
-      path: "_post"
+      path: "article"
     values:
-      layout: "post"
+      layout: "article"

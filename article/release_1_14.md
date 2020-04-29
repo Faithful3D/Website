@@ -4,7 +4,6 @@ separatedTitle: Release 1.14
 description: 1.14 Changelog
 comments: true
 id: 1.14
-author: Juknum
 
 imgURL: ../image/release/release_1_14.jpg
 added:
