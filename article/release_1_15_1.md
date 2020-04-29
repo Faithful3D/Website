@@ -3,6 +3,7 @@ title: Release 1.15.1
 separatedTitle: Release 1.15.1
 description: 1.15.1 Changelog
 comments: true
+id: 1.15.1
 
 imgURL: ../image/release/release_1_15_1.jpg
 added:

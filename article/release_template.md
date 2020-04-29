@@ -2,7 +2,8 @@
 title: Release x
 separatedTitle: Release x
 description: x Changelog
-comments: true
+comments: false
+id: 1.2.5
 
 imgURL: x
 added:
@@ -10,6 +11,8 @@ added:
     - x
   - Items:
     - x
+  - Entities:
+  	- x
 changed:
   - x
 removed:
