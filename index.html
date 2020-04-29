@@ -85,6 +85,21 @@ description: There it is! The official Website made by hand!
 
 <hr>
 
+{% for article in page.article %}
+<img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
+<div class="links-content">
+  <h2>Release {{ article.id }}</h2>
+  <p>
+    for {{ article.id }}, {{ article.date }} -
+    <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="">
+    <a href="{{ article.URL }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+  </p>
+  <p>
+    <a class="btn btn-primary" href="{{ article.URL }}">Read</a>
+  </p>
+</div>
+{% endfor %}
+
 <img src="./image/release/release_20w17a.jpg" alt="Minecraft Screenshot 20w17a" class="links-image">
 <div class="links-content">
   <h2>Release 20w17a</h2>
