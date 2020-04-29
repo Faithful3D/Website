@@ -8,7 +8,7 @@ date: Nov 11, 2019
 author: x
 
 imgURL: x
-text: remove me if empty
+text: x
 added:
   - Blocks:
     - x
