@@ -5,6 +5,8 @@ layout: default
 <hr>
 <p align="justify">
 	{{ page.text }}
+	<br>
+	{{ page.date | date_to_string }} - {{ page.author }}
 </p>
 <h2>Added</h2>
 {% for item in page.added %}
