@@ -93,12 +93,13 @@ description: There it is! The official Website made by hand!
       <h2>Release {{ article.id }}</h2>
       <p>
         for {{ article.id }}, {{ article.date }} -
-        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="">
-        <a href="{{ article.URL }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
       </p>
       <p>
         {{ article.description }}
-        <a class="btn btn-primary" href="{{ article.URL }}">Read</a>
+        <br>
+        <a class="btn btn-primary" href="{{ article.url }}">Read</a>
       </p>
     </div>
 
