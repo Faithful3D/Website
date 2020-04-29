@@ -8,7 +8,7 @@ date: Dec 25, 2019
 author: Juknum
 
 imgURL: ../image/release/release_1_15_1.jpg
-text:
+text: empty
 added:
   - Blocks:
     - Redstone Lamp @BubMiner
