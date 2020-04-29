@@ -97,7 +97,7 @@ description: There it is! The official Website made by hand!
         <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
       </p>
       <p>
-        {% if "{{ article.text }}" != "" %}
+        {% if {{ article.text }} != "" %}
           {{ article.text }}
           <hr>
         {% endif %}
