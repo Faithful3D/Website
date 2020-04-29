@@ -1,0 +1,36 @@
+---
+layout: cards
+title: Software
+separatedTitle: Soft&shy;ware
+description: Here you can find the software we use to create Faithful 3D!
+
+cards:
+  - 1:
+    imgURL: $site.prefix/image/software/cubik.jpg
+    imgAlt: Logo
+    title: Cubik Studio
+    text: Modeling software used in the past by Juknum.
+    btnURL: https://cubik.studio/
+    btnText: Official Website
+  - 2:
+    imgURL: $site.prefix/image/software/blockbench.jpg
+    imgAlt: Logo
+    title: Blockbench
+    text: Modeling software used by Progical, Juknum & Howler.
+    btnURL: https://blockbench.net/
+    btnText: Official Website
+  - 3:
+    imgURL: $site.prefix/image/software/intellij.jpg
+    imgAlt: Logo
+    title: Intellij IDEA
+    text: Text editing software used by Howler.
+    btnURL: https://www.jetbrains.com/idea/
+    btnText: Official Website
+  - 4:
+    imgURL: $site.prefix/image/software/sublime.jpg
+    imgAlt: Logo
+    title: Sublime Text
+    text: Text editing software used by Juknum.
+    btnURL: hhttps://www.sublimetext.com/
+    btnText: Official Website
+---
