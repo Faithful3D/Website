@@ -1,0 +1,36 @@
+---
+layout: cards
+title: Logiciels
+separatedTitle: Logi&shy;ciels
+description: Retrouvez ici tout les logiciels utilisé pour créer le Faithful 3D!
+
+cards:
+  - 1:
+    imgURL: $site.prefix/image/software/cubik.jpg
+    imgAlt: Logo
+    title: Cubik Studio
+    text: Logiciel de modélisation utilisé dans le passé par Juknum.
+    btnURL: https://cubik.studio/
+    btnText: Site Officiel
+  - 2:
+    imgURL: $site.prefix/image/software/blockbench.jpg
+    imgAlt: Logo
+    title: Blockbench
+    text: Logiciel de modélisation utilisé par Progical, Juknum & Howler.
+    btnURL: https://blockbench.net/
+    btnText: Site Officiel
+  - 3:
+    imgURL: $site.prefix/image/software/intellij.jpg
+    imgAlt: Logo
+    title: Intellij IDEA
+    text: Éditeur de texte utilisé par Howler.
+    btnURL: https://www.jetbrains.com/idea/
+    btnText: Site Officiel
+  - 4:
+    imgURL: $site.prefix/image/software/sublime.jpg
+    imgAlt: Logo
+    title: Sublime Text
+    text: Éditeur de texte utilisé par Juknum.
+    btnURL: https://www.sublimetext.com/
+    btnText: Site Officiel
+---

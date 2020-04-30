@@ -1,0 +1,36 @@
+---
+layout: cards
+title: Compatibilité
+separatedTitle: Com&shy;pa&shy;ti&shy;bi&shy;li&shy;té
+description: Retrouvez ici la liste des autres add-ons qui sont compatibles avec le Faithful 3D!
+
+cards:
+  - 1:
+    imgURL: $site.prefix/image/compatibility/alternative.jpg
+    imgAlt: Logo
+    title: Faithful Alternative
+    text: En cours...
+    btnURL: https://www.planetminecraft.com/texture_pack/faithful-alternative-texture/
+    btnText: PlanetMinecraft
+  - 2:
+    imgURL: $site.prefix/image/compatibility/natural.jpg
+    imgAlt: Logo
+    title: NaturalFaithful
+    text: Avec ce pack, le Faithful 3D est déjà inclus pour assurer au mieux la compatibilité.
+    btnURL: https://github.com/Domi04151309/NaturalFaithful
+    btnText: GitHub
+  - 3:
+    imgURL: $site.prefix/image/compatibility/silverfish.jpg
+    imgAlt: Logo
+    title: Silverfish Detector
+    text: Avec ce pack, vous pouvez placer le Faithful 3D par dessus ou en dessous.
+    btnURL: https://www.curseforge.com/minecraft/texture-packs/silverfish-detector
+    btnText: CurseForge
+  - 4:
+    imgURL: $site.prefix/image/compatibility/underwater.jpg
+    imgAlt: Logo
+    title: Underwater
+    text: Avec ce pack, vous pouvez placer le Faithful 3D par dessus ou en dessous.
+    btnURL: https://www.curseforge.com/minecraft/texture-packs/underwater
+    btnText: CurseForge
+---
