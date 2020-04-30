@@ -7,6 +7,7 @@ defaults:
       layout: "default"
   - scope:
       path: "fr"
+    values:
       layout: "fr_default"
   - scope:
       path: "article"
