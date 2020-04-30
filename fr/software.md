@@ -1,5 +1,5 @@
 ---
-layout: cards
+layout: fr_cards
 title: Logiciels
 separatedTitle: Logi&shy;ciels
 description: Retrouvez ici tout les logiciels utilisé pour créer le Faithful 3D!

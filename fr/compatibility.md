@@ -1,5 +1,5 @@
 ---
-layout: cards
+layout: fr_cards
 title: Compatibilité
 separatedTitle: Com&shy;pa&shy;ti&shy;bi&shy;li&shy;té
 description: Retrouvez ici la liste des autres add-ons qui sont compatibles avec le Faithful 3D!

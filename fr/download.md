@@ -1,5 +1,5 @@
 ---
-layout: cards
+layout: fr_cards
 title: Téléchargement
 separatedTitle: Téléch&shy;argement
 description: Retrouvez ici toute les versions du Faithful 3D!

@@ -1,5 +1,5 @@
 ---
-layout: cards
+layout: fr_cards
 title: Liens
 separatedTitle: Liens
 description: Retrouvez ici tout les liens en rapport avec notre projet!
