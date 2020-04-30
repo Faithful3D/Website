@@ -8,7 +8,7 @@ layout: default
   <p>
     {{ item.text | replace: '$site.prefix', site.prefix }}
   </p>
-  <a href="{{ item.btnURL | replace: '$site.prefix', site.prefix  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>
+  {% if item.btnURL %}<a href="{{ item.btnURL | replace: '$site.prefix', site.prefix  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>{% endif %}
 </div>
 <hr>
 {% endfor %}
