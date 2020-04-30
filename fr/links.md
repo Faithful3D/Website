@@ -30,7 +30,7 @@ cards:
     imgURL: $site.prefix/image/links/twitter.jpg
     imgAlt: Twitter Logo
     title: Faithful sur Twitter
-    text: Partenaire officiel de Minecraft. <a href="https://twitter.com/search?q=%23Faithful">#Faithful</a> Créé par <a href="https://twitter.com/xMrVizzy">@xMrVizzy</a>.
+    text: Partenaire officiel de Minecraft. <a href="https://twitter.com/search?q=%23Faithful">#Faithful</a> créé par <a href="https://twitter.com/xMrVizzy">@xMrVizzy</a>.
     btnURL: https://twitter.com/faithfulx32
     btnText: Lien
 ---
