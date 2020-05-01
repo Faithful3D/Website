@@ -87,7 +87,7 @@ description: There it is! The official Website made by hand!
 
 {% assign sorted = site.pages | reverse %}
 {% for article in sorted %}
-  {% if article.path contains "article/" %}
+  {% if article.url contains "article" %}
     <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
     <div class="links-content">
       <h2>Release {{ article.id }}</h2>
