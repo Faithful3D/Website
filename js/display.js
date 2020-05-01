@@ -118,236 +118,236 @@ const inputArray = [
   // Tool models slide 1
   {
     img: document.getElementById("sword"),
-    model: "gltf/tools_and_weapons/netherite_sword.gltf"
+    model: "/gltf/tools_and_weapons/netherite_sword.gltf"
   },
   {
     img: document.getElementById("pickaxe"),
-    model: "gltf/tools_and_weapons/netherite_pickaxe.gltf"
+    model: "/gltf/tools_and_weapons/netherite_pickaxe.gltf"
   },
   {
     img: document.getElementById("shovel"),
-    model: "gltf/tools_and_weapons/netherite_shovel.gltf"
+    model: "/gltf/tools_and_weapons/netherite_shovel.gltf"
   },
   {
     img: document.getElementById("axe"),
-    model: "gltf/tools_and_weapons/netherite_axe.gltf"
+    model: "/gltf/tools_and_weapons/netherite_axe.gltf"
   },
   // Tool models slide 2
   {
     img: document.getElementById("hoe"),
-    model: "gltf/tools_and_weapons/netherite_hoe.gltf"
+    model: "/gltf/tools_and_weapons/netherite_hoe.gltf"
   },
   {
     img: document.getElementById("bow"),
-    model: "gltf/tools_and_weapons/bow_pulling_2.gltf"
+    model: "/gltf/tools_and_weapons/bow_pulling_2.gltf"
   },
   {
     img: document.getElementById("crossbow"),
-    model: "gltf/tools_and_weapons/crossbow_arrow.gltf"
+    model: "/gltf/tools_and_weapons/crossbow_arrow.gltf"
   },
   {
     img: document.getElementById("flint_and_steel"),
-    model: "gltf/tools_and_weapons/flint_and_steel.gltf"
+    model: "/gltf/tools_and_weapons/flint_and_steel.gltf"
   },
   // Redstone slide 1
   {
     img: document.getElementById("redstone_torch"),
-    model: "gltf/redstone/redstone_torch.gltf"
+    model: "/gltf/redstone/redstone_torch.gltf"
   },
   {
     img: document.getElementById("piston"),
-    model: "gltf/redstone/piston.gltf"
+    model: "/gltf/redstone/piston.gltf"
   },
   {
     img: document.getElementById("sticky_piston"),
-    model: "gltf/redstone/sticky_piston.gltf"
+    model: "/gltf/redstone/sticky_piston.gltf"
   },
   {
     img: document.getElementById("redstone_lamp"),
-    model: "gltf/redstone/redstone_lamp_on.gltf"
+    model: "/gltf/redstone/redstone_lamp_on.gltf"
   },
   // Redstone slide 2
   {
     img: document.getElementById("rail"),
-    model: "gltf/redstone/rail.gltf"
+    model: "/gltf/redstone/rail.gltf"
   },
   {
     img: document.getElementById("activator_rail"),
-    model: "gltf/redstone/activator_rail.gltf"
+    model: "/gltf/redstone/activator_rail.gltf"
   },
   {
     img: document.getElementById("powered_rail"),
-    model: "gltf/redstone/powered_rail.gltf"
+    model: "/gltf/redstone/powered_rail.gltf"
   },
   {
     img: document.getElementById("detector_rail"),
-    model: "gltf/redstone/detector_rail.gltf"
+    model: "/gltf/redstone/detector_rail.gltf"
   },
   // Redstone slide 3
   {
     img: document.getElementById("dispenser"),
-    model: "gltf/redstone/dispenser.gltf"
+    model: "/gltf/redstone/dispenser.gltf"
   },
   {
     img: document.getElementById("dropper"),
-    model: "gltf/redstone/dropper.gltf"
+    model: "/gltf/redstone/dropper.gltf"
   },
   {
     img: document.getElementById("redstone_dust_dot"),
-    model: "gltf/redstone/redstone_dust_dot.gltf"
+    model: "/gltf/redstone/redstone_dust_dot.gltf"
   },
   {
     img: document.getElementById("tripwire_hook_attached_on"),
-    model: "gltf/redstone/tripwire_hook_attached_on.gltf"
+    model: "/gltf/redstone/tripwire_hook_attached_on.gltf"
   },
   // Farming slide 1
   {
     img: document.getElementById("beehive_honey"),
-    model: "gltf/farming/beehive_honey.gltf"
+    model: "/gltf/farming/beehive_honey.gltf"
   },
   {
     img: document.getElementById("bee_nest_honey"),
-    model: "gltf/farming/bee_nest_honey.gltf"
+    model: "/gltf/farming/bee_nest_honey.gltf"
   },
   {
     img: document.getElementById("hay_block"),
-    model: "gltf/farming/hay_block.gltf"
+    model: "/gltf/farming/hay_block.gltf"
   },
   {
     img: document.getElementById("dried_kelp_block"),
-    model: "gltf/farming/dried_kelp_block.gltf"
+    model: "/gltf/farming/dried_kelp_block.gltf"
   },
   // Farming slide 2
   {
     img: document.getElementById("beetroots_stage3"),
-    model: "gltf/farming/beetroots_stage3.gltf"
+    model: "/gltf/farming/beetroots_stage3.gltf"
   },
   {
     img: document.getElementById("carrots_stage3"),
-    model: "gltf/farming/carrots_stage3.gltf"
+    model: "/gltf/farming/carrots_stage3.gltf"
   },
   {
     img: document.getElementById("potatoes_stage3"),
-    model: "gltf/farming/potatoes_stage3.gltf"
+    model: "/gltf/farming/potatoes_stage3.gltf"
   },
   {
     img: document.getElementById("cocoa_stage2"),
-    model: "gltf/farming/cocoa_stage2.gltf"
+    model: "/gltf/farming/cocoa_stage2.gltf"
   },
   // Farming slide 3
   {
     img: document.getElementById("brown_mushroom"),
-    model: "gltf/farming/brown_mushroom.gltf"
+    model: "/gltf/farming/brown_mushroom.gltf"
   },
   {
     img: document.getElementById("red_mushroom"),
-    model: "gltf/farming/red_mushroom.gltf"
+    model: "/gltf/farming/red_mushroom.gltf"
   },
   {
     img: document.getElementById("crimson_fungus"),
-    model: "gltf/farming/crimson_fungus.gltf"
+    model: "/gltf/farming/crimson_fungus.gltf"
   },
   {
     img: document.getElementById("warped_fungus"),
-    model: "gltf/farming/warped_fungus.gltf"
+    model: "/gltf/farming/warped_fungus.gltf"
   },
   // Farming slide 4
   {
     img: document.getElementById("cactus"),
-    model: "gltf/farming/cactus.gltf"
+    model: "/gltf/farming/cactus.gltf"
   },
   {
     img: document.getElementById("pumpkin"),
-    model: "gltf/farming/pumpkin.gltf"
+    model: "/gltf/farming/pumpkin.gltf"
   },
   {
     img: document.getElementById("carved_pumpkin"),
-    model: "gltf/farming/carved_pumpkin.gltf"
+    model: "/gltf/farming/carved_pumpkin.gltf"
   },
   {
     img: document.getElementById("jack_o_lantern"),
-    model: "gltf/farming/jack_o_lantern.gltf"
+    model: "/gltf/farming/jack_o_lantern.gltf"
   },
   // Farming slide 5
   {
     img: document.getElementById("farmland"),
-    model: "gltf/farming/farmland.gltf"
+    model: "/gltf/farming/farmland.gltf"
   },
   {
     img: document.getElementById("lily_pad_1"),
-    model: "gltf/farming/lily_pad_1.gltf"
+    model: "/gltf/farming/lily_pad_1.gltf"
   },
   {
     img: document.getElementById("sugar_cane"),
-    model: "gltf/farming/sugar_cane.gltf"
+    model: "/gltf/farming/sugar_cane.gltf"
   },
   {
     img: document.getElementById("wheat_stage7"),
-    model: "gltf/farming/wheat_stage7.gltf"
+    model: "/gltf/farming/wheat_stage7.gltf"
   },
   // Utilities slide 1
   {
     img: document.getElementById("barrel"),
-    model: "gltf/utilities/barrel.gltf"
+    model: "/gltf/utilities/barrel.gltf"
   },
   {
     img: document.getElementById("blast_furnace_on"),
-    model: "gltf/utilities/blast_furnace_on.gltf"
+    model: "/gltf/utilities/blast_furnace_on.gltf"
   },
   {
     img: document.getElementById("bookshelf"),
-    model: "gltf/utilities/bookshelf.gltf"
+    model: "/gltf/utilities/bookshelf.gltf"
   },
   {
     img: document.getElementById("brewing_stand"),
-    model: "gltf/utilities/brewing_stand.gltf"
+    model: "/gltf/utilities/brewing_stand.gltf"
   },
   // Utilities slide 2
   {
     img: document.getElementById("cartography_table"),
-    model: "gltf/utilities/cartography_table.gltf"
+    model: "/gltf/utilities/cartography_table.gltf"
   },
   {
     img: document.getElementById("composter"),
-    model: "gltf/utilities/composter.gltf"
+    model: "/gltf/utilities/composter.gltf"
   },
   {
     img: document.getElementById("enchanting_table"),
-    model: "gltf/utilities/enchanting_table.gltf"
+    model: "/gltf/utilities/enchanting_table.gltf"
   },
   {
     img: document.getElementById("end_portal_frame_filled"),
-    model: "gltf/utilities/end_portal_frame_filled.gltf"
+    model: "/gltf/utilities/end_portal_frame_filled.gltf"
   },
   // Utilities slide 3
   {
     img: document.getElementById("furnace_on"),
-    model: "gltf/utilities/furnace_on.gltf"
+    model: "/gltf/utilities/furnace_on.gltf"
   },
   {
     img: document.getElementById("lectern"),
-    model: "gltf/utilities/lectern.gltf"
+    model: "/gltf/utilities/lectern.gltf"
   },
   {
     img: document.getElementById("lodestone"),
-    model: "gltf/utilities/lodestone.gltf"
+    model: "/gltf/utilities/lodestone.gltf"
   },
   {
     img: document.getElementById("loom"),
-    model: "gltf/utilities/loom.gltf"
+    model: "/gltf/utilities/loom.gltf"
   },
   // Utilities slide 4
   {
     img: document.getElementById("smoker_on"),
-    model: "gltf/utilities/smoker_on.gltf"
+    model: "/gltf/utilities/smoker_on.gltf"
   },
   {
     img: document.getElementById("spawner"),
-    model: "gltf/utilities/spawner.gltf"
+    model: "/gltf/utilities/spawner.gltf"
   },
   {
     img: document.getElementById("stonecutter"),
-    model: "gltf/utilities/stonecutter.gltf"
+    model: "/gltf/utilities/stonecutter.gltf"
   }
 
 ]
