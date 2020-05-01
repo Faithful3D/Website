@@ -47,7 +47,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = layout.lang | append: '/' %}{% else %}{% assign langURL = '' %}{% endunless %}
+        <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
             <li class="nav-item">
                 <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
             </li>
