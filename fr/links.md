@@ -9,7 +9,7 @@ cards:
     imgURL: $site.prefix/image/links/minecraft.jpg
     imgAlt: Minecraft Screenshot
     title: Site du Faithful
-    text: Site Officiel du Resource pack Faithful, retrouvez là-bas toute ses versions.
+    text: Site officiel du Resource pack Faithful, retrouvez là-bas toute les versions disponibles.
     btnURL: https://faithful.team/
     btnText: Lien
   - 2:
