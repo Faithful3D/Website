@@ -93,27 +93,28 @@
 
     <div class="lang-navbar collapse navbar-collapse" id="collapsibleLangNavbar">
         <ul class="navbar-nav">
+            {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/es'  %}
             <li class="nav-item">
-                <a class="nav-link" href="/de{{ page.url | remove: '.html' }}">
-                  <img src="{{site.prefix}}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
+                <a class="nav-link" href="/de{{ link }}">
+                  <img src="{{ site.prefix }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
                   DE
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/es' }}">
-                  <img src="{{site.prefix}}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
+                <a class="nav-link" href="{{ link }}">
+                  <img src="{{ site.prefix }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
                   EN
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/es{{ page.url | remove: '.html' }}">
-                  <img src="{{site.prefix}}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
+                <a class="nav-link" href="/es{{ link }}">
+                  <img src="{{ site.prefix }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
                   ES
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/fr{{ page.url | remove: '.html' }}">
-                  <img src="{{site.prefix}}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
+                <a class="nav-link" href="/fr{{ link }}">
+                  <img src="{{ site.prefix }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
                   FR
                 </a>
             </li>
