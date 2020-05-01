@@ -1,8 +1,8 @@
 ---
 layout: fr_cards
-title: Download
-separatedTitle: Down&shy;load
-description: Here you can find all versions of Faithful 3D!
+title: Téléchargements
+separatedTitle: Téléchar&shy;gements
+description: Retrouvez ici toute les versions du Faithful 3D!
 
 cards:
   - 1:
