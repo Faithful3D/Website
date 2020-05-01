@@ -6,8 +6,9 @@ comments: true
 id: 1.14
 date: Nov 11, 2019
 author: Juknum
+release: true
 
-imgURL: ../image/release/release_1_14.jpg
+imgURL: ../image/article/release_1_14.jpg
 text:
 added:
   - Blocks:

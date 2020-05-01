@@ -6,8 +6,9 @@ comments: true
 id: 1.15.1
 date: Dec 25, 2019
 author: Juknum
+release: true
 
-imgURL: ../image/release/release_1_15_1.jpg
+imgURL: ../image/article/release_1_15_1.jpg
 text:
 added:
   - Blocks:

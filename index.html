@@ -92,7 +92,12 @@ description: There it is! The official Website made by hand!
     <div class="links-content">
       <h2>Release {{ article.id }}</h2>
       <p>
-        for {{ article.id }}, {{ article.date }}, {{ article.author }} -
+        {% if article.release = true %}
+          for {{ article.id }}, {{ article.date }}, {{ article.author }} -
+        {% endif %}
+        {% if article.release = false %}
+          {{ article.date }}, {{ article.author }} -
+        {% endif %}
         <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
         <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
       </p>

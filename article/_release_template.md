@@ -6,6 +6,7 @@ comments: true
 id: 1.14
 date: Nov 11, 2019
 author: x
+release: true
 
 imgURL: x
 text: x

@@ -6,8 +6,9 @@ comments: true
 id: 20w17a
 date: Apr 22, 2020
 author: Juknum
+release: true
 
-imgURL: ../image/release/release_20w17a.jpg
+imgURL: ../image/article/release_20w17a.jpg
 text: Congrats and Happy Birthday everyone! We are about to reach 30K downloads! The pack will be 1 year old within 2 days!
 added:
   - Blocks:

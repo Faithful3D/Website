@@ -6,8 +6,9 @@ comments: true
 id: 1.15.2
 date: Feb 8, 2020
 author: Juknum
+release: true
 
-imgURL: ../image/release/release_1_15_2.jpg
+imgURL: ../image/article/release_1_15_2.jpg
 text:
 added:
   - Blocks:
