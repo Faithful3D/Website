@@ -66,6 +66,7 @@ cards:
       </p>
   - 7:
     raw: |
+      <script>const dateArray = ['November','December','January','Februar','March','April','May']</script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
       <script src="$site.prefix/js/download.js" defer></script>
 ---

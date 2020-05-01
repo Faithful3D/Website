@@ -1,9 +1,15 @@
-const ctx = document.getElementById('chart_download').getContext('2d');
+var dates;
+if (dateArray) {
+  dates = dateArray;
+} else {
+  dates = ['11','12','1','2','3','4','5'];
+  console.log("No translation of months available. Falling back to numbers.");
+}
 
-const myChart = new Chart(ctx, {
+new Chart(document.getElementById('chart_download').getContext('2d'), {
   type: 'bar',
   data: {
-    labels: ['November','December','January','Februar','March','April','May'],
+    labels: dates,
     datasets: [{
       label: 'Total',
       data: [414,4522,8527,14525,22753],
