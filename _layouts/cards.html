@@ -8,7 +8,7 @@ layout: default
 <div class="links-content">
   <h2>{{ item.title }}</h2>
   {% if item.rawText %}{{ item.rawText | replace: '$site.prefix', site.prefix }}
-  {% else %}<p>
+  {% else %}<p align="justify">
     {{ item.text | replace: '$site.prefix', site.prefix }}
   </p>{% endif %}{% if item.btnURL %}
   <a href="{{ item.btnURL | replace: '$site.prefix', site.prefix  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>{% endif %}
