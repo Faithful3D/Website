@@ -1,7 +1,4 @@
----
-layout: fr_default
----
-{% for item in page.cards %}{% if item.raw %}
+{% for item in include.cards %}{% if item.raw %}
 {{ item.raw | replace: '$site.prefix', site.prefix }}
 {% else %}
 <img src="{{ item.imgURL | replace: '$site.prefix', site.prefix }}" alt="{{ item.imgAlt }}" class="links-image">

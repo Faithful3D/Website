@@ -1,5 +1,4 @@
 ---
-layout: fr_cards
 title: 404
 description: Oups
 
@@ -10,3 +9,4 @@ cards:
     title: Oups, Quelquechose s'est mal passé
     text: Malheureusement, la page que vous avez demandée n'existe pas!<br>Vérifiez l'orthographe ou accédez à la <a href="$site.prefix/fr/">page d'accueil</a> pour trouver ce que vous chercher.
 ---
+{% include cards.html cards=page.cards %}

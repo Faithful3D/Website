@@ -1,5 +1,4 @@
 ---
-layout: cards
 title: 404
 description: Oops
 permalink: /404.html
@@ -11,3 +10,4 @@ cards:
     title: Ooops, Something Went Wrong
     text: Unfortunately the page you requested doesn't exist!<br>Check the spelling or go to the <a href="$site.prefix/">Mainpage</a> to find what you were looking for.
 ---
+{% include cards.html cards=page.cards %}
