@@ -6,6 +6,10 @@ defaults:
     values:
       layout: "default"
   - scope:
+      path: "de"
+    values:
+      layout: "de_default"
+  - scope:
       path: "fr"
     values:
       layout: "fr_default"
