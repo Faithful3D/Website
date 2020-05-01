@@ -1,8 +1,8 @@
 ---
-layout: cards
-title: Download
-separatedTitle: Down&shy;load
-description: Here you can find all versions of Faithful 3D!
+layout: fr_cards
+title: Téléchargement
+separatedTitle: Téléch&shy;argement
+description: Retrouvez ici toute les versions du Faithful 3D!
 
 cards:
   - 1:
@@ -10,10 +10,10 @@ cards:
   - 2:
     imgURL: $site.prefix/image/home/github_banner.jpg
     imgAlt: GitHub Banner
-    title: Latest
+    title: Dernière version
     rawText: |
       <p align="justify">
-        In order to enjoy all that is presented on this website, it is better to download the GitHub version. Note that some older versions will no longer be compatible with newer versions. You'll have to complain to Mojang ;)
+        Afin d'obtenir tout ce qui est présenté sur le site, il est conseillé de télécharger la version GitHub. Noter aussi que de vielles versions ne seront plus compatibles avec celle-ci. Allez vous plaindre à Mojang ;)
       </p>
       <p align="right">
         Juknum
@@ -59,7 +59,7 @@ cards:
     title: 1.8 - 1.13
     rawText: |
       <p align="justify">
-         All the versions below have the same content as 1.14. They will not be updated anymore.
+		     Toutes les versions ci-dessous ont le même contenu que la version 1.14. Elles ne seront plus mis à jour.
       </p>
       <p>
         [WIP]
@@ -67,5 +67,5 @@ cards:
   - 7:
     raw: |
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script src="$site.prefix/js/download.js" defer></script>
+      <script src="$site.prefix/js/fr_download.js" defer></script>
 ---
