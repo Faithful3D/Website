@@ -95,25 +95,26 @@
         <ul class="navbar-nav">
             {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/es'  %}
             <li class="nav-item">
-                <a class="nav-link" href="/de{{ link }}">
+                <a class="nav-link disabled" href="/de{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
                   DE
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ link }}">
+                <!-- disabled because it's already in english -->
+                <a class="nav-link disabled" href="{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
                   EN
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/es{{ link }}">
+                <a class="nav-link disabled" href="/es{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
                   ES
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/fr{{ link }}">
+                <a class="nav-link " href="/fr{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
                   FR
                 </a>
