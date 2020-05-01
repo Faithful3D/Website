@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
     <meta charset="utf-8">
     <title>Faithful 3D - {{ page.title }}</title>
@@ -47,30 +47,30 @@
     </button>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav">{% if lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = page.lang | append: '/' %}{% endif %}
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/">Home</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ page.navHome | default: 'Home' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/download">Download</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ page.navDownload | default: 'Download' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/display">Display</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ page.navDisplay | default: 'Display' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/compatibility">Compatibility</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ page.navCompatibility | default: 'Compatibility' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/credits">Credits</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ page.navCredits | default: 'Credits' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/team">Team</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ page.navTeam | default: 'Team' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/software">Software</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ page.navSoftware | default: 'Software' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/links">Links</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ page.navLinks | default: 'Links' }}</a>
             </li>
         </ul>
     </div>
@@ -84,7 +84,7 @@
 <nav class="lang-navbar navbar navbar-expand-sm navbar-dark">
     <span class="navbar-brand">
         <img src="{{site.prefix}}/image/lang/lang.svg" height="30" class="d-inline-block" alt="">
-        Language
+        {{ page.langLbl | default: 'Language' }}
     </span>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleLangNavbar" aria-label="Menu">
@@ -101,8 +101,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <!-- disabled because it's already in english -->
-                <a class="nav-link disabled" href="{{ link }}">
+                <a class="nav-link" href="{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
                   EN
                 </a>
@@ -125,11 +124,11 @@
 
 <footer>
   <p>
-    <strong>Join us on Discord: <a href="https://discord.gg/GJzgeY7">https://discord.gg/GJzgeY7</a></strong><br>
+    <strong>{{ page.footerDiscord | default: 'Join us on Discord:' }} <a href="https://discord.gg/GJzgeY7">https://discord.gg/GJzgeY7</a></strong><br>
     <em>
-        Addon made by <a href="https://github.com/Progical">Progical</a>, <a href="https://github.com/HowlerMC">Howler</a> & <a href="https://github.com/Juknum">Juknum</a>
+        {{ page.footerAddon | default: 'Addon made by' }} <a href="https://github.com/Progical">Progical</a>, <a href="https://github.com/HowlerMC">Howler</a> & <a href="https://github.com/Juknum">Juknum</a>
         <br>
-        Website made by <a href="https://github.com/Domi04151309">Domi04151309</a> & <a href="https://github.com/Juknum">Juknum</a>
+        {{ page.footerWebsite | default: 'Website made by' }} <a href="https://github.com/Domi04151309">Domi04151309</a> & <a href="https://github.com/Juknum">Juknum</a>
     </em>
   </p>
 </footer>
