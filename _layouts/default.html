@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'en' }}">
+<html lang="{{ layout.lang | default: 'en' }}">
 <head>
     <meta charset="utf-8">
     <title>Faithful 3D - {{ page.title }}</title>
@@ -47,30 +47,30 @@
     </button>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">{% unless lang or lang == 'en' %}{% assign langURL = page.lang | append: '/' %}{% else %}{% assign langURL = '' %}{% endunless %}
+        <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = layout.lang | append: '/' %}{% else %}{% assign langURL = '' %}{% endunless %}
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ page.navHome | default: 'Home' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ page.navDownload | default: 'Download' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ page.navDisplay | default: 'Display' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ page.navCompatibility | default: 'Compatibility' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ page.navCredits | default: 'Credits' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ page.navTeam | default: 'Team' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ page.navSoftware | default: 'Software' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ page.navLinks | default: 'Links' }}</a>
+                <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
             </li>
         </ul>
     </div>
@@ -124,11 +124,11 @@
 
 <footer>
   <p>
-    <strong>{{ page.footerDiscord | default: 'Join us on Discord:' }} <a href="https://discord.gg/GJzgeY7">https://discord.gg/GJzgeY7</a></strong><br>
+    <strong>{{ layout.footerDiscord | default: 'Join us on Discord:' }} <a href="https://discord.gg/GJzgeY7">https://discord.gg/GJzgeY7</a></strong><br>
     <em>
-        {{ page.footerAddon | default: 'Addon made by' }} <a href="https://github.com/Progical">Progical</a>, <a href="https://github.com/HowlerMC">Howler</a> & <a href="https://github.com/Juknum">Juknum</a>
+        {{ layout.footerAddon | default: 'Addon made by' }} <a href="https://github.com/Progical">Progical</a>, <a href="https://github.com/HowlerMC">Howler</a> & <a href="https://github.com/Juknum">Juknum</a>
         <br>
-        {{ page.footerWebsite | default: 'Website made by' }} <a href="https://github.com/Domi04151309">Domi04151309</a> & <a href="https://github.com/Juknum">Juknum</a>
+        {{ layout.footerWebsite | default: 'Website made by' }} <a href="https://github.com/Domi04151309">Domi04151309</a> & <a href="https://github.com/Juknum">Juknum</a>
     </em>
   </p>
 </footer>
