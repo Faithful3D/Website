@@ -67,5 +67,5 @@ cards:
   - 7:
     raw: |
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script src="$site.prefix/js/download.js" defer></script>
+      <script src="$site.prefix/js/fr_download.js" defer></script>
 ---

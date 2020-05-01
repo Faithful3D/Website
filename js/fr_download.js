@@ -3,7 +3,7 @@ const ctx = document.getElementById('chart_download').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['November','December','January','Februar','March','April','May'],
+    labels: ['Novembre','Décembre','Janvier','Février','Mars','Avril','Mai'],
     datasets: [{
       label: 'Total',
       data: [414,4522,8527,14525,22753],
