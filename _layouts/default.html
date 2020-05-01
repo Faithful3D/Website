@@ -95,7 +95,7 @@
         <ul class="navbar-nav">
             {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/es'  %}
             <li class="nav-item">
-                <a class="nav-link disabled" href="/de{{ link }}">
+                <a class="nav-link" href="/de{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
                   DE
                 </a>
