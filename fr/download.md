@@ -13,7 +13,7 @@ cards:
     title: Dernière version
     rawText: |
       <p align="justify">
-      Afin d'obtenir tout ce qui est présenté sur le site, il est conseillé de télécharger la version GitHub. Noter aussi que de vielles versions ne seront plus compatibles avec celle-ci. Allez vous plaindre à Mojang ;)
+        Afin d'obtenir tout ce qui est présenté sur le site, il est conseillé de télécharger la version GitHub. Noter aussi que de vielles versions ne seront plus compatibles avec celle-ci. Allez vous plaindre à Mojang ;)
       </p>
       <p align="right">
         Juknum
@@ -59,7 +59,7 @@ cards:
     title: 1.8 - 1.13
     rawText: |
       <p align="justify">
-		Toutes les versions ci-dessous ont le même contenu que la version 1.14. Elles ne seront plus mis à jour.
+		     Toutes les versions ci-dessous ont le même contenu que la version 1.14. Elles ne seront plus mis à jour.
       </p>
       <p>
         [WIP]
