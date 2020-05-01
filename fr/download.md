@@ -1,5 +1,5 @@
 ---
-layout: cards
+layout: fr_cards
 title: Download
 separatedTitle: Down&shy;load
 description: Here you can find all versions of Faithful 3D!
