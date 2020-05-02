@@ -1,0 +1,89 @@
+<canvas id="hiddenCanvas" style="display: none;"></canvas>
+
+<h2 class="text-center"><em>{{ include.info }}</em></h2>
+<hr>
+
+{% for category in include.display %}
+<img src="{{ category.headerImgURL | replace: '$site.prefix', site.prefix }}" class="header-image" alt="{{ category.headerImgAlt }}">
+<h4 class="text-center mb-3 display-4">{{ category.categoryTitle }}</h4>
+
+<div id="{{ category.first | pop }}" class="custom carousel slide" data-ride="carousel">
+  <ol class="custom carousel-indicators">
+    {% for slide in category.slides %}
+      <li data-target="#carouselTools" data-slide-to="{{ slide.first | pop }}"{% if slide == category.slides.first %} class="active"{% endif %}></li>
+    {% endfor %}
+  </ol>
+  <div class="carousel-inner">
+    {% for slide in category.slides %}
+    <div class="custom carousel-item{% if slide == category.slides.first %} active{% endif %}">
+
+       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model1 | replace: '$site.prefix', site.prefix }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+        <div class="card-body">
+          <h5>{{ slide.name1 | dafault: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author1 | dafault: '&nbsp;' }}</small></p>
+        </div>
+      </div>
+
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model2 | replace: '$site.prefix', site.prefix }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+        <div class="card-body">
+          <h5>{{ slide.name2 | dafault: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author2 | dafault: '&nbsp;' }}</small></p>
+        </div>
+      </div>
+
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model3 | replace: '$site.prefix', site.prefix }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+        <div class="card-body">
+          <h5>{{ slide.name3 | dafault: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author3 | dafault: '&nbsp;' }}</small></p>
+        </div>
+      </div>
+
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model4 | replace: '$site.prefix', site.prefix }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+        <div class="card-body">
+          <h5>{{ slide.name4 | dafault: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author4 | dafault: '&nbsp;' }}</small></p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a class="custom carousel-control-prev" href="#{{ category.first | pop }}" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="custom carousel-control-next" href="#{{ category.first | pop }}" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Modal -->
+<div class="modal fade" id="modelModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">View Model</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          You can rotate the model with your mouse.
+        </p>
+        <canvas id="modalCanvas">
+
+        </canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3d models script -->
+<script type="module" src="/js/display.js"></script>
