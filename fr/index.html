@@ -96,7 +96,7 @@ description: Le voici! Le site officiel fais à la main!
                     {% if article.comments == true %}
                         -
                         <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
-                        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                        <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
                 <p>
@@ -105,7 +105,7 @@ description: Le voici! Le site officiel fais à la main!
                         <br><br>
                     {% endif %}
             
-                    <a class="btn btn-primary" href="{{ article.url }}">Lire</a>
+                    <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lire</a>
                 </p>
             </div>
 
@@ -120,7 +120,7 @@ description: Le voici! Le site officiel fais à la main!
                     {% if article.comments == true %}
                         -
                         <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
-                        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                        <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
                 <p>
@@ -129,7 +129,7 @@ description: Le voici! Le site officiel fais à la main!
                         <br><br>
                     {% endif %}
             
-                    <a class="btn btn-primary" href="{{ article.url }}">Lire</a>
+                    <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lire</a>
                 </p>
             </div>
         {% endif %}
