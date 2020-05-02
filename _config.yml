@@ -8,11 +8,11 @@ defaults:
   - scope:
       path: "de"
     values:
-      layout: "de_default"
+      layout: "default_de"
   - scope:
       path: "fr"
     values:
-      layout: "fr_default"
+      layout: "default_fr"
   - scope:
       path: "article"
     values:
