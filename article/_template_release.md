@@ -13,7 +13,8 @@ date: Nov 11, 2019
 
 imgURL: ../image/article/IMAGE.jpg
 
-short_text: remove this option if empty
+short_text: remove this option if empty (for index)
+long_text: remove this option if empty (for article)
 
 added:
   - Blocks:
