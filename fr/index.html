@@ -44,9 +44,11 @@ description: Le voici! Le site officiel fais à la main!
     <!-- Left and right controls -->
     <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
+        <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
+        <span class="sr-only">Next</span>
     </a>
 
 </div>
@@ -91,8 +93,8 @@ description: Le voici! Le site officiel fais à la main!
             <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
-                <p> 
-                    pour {{ article.version }}, {{ article.date }}, {{ article.author }} 
+                <p>
+                    pour {{ article.version }}, {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
                         <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
@@ -104,7 +106,7 @@ description: Le voici! Le site officiel fais à la main!
                         {{ article.short_text }}
                         <br><br>
                     {% endif %}
-            
+
                     <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lire</a>
                 </p>
             </div>
@@ -115,7 +117,7 @@ description: Le voici! Le site officiel fais à la main!
             <img src="{{ article.imgURL }}" alt="{{ article.title }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
-                <p> 
+                <p>
                     {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
@@ -128,7 +130,7 @@ description: Le voici! Le site officiel fais à la main!
                         {{ article.short_text }}
                         <br><br>
                     {% endif %}
-            
+
                     <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lire</a>
                 </p>
             </div>
