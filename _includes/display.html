@@ -20,32 +20,32 @@
        <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model1 | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
-          <h5>{{ slide.name1 | dafault: '&nbsp;' }}</h5>
-          <p class="card-text"><small class="text-muted">{{ slide.author1 | dafault: '&nbsp;' }}</small></p>
+          <h5>{{ slide.name1 | default: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author1 | default: '&nbsp;' }}</small></p>
         </div>
       </div>
 
       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model2 | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
-          <h5>{{ slide.name2 | dafault: '&nbsp;' }}</h5>
-          <p class="card-text"><small class="text-muted">{{ slide.author2 | dafault: '&nbsp;' }}</small></p>
+          <h5>{{ slide.name2 | default: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author2 | default: '&nbsp;' }}</small></p>
         </div>
       </div>
 
       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model3 | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
-          <h5>{{ slide.name3 | dafault: '&nbsp;' }}</h5>
-          <p class="card-text"><small class="text-muted">{{ slide.author3 | dafault: '&nbsp;' }}</small></p>
+          <h5>{{ slide.name3 | default: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author3 | default: '&nbsp;' }}</small></p>
         </div>
       </div>
 
       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model4 | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
-          <h5>{{ slide.name4 | dafault: '&nbsp;' }}</h5>
-          <p class="card-text"><small class="text-muted">{{ slide.author4 | dafault: '&nbsp;' }}</small></p>
+          <h5>{{ slide.name4 | default: '&nbsp;' }}</h5>
+          <p class="card-text"><small class="text-muted">{{ slide.author4 | default: '&nbsp;' }}</small></p>
         </div>
       </div>
     </div>
@@ -68,18 +68,18 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">{{ include.modalTitle }}</h4>
+        <h4 class="modal-title">{{ include.modalTitle | default: 'View Model' }}</h4>
       </div>
       <div class="modal-body">
         <p>
-          {{ include.modalText }}
+          {{ include.modalText | default: 'You can rotate the model with your mouse.' }}
         </p>
         <canvas id="modalCanvas">
 
         </canvas>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">{{ include.modalBtn }}</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">{{ include.modalBtn | default: 'Close' }}</button>
       </div>
     </div>
   </div>
