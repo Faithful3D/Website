@@ -204,5 +204,7 @@ display:
         name3: Stonecutter
         author3: By Juknum & Howler
         model3: $site.prefix/gltf/utilities/stonecutter.gltf
+modalTitle: View Model
+modalText: You can rotate the model with your mouse.
 ---
-{% include display.html info=page.info display=page.display %}
+{% include display.html info=page.info display=page.display modalTitle=page.modalTitle modalText=page.modalText%}
