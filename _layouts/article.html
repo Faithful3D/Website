@@ -4,7 +4,7 @@ layout: default
 
 <img src="{{ page.imgURL }}" class="img-fluid mb-4 d-block" alt="Minecraft Screenshot {{ page.id }}">
 
-{% if article.release == true %}
+{% if page.release == true %}
 	<p>
 		for {{ page.id }}, {{ page.date }}, {{ page.author }} -
 		<img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
@@ -43,15 +43,15 @@ layout: default
 			<li>{{ item }}</li>
 		{% endfor %}
 	</ul>
-	
+
 	<hr>
 
 	<a class="btn btn-primary btn-block" href="{{ page.downloadURL }}">Download</a>
 {% endif %}
 
-{{ content }}
-
-<hr>
+{% if page.release == false %}
+	{{ content }}
+{% endif %}
 
 {% if page.comments %}
 	<div id="disqus_thread"></div>
