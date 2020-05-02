@@ -117,9 +117,8 @@ window.loadModelToModal = function(model) {
 function generateInputArray() {
   var inputArray = [];
   var object = {};
-  var elements = document.getElementsByClassName("card");
 
-  for (const item of elements) {
+  for (const item of document.getElementsByClassName("card")) {
     object = {
       img: item.getElementsByTagName("IMG")[0],
       model: item.dataset.model
