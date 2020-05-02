@@ -4,52 +4,48 @@ layout: default
 
 <img src="{{ page.imgURL }}" class="img-fluid mb-4 d-block" alt="Minecraft Screenshot {{ page.id }}">
 
-<p>
-  for {{ page.id }}, {{ page.date }}, {{ page.author }} -
-  <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
-  <a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
-</p>
+{% if article.release == true %}
+	<p>
+		for {{ page.id }}, {{ page.date }}, {{ page.author }} -
+		<img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+		<a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
+	</p>
 
-{% if page.text %}
-  <p align="justify">
-    {{ page.text }}
-  </p>
-{% endif %}
+	{% if page.text %}
+		<p align="justify">
+			{{ page.text }}
+		</p>
+	{% endif %}
 
-<hr>
+	<hr>
 
-{% if page.added %}
 	<h2>Added</h2>
+	
 	{% for item in page.added %}
-	<h2><small>{{ item.first | pop}}</h2></small>
-	  <ul>
-	    <li>{{ item.first | shift  | join: '</li><li>' }}</li>
-	  </ul>
-	</li>
+		<h2><small>{{ item.first | pop}}</h2></small>
+		<ul>
+			<li>{{ item.first | shift  | join: '</li><li>' }}</li>
+		</ul>
 	{% endfor %}
-{% endif %}
 
-{% if page.changed %}
 	<h2>Changed</h2>
+	
 	<ul>
-	{% for item in page.changed %}
-	  <li>{{ item }}</li>
-	{% endfor %}
+		{% for item in page.changed %}
+			<li>{{ item }}</li>
+		{% endfor %}
 	</ul>
-{% endif %}
 
-{% if page.removed %}
 	<h2>Removed</h2>
+	
 	<ul>
-	{% for item in page.removed %}
-	  <li>{{ item }}</li>
-	{% endfor %}
+		{% for item in page.removed %}
+			<li>{{ item }}</li>
+		{% endfor %}
 	</ul>
-{% endif %}
+	
+	<hr>
 
-<hr>
-
-{% if page.downloadURL %}
 	<a class="btn btn-primary btn-block" href="{{ page.downloadURL }}">Download</a>
 {% endif %}
 
