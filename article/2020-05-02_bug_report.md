@@ -1,13 +1,17 @@
 ---
-title: Report a bug
-separatedTitle: Report a bug
-description: Tutorial
-comments: true
-id: report_bug
-date: May 2, 2020
-author: Juknum
 release: false
 
+title: Bug Report
+separatedTitle: Bug Report
+description: Disover how to report us the bug you found!
+
+id: report_bug
+comments: true
+
+author: Juknum
+date: May 2, 2020
+
 imgURL: ../image/article/report_bug.jpg
-text: How to report a bug
+
 ---
+html here
