@@ -38,7 +38,7 @@ short_text: Discover how to report bug!
 		Just to avoid most of trolls and dupplicate report bug!
 	</p>
 
-	<h3>Ok, but how?</h3>
+	<h3>Well, but how?</h3>
 	<p align="justify">
 		Template! you can choose one <a href="https://github.com/Juknum/faithful3d.github.io/issues/new/choose">here</a> when you have to report a bug or make suggestion for the <strong>website</strong>. Otherwise you can follow this one below (if it concerns the resource pack):
 	</p>
