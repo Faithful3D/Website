@@ -23,10 +23,10 @@ short_text: Discover how to report bug!
 <h3>Yeah, but how?</h3>
 <p align="justify">
 	Well, answer is simple, you just have to use following links and open an issue:
-	<br>
-	<a href="https://github.com/Juknum/Faithful-3D/issues">report bug for Faithful 3D <strong>Resource pack</strong></a>
-	<br>
-	<a href="https://github.com/Juknum/faithful3d.github.io/issues">report bug for Faithful 3D <strong>Website</strong></a>
+	<ul>
+		<li><a href="https://github.com/Juknum/Faithful-3D/issues">report bug for Faithful 3D <strong>Resource pack</strong></a></li>
+		<li><a href="https://github.com/Juknum/faithful3d.github.io/issues">report bug for Faithful 3D <strong>Website</strong></a></li>
+	</ul>
 </p>
 <h3>Ok, but why GitHub?</h3>
 <p>
