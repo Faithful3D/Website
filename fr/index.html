@@ -83,27 +83,59 @@ description: Le voici! Le site officiel fais à la main!
 <hr>
 
 {% assign sorted = site.pages | reverse %}
-{% for article in sorted %}
-  {% if article.path contains "article/" %}
-    <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
-    <div class="links-content">
-      <h2>Version {{ article.id }}</h2>
-      <p>
-        Pour {{ article.id }}, {{ article.date }}, {{ article.author }} -
-        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
-        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
-      </p>
-      <p>
-        {% if article.text %}
-          {{ article.text }}
-          <br><br>
-        {% endif %}
-        <a class="btn btn-primary" href="{{ article.url }}">Lire</a>
-      </p>
-    </div>
 
-    <hr>
-  {% endif %}
+{% for article in sorted %}
+    {% if article.url contains "/article/" %}
+
+        {% if article.release == true %}
+            <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
+            <div class="links-content">
+                <h2>Version {{ article.id }}</h2>
+                <p> 
+                    for {{ article.id }}, {{ article.date }}, {{ article.author }} 
+                    {% if article.comments == true %}
+                        -
+                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                    {% endif %}
+                </p>
+                <p>
+                    {% if article.short_text %}
+                        {{ article.short_text }}
+                        <br><br>
+                    {% endif %}
+            
+                    <a class="btn btn-primary" href="{{ article.url }}">Lire</a>
+                </p>
+            </div>
+
+        {% endif %}
+
+        {% if article.release == false %}
+            <img src="{{ article.imgURL }}" alt="{{ article.title }}" class="links-image">
+            <div class="links-content">
+                <h2>{{ article.title }}</h2>
+                <p> 
+                    {{ article.date }}, {{ article.author }}
+                    {% if article.comments == true %}
+                        -
+                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <a href="{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                    {% endif %}
+                </p>
+                <p>
+                    {% if article.short_text %}
+                        {{ article.short_text }}
+                        <br><br>
+                    {% endif %}
+            
+                    <a class="btn btn-primary" href="{{ article.url }}">Lire</a>
+                </p>
+            </div>
+        {% endif %}
+
+        <hr>
+    {% endif %}
 {% endfor %}
 
 <!-- count comment script Disqus -->
