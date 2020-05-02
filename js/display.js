@@ -119,13 +119,13 @@ function generateInputArray() {
   var object = {};
   var elements = document.getElementsByClassName("card");
 
-  elements.forEach((item, i) => {
+  for (const item of elements) {
     object = {
       img: item.getElementsByTagName("IMG")[0],
       model: item.dataset.model
     }
     inputArray.push(object);
-  });
+  }
   return inputArray
 }
 
