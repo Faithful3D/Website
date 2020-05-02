@@ -1,6 +1,8 @@
 ---
 release: true
 
+permalink: /article/TITLE
+
 title: Release x
 separatedTitle: Release x
 description: x Changelog

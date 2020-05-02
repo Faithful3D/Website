@@ -1,6 +1,8 @@
 ---
 release: false
 
+permalink: /article/bug_report
+
 title: Bug Report
 separatedTitle: Bug Report
 description: Discover how to report bug!

@@ -1,6 +1,8 @@
 ---
 release: false
 
+permalink: /article/TITLE
+
 title: Article
 separatedTitle: Arti&shy;cle
 description: This is a cool description
