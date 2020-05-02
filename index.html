@@ -93,7 +93,7 @@ description: There it is! The official Website made by hand!
         {% if article.release == true %}
             <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
-                <h2>Release {{ article.id }}</h2>
+                <h2>{{ article.title }}</h2>
                 <p> 
                     for {{ article.id }}, {{ article.date }}, {{ article.author }} 
                     {% if article.comments == true %}

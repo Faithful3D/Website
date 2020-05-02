@@ -90,7 +90,7 @@ description: Le voici! Le site officiel fais à la main!
         {% if article.release == true %}
             <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
-                <h2>Version {{ article.id }}</h2>
+                <h2>{{ article.title }}</h2>
                 <p> 
                     for {{ article.id }}, {{ article.date }}, {{ article.author }} 
                     {% if article.comments == true %}

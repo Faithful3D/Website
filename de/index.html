@@ -93,7 +93,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
         {% if article.release == true %}
             <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
-                <h2>Version {{ article.id }}</h2>
+                <h2>{{ article.title }}</h2>
                 <p> 
                     für {{ article.id }}, {{ article.date }}, {{ article.author }} 
                     {% if article.comments == true %}
