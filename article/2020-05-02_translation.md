@@ -32,10 +32,10 @@ short_text: We need your help!
 		</ul>
 	</p>
 	<p>
-		If you can speak a language fluently, don't hesitate to contact us!
+		If you can speak a language fluently, contact us <a href="https://discord.gg/GJzgeY7">here (Discord)</a>!
 	</p>
 	<p>
-		<i>PS: Besides if you speak English fluently, you can help us, spelling and grammatical errors must be numerous...</i>
+		<i>PS: Besides if you speak English fluently, help us, because spelling and grammatical errors must be numerous...</i>
 	</p>
 
 
