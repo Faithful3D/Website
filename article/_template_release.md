@@ -6,8 +6,9 @@ permalink: /article/TITLE
 title: Release x
 separatedTitle: Release x
 description: x Changelog
+version: mc version this release is for
 
-id: Minecraft version
+id: use mc version (if no one already exist, else add a letter)
 comments: true
 
 author: you
