@@ -93,7 +93,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
     {% if article.url contains "/article/" %}
 
         {% if article.release == true %}
-            <img src="{{ article.imgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
+            <img src="{{ article.headerImgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>
@@ -117,7 +117,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
         {% endif %}
 
         {% if article.release == false %}
-            <img src="{{ article.imgURL }}" alt="{{ article.title }}" class="links-image">
+            <img src="{{ article.headerImgURL }}" alt="{{ article.title }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>

@@ -13,7 +13,7 @@ comments: true
 author: Juknum
 date: May 2, 2020
 
-imgURL: ../image/article/report_bug.jpg
+headerImgURL: /image/article/report_bug.jpg
 
 short_text: Discover how to report a bug!
 

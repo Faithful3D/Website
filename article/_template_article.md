@@ -13,7 +13,8 @@ comments: true
 author: you
 date: Nov 11, 2019
 
-imgURL: ../image/article/IMAGE.jpg
+# This has to start with a "/"
+headerImgURL: /image/article/IMAGE.jpg
 
 short_text: article description
 
