@@ -14,8 +14,7 @@ comments: true
 author: you
 date: Nov 11, 2019
 
-# This has to start with a "/"
-headerImgURL: /image/article/IMAGE.jpg
+imgURL: ../image/article/IMAGE.jpg
 
 short_text: remove this option if empty (for index)
 long_text: remove this option if empty (for article)

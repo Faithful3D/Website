@@ -13,7 +13,7 @@ comments: true
 author: Juknum
 date: May 2, 2020
 
-headerImgURL: /image/article/translation.jpg
+imgURL: ../image/article/translation.jpg
 
 short_text: We need your help!
 
