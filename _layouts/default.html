@@ -100,7 +100,7 @@
 
     <div class="lang-navbar collapse navbar-collapse" id="collapsibleLangNavbar">
         <ul class="navbar-nav">
-            {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/es'  %}
+            {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/pl'  %}
             <li class="nav-item">
                 <a class="nav-link" href="/de{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
@@ -114,15 +114,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="/es{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
-                  ES
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link " href="/fr{{ link }}">
                   <img src="{{ site.prefix }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
                   FR
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="/pl{{ link }}">
+                  <img src="{{ site.prefix }}/image/lang/pl.png" height="24" class="d-inline-block" alt="Flag">
+                  PL
                 </a>
             </li>
         </ul>

@@ -15,6 +15,10 @@ defaults:
     values:
       layout: "default_fr"
   - scope:
+      path: "pl"
+    values:
+      layout: "default_pl"
+  - scope:
       path: "article"
     values:
       layout: "article"
