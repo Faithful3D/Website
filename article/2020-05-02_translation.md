@@ -4,7 +4,7 @@ release: false
 permalink: /article/translation
 
 title: Translation
-separatedTitle: Trans&shy;lation
+separatedTitle: Trans&shy;la&shy;tion
 description: We need your help!
 
 id: translation
@@ -21,10 +21,13 @@ short_text: We need your help!
 <div class="container">
 	<h3>Hi everyone!</h3>
 	<p align="justify">
-		We have added language support for the website! Faithful 3D and his community are growing day after day, and with the attendance of the website increase. We decided to add this language support to allow you to better understand and interact with us!
+		We have added language support for the website!
+    Faithful 3D and its community are growing day after day,
+    and with the attendance of the website increasing.
+    We decided to add language support to allow you to better understand and interact with us!
 	</p>
 	<p>
-		But for now, we only have 3 language available:
+		But for now, we only have 3 languages available:
 		<ul>
 			<li><strong>EN</strong> - English</li>
 			<li><strong>DE</strong> - Deutsch</li>
