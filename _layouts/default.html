@@ -84,7 +84,7 @@
     {{ content }}
 </main>
 
-
+{% unless page.url contains "/article/" %}
 <nav class="lang-navbar navbar navbar-expand-sm navbar-dark">
     <span class="navbar-brand">
         <img src="{{site.prefix}}/image/lang/lang.svg" height="30" class="d-inline-block" alt="">
@@ -125,6 +125,7 @@
         </ul>
     </div>
 </nav>
+{% endunless %}
 
 <footer>
   <p>
