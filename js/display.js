@@ -120,7 +120,7 @@ window.loadModelToModal = function(model) {
 /*
  * Execute
  */
-const array = generateInputArray();
+array = generateInputArray();
 loadModelsToImgs();
 
 $('#modelModal').on('show.bs.modal', function (event) {
