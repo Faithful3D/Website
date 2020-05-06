@@ -67,7 +67,7 @@ function generateInputArray() {
 function loadModelsToImgs() {
   if (array.length <= 0) return;
   scene = imgScene.clone();
-  loader.load(array[0].model, onLoad(gltf));
+  loader.load(array[0].model, onLoad);
 }
 
 function onLoad(gltf) {
