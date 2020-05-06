@@ -17,7 +17,7 @@
     {% for slide in category.slides %}
     <div class="custom carousel-item{% if slide == category.slides.first %} active{% endif %}">
 
-       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model1 | replace: '$site.prefix', site.prefix }}">
+       <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model1 | default: '$site.prefix/gltf/question.gltf' | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
           <h5>{{ slide.name1 | default: '&nbsp;' }}</h5>
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model2 | replace: '$site.prefix', site.prefix }}">
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model2 | default: '$site.prefix/gltf/question.gltf' | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
           <h5>{{ slide.name2 | default: '&nbsp;' }}</h5>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model3 | replace: '$site.prefix', site.prefix }}">
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model3 | default: '$site.prefix/gltf/question.gltf' | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
           <h5>{{ slide.name3 | default: '&nbsp;' }}</h5>
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model4 | replace: '$site.prefix', site.prefix }}">
+      <div class="card" style="width:200px" data-toggle="modal" data-target="#modelModal" data-model="{{ slide.model4 | default: '$site.prefix/gltf/question.gltf' | replace: '$site.prefix', site.prefix }}">
         <img class="card-img-top" src="/image/display/loading.png" alt="Model">
         <div class="card-body">
           <h5>{{ slide.name4 | default: '&nbsp;' }}</h5>
