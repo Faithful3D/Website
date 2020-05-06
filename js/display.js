@@ -94,7 +94,7 @@ function onImgLoad() {
 
 window.loadModelToModal = function(model) {
   const modalCamera = camera.clone();
-  const modalScene = modalScene.clone();
+  const modalSceneLocal = modalScene.clone();
   var mesh;
 
   const controls = new OrbitControls(modalCamera, modalRenderer.domElement);
@@ -110,12 +110,12 @@ window.loadModelToModal = function(model) {
     const box = new THREE.Box3().setFromObject(mesh);
     box.getCenter(mesh.position);
     mesh.position.multiplyScalar(-1);
-    modalScene.add(mesh);
+    modalSceneLocal.add(mesh);
     render();
   }
 
   function render() {
-    if (mesh) modalRenderer.render(modalScene, modalCamera);
+    if (mesh) modalRenderer.render(modalSceneLocal, modalCamera);
   }
 }
 
