@@ -77,17 +77,19 @@ function onLoad(gltf) {
   imgMesh.position.multiplyScalar(-1);
   scene.add(imgMesh);
   imgRenderer.render(scene, camera);
-  hiddenCanvas.toBlob(loadBlob(blob));
+  hiddenCanvas.toBlob(loadBlob);
 }
 
 function loadBlob(blob) {
   url = URL.createObjectURL(blob);
-  array[0].img.onload = function() {
-    URL.revokeObjectURL(url);
-    array.shift();
-    loadModelsToImgs(array);
-  };
+  array[0].img.onload = onImgLoad;
   array[0].img.src = url;
+}
+
+function onImgLoad() {
+  URL.revokeObjectURL(url);
+  array.shift();
+  loadModelsToImgs(array);
 }
 
 window.loadModelToModal = function(model) {
