@@ -50,7 +50,10 @@ modalScene.add(dirLight.clone());
 const loader = new GLTFLoader();
 
 //MESH
-var imgMesh
+var imgMesh;
+
+//URL
+var url;
 
 //FUNCTION
 function loadModelsToImgs(array) {
@@ -71,9 +74,15 @@ function loadModelsToImgs(array) {
     scene.add(imgMesh);
 
     imgRenderer.render(scene, camera);
-    array[0].img.src = hiddenCanvas.toDataURL("image/png");
-    array.shift();
-    loadModelsToImgs(array);
+    hiddenCanvas.toBlob(function(blob) {
+      url = URL.createObjectURL(blob);
+      array[0].img.onload = function() {
+        URL.revokeObjectURL(url);
+        array.shift();
+        loadModelsToImgs(array);
+      };
+      array[0].img.src = url;
+    });
   }
 }
 
