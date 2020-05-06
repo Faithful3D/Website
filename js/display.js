@@ -2,9 +2,13 @@ import * as THREE from './build/three.module.js';
 import { GLTFLoader } from './examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from './examples/jsm/controls/OrbitControls.js';
 
+/*
+ * Variables
+ */
+const loader = new GLTFLoader();
 const hiddenCanvas = document.getElementById("hiddenCanvas");
+var array, imgMesh, scene, url;
 
-//RENDERER
 const imgRenderer = new THREE.WebGLRenderer({
   canvas: hiddenCanvas,
   antialias: true
@@ -23,11 +27,9 @@ modalRenderer.setPixelRatio(window.devicePixelRatio);
 modalRenderer.setSize(1080, 1080);
 modalRenderer.outputEncoding = THREE.sRGBEncoding
 
-//CAMERA PerspectiveCamera( fov : Number, aspect : Number, near : Number, far : Number )
 const camera = new THREE.PerspectiveCamera(30, 1, 1, 128);
 camera.position.z = 64;
 
-//SCENE
 const imgScene = new THREE.Scene();
 imgScene.rotation.y = 135 * Math.PI / 180;
 imgScene.rotation.x = 0.625;
@@ -35,7 +37,6 @@ imgScene.rotation.x = 0.625;
 const modalScene = new THREE.Scene();
 modalScene.rotation.y = Math.PI;
 
-//LIGHT
 const ambiLight = new THREE.AmbientLight(0xffffff, 0.75);
 ambiLight.position.set(0, 0, 0);
 imgScene.add(ambiLight);
@@ -46,83 +47,9 @@ dirLight.position.set(64, 64, -64);
 imgScene.add(dirLight);
 modalScene.add(dirLight.clone());
 
-//GLTF LOADER
-const loader = new GLTFLoader();
-
-//MESH
-var imgMesh;
-
-//URL
-var url;
-
-//FUNCTION
-function loadModelsToImgs(array) {
-  if (array.length <= 0) return;
-
-  //SCENE
-  const scene = imgScene.clone();
-
-  //gltf made with Blockbench
-  loader.load(array[0].model, handle_load);
-
-  function handle_load(gltf) {
-    imgMesh = gltf.scene;
-
-    const box = new THREE.Box3().setFromObject(imgMesh);
-    box.getCenter(imgMesh.position);
-    imgMesh.position.multiplyScalar(-1);
-    scene.add(imgMesh);
-
-    imgRenderer.render(scene, camera);
-    hiddenCanvas.toBlob(function(blob) {
-      url = URL.createObjectURL(blob);
-      array[0].img.onload = function() {
-        URL.revokeObjectURL(url);
-        array.shift();
-        loadModelsToImgs(array);
-      };
-      array[0].img.src = url;
-    });
-  }
-}
-
-//Modal Function
-window.loadModelToModal = function(model) {
-  //CAMERA
-  const modalCamera = camera.clone();
-
-  //CONTROLS
-  const controls = new OrbitControls(modalCamera, modalRenderer.domElement);
-  controls.addEventListener('change', render);
-  controls.minDistance = 16;
-  controls.maxDistance = 64;
-  controls.update();
-
-  //SCENE
-  const scene = modalScene.clone();
-
-  //gltf made with Blockbench
-  loader.load(model, handle_load);
-
-  var mesh;
-
-  function handle_load(gltf) {
-    mesh = gltf.scene;
-
-    const box = new THREE.Box3().setFromObject(mesh);
-    box.getCenter(mesh.position);
-    mesh.position.multiplyScalar(-1);
-    scene.add(mesh);
-    render();
-  }
-
-  function render() {
-    if (mesh) {
-      modalRenderer.render(scene, modalCamera);
-    }
-  }
-}
-
+/*
+ * Functions
+ */
 function generateInputArray() {
   var inputArray = [];
   var object = {};
@@ -137,9 +64,65 @@ function generateInputArray() {
   return inputArray
 }
 
-loadModelsToImgs(generateInputArray());
+function loadModelsToImgs() {
+  if (array.length <= 0) return;
+  scene = imgScene.clone();
+  loader.load(array[0].model, onLoad(gltf));
+}
 
-// Modal
+function onLoad(gltf) {
+  imgMesh = gltf.scene;
+  const box = new THREE.Box3().setFromObject(imgMesh);
+  box.getCenter(imgMesh.position);
+  imgMesh.position.multiplyScalar(-1);
+  scene.add(imgMesh);
+  imgRenderer.render(scene, camera);
+  hiddenCanvas.toBlob(loadBlob(blob));
+}
+
+function loadBlob(blob) {
+  url = URL.createObjectURL(blob);
+  array[0].img.onload = function() {
+    URL.revokeObjectURL(url);
+    array.shift();
+    loadModelsToImgs(array);
+  };
+  array[0].img.src = url;
+}
+
+window.loadModelToModal = function(model) {
+  const modalCamera = camera.clone();
+  const modalScene = modalScene.clone();
+  var mesh;
+
+  const controls = new OrbitControls(modalCamera, modalRenderer.domElement);
+  controls.addEventListener('change', render);
+  controls.minDistance = 16;
+  controls.maxDistance = 64;
+  controls.update();
+
+  loader.load(model, handle_load);
+
+  function handle_load(gltf) {
+    mesh = gltf.scene;
+    const box = new THREE.Box3().setFromObject(mesh);
+    box.getCenter(mesh.position);
+    mesh.position.multiplyScalar(-1);
+    modalScene.add(mesh);
+    render();
+  }
+
+  function render() {
+    if (mesh) modalRenderer.render(modalScene, modalCamera);
+  }
+}
+
+/*
+ * Execute
+ */
+const array = generateInputArray();
+loadModelsToImgs();
+
 $('#modelModal').on('show.bs.modal', function (event) {
   window.loadModelToModal($(event.relatedTarget).data("model"));
 })
