@@ -43,45 +43,47 @@
   <p>{{ page.description }}</p>
 </header>
 
-<nav class="custom-navbar navbar navbar-expand-sm navbar-dark">
-    <span class="navbar-brand">
-        <img src="{{site.prefix}}/image/icon/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Faithful 3D
-    </span>
+<div class="custom-navbar-wrapper">
+  <nav class="custom-navbar navbar navbar-expand-sm navbar-dark">
+      <span class="navbar-brand">
+          <img src="{{site.prefix}}/image/icon/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Faithful 3D
+      </span>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</div>
 
 <main class="container">
     {{ content }}
