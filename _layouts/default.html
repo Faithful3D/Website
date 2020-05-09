@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Faithful 3D - {{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}" />
+    <meta name="description" content="{{ page.description }} - Faithful 3D is an add-on for the popular Faithful resource pack for Minecraft Java Edition." />
     <meta name="keywords" content="Minecraft, Faithful, Faithful 3D, 3D, Resourcepack, Faithful Addons">
 
-    <link rel="icon" href="{{ site.prefix }}/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="{{ site.prefix }}/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.prefix }}/favicon.ico" />
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
     <meta property="og:image" content="{{ site.url }}{{ page.headerImgURL | default: '/image/icon/og.jpg' }}" />
     <meta property="twitter:image" content="{{ site.url }}{{ page.headerImgURL | default: '/image/icon/og.jpg' }}" />
     <meta name="twitter:card" content="summary_large_image">
@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{site.prefix}}/css/main.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -46,7 +46,7 @@
 <div class="custom-navbar-wrapper">
   <nav class="custom-navbar navbar navbar-expand-sm navbar-dark">
       <span class="navbar-brand">
-          <img src="{{site.prefix}}/image/icon/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img src="{{site.baseurl}}/image/icon/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
           Faithful 3D
       </span>
 
@@ -57,28 +57,28 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{{site.prefix}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
+                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
               </li>
           </ul>
       </div>
@@ -92,7 +92,7 @@
 {% unless page.url contains "/article/" %}
 <nav class="lang-navbar navbar navbar-expand-sm navbar-dark">
     <span class="navbar-brand">
-        <img src="{{site.prefix}}/image/lang/lang.svg" height="30" class="d-inline-block" alt="">
+        <img src="{{site.baseurl}}/image/lang/lang.svg" height="30" class="d-inline-block" alt="">
         {{ layout.langLbl | default: 'Language' }}
     </span>
 
@@ -105,31 +105,31 @@
             {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/pl'  %}
             <li class="nav-item">
                 <a class="nav-link" href="/de{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
+                  <img src="{{ site.baseurl }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
                   DE
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
+                  <img src="{{ site.baseurl }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
                   EN
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="/es{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
+                  <img src="{{ site.baseurl }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
                   ES
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="/fr{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
+                  <img src="{{ site.baseurl }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
                   FR
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="/pl{{ link }}">
-                  <img src="{{ site.prefix }}/image/lang/pl.png" height="24" class="d-inline-block" alt="Flag">
+                  <img src="{{ site.baseurl }}/image/lang/pl.png" height="24" class="d-inline-block" alt="Flag">
                   PL
                 </a>
             </li>
