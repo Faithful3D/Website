@@ -17974,38 +17974,38 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 
 	var program = gl.createProgram();
 
-	var prefixVertex, prefixFragment;
+	var baseurlVertex, baseurlFragment;
 
 	if ( parameters.isRawShaderMaterial ) {
 
-		prefixVertex = [
+		baseurlVertex = [
 
 			customDefines
 
 		].filter( filterEmptyLine ).join( '\n' );
 
-		if ( prefixVertex.length > 0 ) {
+		if ( baseurlVertex.length > 0 ) {
 
-			prefixVertex += '\n';
+			baseurlVertex += '\n';
 
 		}
 
-		prefixFragment = [
+		baseurlFragment = [
 
 			customExtensions,
 			customDefines
 
 		].filter( filterEmptyLine ).join( '\n' );
 
-		if ( prefixFragment.length > 0 ) {
+		if ( baseurlFragment.length > 0 ) {
 
-			prefixFragment += '\n';
+			baseurlFragment += '\n';
 
 		}
 
 	} else {
 
-		prefixVertex = [
+		baseurlVertex = [
 
 			generatePrecision( parameters ),
 
@@ -18131,7 +18131,7 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 
 		].filter( filterEmptyLine ).join( '\n' );
 
-		prefixFragment = [
+		baseurlFragment = [
 
 			customExtensions,
 
@@ -18252,14 +18252,14 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 
 		// GLSL 3.0 conversion
 
-		prefixVertex = [
+		baseurlVertex = [
 			'#version 300 es\n',
 			'#define attribute in',
 			'#define varying out',
 			'#define texture2D texture'
-		].join( '\n' ) + '\n' + prefixVertex;
+		].join( '\n' ) + '\n' + baseurlVertex;
 
-		prefixFragment = [
+		baseurlFragment = [
 			'#version 300 es\n',
 			'#define varying in',
 			isGLSL3ShaderMaterial ? '' : 'out highp vec4 pc_fragColor;',
@@ -18274,12 +18274,12 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 			'#define texture2DGradEXT textureGrad',
 			'#define texture2DProjGradEXT textureProjGrad',
 			'#define textureCubeGradEXT textureGrad'
-		].join( '\n' ) + '\n' + prefixFragment;
+		].join( '\n' ) + '\n' + baseurlFragment;
 
 	}
 
-	var vertexGlsl = prefixVertex + vertexShader;
-	var fragmentGlsl = prefixFragment + fragmentShader;
+	var vertexGlsl = baseurlVertex + vertexShader;
+	var fragmentGlsl = baseurlFragment + fragmentShader;
 
 	// console.log( '*VERTEX*', vertexGlsl );
 	// console.log( '*FRAGMENT*', fragmentGlsl );
@@ -18345,14 +18345,14 @@ function WebGLProgram( renderer, cacheKey, parameters ) {
 				vertexShader: {
 
 					log: vertexLog,
-					prefix: prefixVertex
+					baseurl: baseurlVertex
 
 				},
 
 				fragmentShader: {
 
 					log: fragmentLog,
-					prefix: prefixFragment
+					baseurl: baseurlFragment
 
 				}
 

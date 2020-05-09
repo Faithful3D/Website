@@ -19,25 +19,25 @@ description: Le voici! Le site officiel fais à la main!
     <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ site.prefix }}/image/home/caroussel_1.png" alt="Rail">
+            <img src="{{ site.baseurl }}/image/home/caroussel_1.png" alt="Rail">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_2.jpg" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_2.jpg" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_3.gif" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_3.gif" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_4.jpg" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_4.jpg" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_5.jpg" alt="Doors">
+            <img src="{{ site.baseurl }}/image/home/caroussel_5.jpg" alt="Doors">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_6.jpg" alt="Trapdoors">
+            <img src="{{ site.baseurl }}/image/home/caroussel_6.jpg" alt="Trapdoors">
         </div>
         <div class="carousel-item">
-            <img src="{{ site.prefix }}/image/home/caroussel_7.jpg" alt="Iron bars">
+            <img src="{{ site.baseurl }}/image/home/caroussel_7.jpg" alt="Iron bars">
         </div>
     </div>
 
@@ -73,7 +73,7 @@ description: Le voici! Le site officiel fais à la main!
 
 <hr>
 
-<img src="{{ site.prefix }}/image/home/github_banner.jpg" alt="GitHub Banner" class="links-image">
+<img src="{{ site.baseurl }}/image/home/github_banner.jpg" alt="GitHub Banner" class="links-image">
 <div class="links-content">
   <h2>GitHub</h2>
   <p align="justify">
@@ -97,7 +97,7 @@ description: Le voici! Le site officiel fais à la main!
                     pour {{ article.version }}, {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
-                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
                         <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
@@ -121,7 +121,7 @@ description: Le voici! Le site officiel fais à la main!
                     {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
-                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
                         <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>

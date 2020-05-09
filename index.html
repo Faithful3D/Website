@@ -100,7 +100,7 @@ description: There it is! The official Website made by hand!
                     for {{ article.version }}, {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
-                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
                         <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
@@ -124,7 +124,7 @@ description: There it is! The official Website made by hand!
                     {{ article.date }}, {{ article.author }}
                     {% if article.comments == true %}
                         -
-                        <img src="{{ site.prefix }}/image/home/comment.png" width="15" height="15" alt="comment image">
+                        <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
                         <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>

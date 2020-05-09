@@ -7,7 +7,7 @@ cards:
   - 1:
     raw: <div><canvas id="chart_download"></canvas></div>
   - 2:
-    imgURL: $site.prefix/image/home/github_banner.jpg
+    imgURL: $site.baseurl/image/home/github_banner.jpg
     imgAlt: GitHub Banner
     title: Neuste
     rawText: |
@@ -24,7 +24,7 @@ cards:
         <a class="btn btn-primary" href="https://github.com/Juknum/Faithful-3D">GitHub</a>
       </p>
   - 3:
-    imgURL: $site.prefix/image/download/1.16.jpg
+    imgURL: $site.baseurl/image/download/1.16.jpg
     imgAlt: 1.16
     title: 1.16
     rawText: |
@@ -32,7 +32,7 @@ cards:
         <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2938029">20w17a - s1</a>
       </p>
   - 4:
-    imgURL: $site.prefix/image/download/1.15.jpg
+    imgURL: $site.baseurl/image/download/1.15.jpg
     imgAlt: 1.15
     title: 1.15
     rawText: |
@@ -48,7 +48,7 @@ cards:
         <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2832299">1.15 - s1</a>
       </p>
   - 5:
-    imgURL: $site.prefix/image/download/1.14.jpg
+    imgURL: $site.baseurl/image/download/1.14.jpg
     imgAlt: 1.14
     title: 1.14
     rawText: |
@@ -56,7 +56,7 @@ cards:
          <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2825892">1.14.x - r1</a>
       </p>
   - 6:
-    imgURL: $site.prefix/image/download/1.13.jpg
+    imgURL: $site.baseurl/image/download/1.13.jpg
     imgAlt: 1.13
     title: 1.8 - 1.13
     rawText: |
@@ -70,6 +70,6 @@ cards:
     raw: |
       <script>const dateArray = ['November','Dezember','Januar','Februar','März','April','Mai']</script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script src="$site.prefix/js/download.js" defer></script>
+      <script src="$site.baseurl/js/download.js" defer></script>
 ---
 {% include cards.html cards=page.cards %}

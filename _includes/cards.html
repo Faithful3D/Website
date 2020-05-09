@@ -1,14 +1,14 @@
 {% for item in include.cards %}{% if item.raw %}
-{{ item.raw | replace: '$site.prefix', site.prefix }}
+{{ item.raw | replace: '$site.baseurl', site.baseurl }}
 {% else %}
-<img src="{{ item.imgURL | replace: '$site.prefix', site.prefix }}" alt="{{ item.imgAlt }}" class="links-image">
+<img src="{{ item.imgURL | replace: '$site.baseurl', site.baseurl }}" alt="{{ item.imgAlt }}" class="links-image">
 <div class="links-content">
   <h2>{{ item.title }}</h2>
-  {% if item.rawText %}{{ item.rawText | replace: '$site.prefix', site.prefix }}
+  {% if item.rawText %}{{ item.rawText | replace: '$site.baseurl', site.baseurl }}
   {% else %}<p align="justify">
-    {{ item.text | replace: '$site.prefix', site.prefix }}
+    {{ item.text | replace: '$site.baseurl', site.baseurl }}
   </p>{% endif %}{% if item.btnURL %}
-  <a href="{{ item.btnURL | replace: '$site.prefix', site.prefix  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>{% endif %}
+  <a href="{{ item.btnURL | replace: '$site.baseurl', site.baseurl  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>{% endif %}
 </div>{% endif %}
 <hr>
 {% endfor %}
