@@ -12,21 +12,21 @@ new Chart(document.getElementById('chart_download').getContext('2d'), {
     labels: dates,
     datasets: [{
       label: 'Total',
-      data: [414,4522,8527,14525,22753],
+      data: [414,4522,8527,14525,22753,31497],
       borderColor: 'rgb(255, 0, 0)',
       backgroundColor: 'rgba(255, 0, 0, 0.5)',
       borderWidth: 1
     },
     {
       label: 'Curse Forge',
-      data: [399,4341,7699,13041,20396],
+      data: [399,4341,7699,13041,20396,28264],
       borderColor: 'rgb(255, 128, 0)',
       backgroundColor: 'rgba(255, 128, 0, 0.5)',
       borderWidth: 1
     },
     {
       label: 'Twitch App',
-      data: [15,181,828,1484,2357],
+      data: [15,181,828,1484,2357,3233],
       borderColor: 'rgb(127, 0, 255)',
       backgroundColor: 'rgba(127, 0, 255, 0.5)',
       borderWidth: 1
