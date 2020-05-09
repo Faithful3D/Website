@@ -101,7 +101,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
                     {% if article.comments == true %}
                         -
                         <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
-                        <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                        <a href="{{ site.baseurl }}{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
                 <p>
@@ -110,7 +110,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
                         <br><br>
                     {% endif %}
 
-                    <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lesen</a>
+                    <a class="btn btn-primary" href="{{ site.baseurl }}{{ article.url | remove: '.html' }}">Lesen</a>
                 </p>
             </div>
 
@@ -125,7 +125,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
                     {% if article.comments == true %}
                         -
                         <img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
-                        <a href="{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
+                        <a href="{{ site.baseurl }}{{ article.url | remove: '.html' }}#disqus_thread" data-disqus-identifier="{{ article.id }}"></a>
                     {% endif %}
                 </p>
                 <p>
@@ -134,7 +134,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
                         <br><br>
                     {% endif %}
 
-                    <a class="btn btn-primary" href="{{ article.url | remove: '.html' }}">Lesen</a>
+                    <a class="btn btn-primary" href="{{ site.baseurl }}{{ article.url | remove: '.html' }}">Lesen</a>
                 </p>
             </div>
         {% endif %}
