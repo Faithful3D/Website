@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img src="{{ page.headerImgURL }}" class="img-fluid mb-4 d-block" alt="Minecraft Screenshot {{ page.id }}">
+<img src="{{ page.headerImgURL | replace: '$site.baseurl', site.baseurl }}" class="img-fluid mb-4 d-block" alt="Minecraft Screenshot {{ page.id }}">
 
 {% if page.release == true %}
 	<p>

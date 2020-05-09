@@ -19,25 +19,25 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
     <!-- The slideshow -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/image/home/caroussel_1.png" alt="Rail">
+            <img src="{{ site.baseurl }}/image/home/caroussel_1.png" alt="Rail">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_2.jpg" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_2.jpg" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_3.gif" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_3.gif" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_4.jpg" alt="Rails">
+            <img src="{{ site.baseurl }}/image/home/caroussel_4.jpg" alt="Rails">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_5.jpg" alt="Doors">
+            <img src="{{ site.baseurl }}/image/home/caroussel_5.jpg" alt="Doors">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_6.jpg" alt="Trapdoors">
+            <img src="{{ site.baseurl }}/image/home/caroussel_6.jpg" alt="Trapdoors">
         </div>
         <div class="carousel-item">
-            <img src="/image/home/caroussel_7.jpg" alt="Iron bars">
+            <img src="{{ site.baseurl }}/image/home/caroussel_7.jpg" alt="Iron bars">
         </div>
     </div>
 
@@ -93,7 +93,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
     {% if article.url contains "/article/" %}
 
         {% if article.release == true %}
-            <img src="{{ article.headerImgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
+            <img src="{{ article.headerImgURL | replace: '$site.baseurl', site.baseurl }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>
@@ -117,7 +117,7 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
         {% endif %}
 
         {% if article.release == false %}
-            <img src="{{ article.headerImgURL }}" alt="{{ article.title }}" class="links-image">
+            <img src="{{ article.headerImgURL | replace: '$site.baseurl', site.baseurl }}" alt="{{ article.title }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>

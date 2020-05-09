@@ -93,7 +93,7 @@ description: There it is! The official Website made by hand!
     {% if article.url contains "/article/" %}
 
         {% if article.release == true %}
-            <img src="{{ article.headerImgURL }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
+            <img src="{{ article.headerImgURL | replace: '$site.baseurl', site.baseurl }}" alt="Minecraft Screenshot {{ article.id }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>
@@ -117,7 +117,7 @@ description: There it is! The official Website made by hand!
         {% endif %}
 
         {% if article.release == false %}
-            <img src="{{ article.headerImgURL }}" alt="{{ article.title }}" class="links-image">
+            <img src="{{ article.headerImgURL | replace: '$site.baseurl', site.baseurl }}" alt="{{ article.title }}" class="links-image">
             <div class="links-content">
                 <h2>{{ article.title }}</h2>
                 <p>
