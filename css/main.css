@@ -158,7 +158,7 @@ h2, h3, h4, h5 {
 .custom.carousel-item > .card:hover {
   box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5)
 }
-@media (min-width: 480px) {
+@media (min-width: 624px) {
   .custom.carousel-item > .card {
     flex: 0 0 34%;
   }
@@ -173,7 +173,7 @@ h2, h3, h4, h5 {
     right: -50px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .custom.carousel-item > .card {
     flex: initial;
   }
