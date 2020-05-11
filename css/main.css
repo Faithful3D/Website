@@ -153,19 +153,20 @@ h2, h3, h4, h5 {
   bottom: -45px;
 }
 .custom.carousel-item > .card {
+  cursor: pointer;
+  transition-duration:.3s;
   margin: 15px auto;
 }
 .custom img {
   height: auto;
 }
-.carousel .card {
-  cursor: pointer;
-  transition-duration:.3s;
-}
-.carousel .card:hover {
+.custom.carousel-item > .card:hover {
   box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5)
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
+  .custom.carousel-item > .card {
+    flex: 0 0 34%;
+  }
   .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
     flex-direction: row;
   }
@@ -174,6 +175,11 @@ h2, h3, h4, h5 {
   }
   .custom.carousel-control-next {
     right: -100px;
+  }
+}
+@media (min-width: 992px) {
+  .custom.carousel-item > .card {
+    flex: initial;
   }
 }
 
