@@ -142,8 +142,7 @@ h2, h3, h4, h5 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 .custom.carousel-indicators {
   bottom: -45px;
@@ -164,18 +163,25 @@ h2, h3, h4, h5 {
     flex: 0 0 34%;
   }
   .custom.carousel-item-prev, .custom.carousel-item.active, .custom.carousel-item-next {
+    flex-wrap: wrap;
     flex-direction: row;
+  }
+  .custom.carousel-control-prev {
+    left: -50px;
+  }
+  .custom.carousel-control-next {
+    right: -50px;
+  }
+}
+@media (min-width: 992px) {
+  .custom.carousel-item > .card {
+    flex: initial;
   }
   .custom.carousel-control-prev {
     left: -100px;
   }
   .custom.carousel-control-next {
     right: -100px;
-  }
-}
-@media (min-width: 992px) {
-  .custom.carousel-item > .card {
-    flex: initial;
   }
 }
 
