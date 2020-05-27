@@ -16,4 +16,4 @@ setTimeout(() => {
   if (!localStorage.getItem("Faithful3D_cookieBannerDisplayed")) {
     cookieContainer.classList.add("active");
   }
-}, 2000);
+}, 1500);
