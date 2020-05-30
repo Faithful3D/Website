@@ -202,7 +202,7 @@ h2, h3, h4, h5 {
   color: #f5f6fa;
   padding: 0 32px;
   padding-top: 16px;
-
+  z-index: 1050;
   transition: 400ms;
 }
 
