@@ -1,242 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="There it is! The official Website made by hand! - Faithful 3D is an add-on for the popular Faithful resource pack for Minecraft Java Edition." />
-    <meta name="keywords" content="Minecraft, Faithful, Faithful 3D, 3D, Resourcepack, Faithful Addons">
-    <meta name="theme-color" content="#007bff">
+---
+layout: default
+---
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-    <meta property="og:image" content="https://www.faithful3d.team/image/icon/og.jpg" />
-    <meta property="twitter:image" content="https://www.faithful3d.team/image/icon/og.jpg" />
-    <meta name="twitter:card" content="summary_large_image">
+{% if page.release == true %}
+	<p>
+		for {{ page.version }}, {{ page.date }}, {{ page.author }} -
+		<img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
+		<a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
+	</p>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-	<style>
-		.display-article {
-			background-image: url({{ page.headerImgURL | replace: '$site.baseurl', site.baseurl }});
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			color: #fff;
-			text-shadow: 2px 2px 20px #000;
-		}
-	</style>
-
-</head>
-
-<body>
-
-<header class="display-article">
-  <h1 class="display-1">{{ page.separatedTitle }}</h1>
-  <p>{{ page.description }}</p>
-</header>
-
-<div class="custom-navbar-wrapper">
-  <nav class="custom-navbar navbar navbar-expand-sm navbar-dark">
-      <span class="navbar-brand">
-          <img src="{{site.baseurl}}/image/icon/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-          Faithful 3D
-      </span>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">{% unless layout.lang or layout.lang == 'en' %}{% assign langURL = '' %}{% else %}{% assign langURL = layout.lang | append: '/' %}{% endunless %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}">{{ layout.navHome | default: 'Home' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}download">{{ layout.navDownload | default: 'Download' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}display">{{ layout.navDisplay | default: 'Display' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}compatibility">{{ layout.navCompatibility | default: 'Compatibility' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}credits">{{ layout.navCredits | default: 'Credits' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}team">{{ layout.navTeam | default: 'Team' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}software">{{ layout.navSoftware | default: 'Software' }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{{site.baseurl}}/{{langURL}}links">{{ layout.navLinks | default: 'Links' }}</a>
-              </li>
-          </ul>
-      </div>
-  </nav>
-</div>
-
-<main class="container">
-	{% if page.release == true %}
-		<p>
-			for {{ page.version }}, {{ page.date }}, {{ page.author }} -
-			<img src="{{ site.baseurl }}/image/home/comment.png" width="15" height="15" alt="comment image">
-			<a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}"></a>
+	{% if page.long_text %}
+		<p align="justify">
+			{{ page.long_text }}
 		</p>
+	{% endif %}
 
-		{% if page.long_text %}
-			<p align="justify">
-				{{ page.long_text }}
-			</p>
-		{% endif %}
+	<hr>
 
-		<hr>
+	<h2>Added</h2>
 
-		<h2>Added</h2>
+	{% for item in page.added %}
+		<h2><small>{{ item.first | pop}}</h2></small>
+		<ul>
+			<li>{{ item.first | shift  | join: '</li><li>' }}</li>
+		</ul>
+	{% endfor %}
 
-		{% for item in page.added %}
-			<h2><small>{{ item.first | pop}}</h2></small>
-			<ul>
-				<li>{{ item.first | shift  | join: '</li><li>' }}</li>
-			</ul>
+	<h2>Changed</h2>
+
+	<ul>
+		{% for item in page.changed %}
+			<li>{{ item }}</li>
 		{% endfor %}
+	</ul>
 
-		<h2>Changed</h2>
+	<h2>Removed</h2>
 
-		<ul>
-			{% for item in page.changed %}
-				<li>{{ item }}</li>
-			{% endfor %}
-		</ul>
+	<ul>
+		{% for item in page.removed %}
+			<li>{{ item }}</li>
+		{% endfor %}
+	</ul>
 
-		<h2>Removed</h2>
+	<hr>
 
-		<ul>
-			{% for item in page.removed %}
-				<li>{{ item }}</li>
-			{% endfor %}
-		</ul>
+	<a class="btn btn-primary btn-block mb-4" href="{{ page.downloadURL }}">Download</a>
+{% endif %}
 
-		<hr>
+{% if page.release == false %}
+	{{ content }}
+{% endif %}
 
-		<a class="btn btn-primary btn-block mb-4" href="{{ page.downloadURL }}">Download</a>
-	{% endif %}
+{% if page.comments %}
+	<div id="disqus_thread"></div>
+	<script>
+		/*
+		 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+		 */
 
-	{% if page.release == false %}
-		{{ content }}
-	{% endif %}
+		var disqus_config = function () {
+		this.page.url = 'https://www.faithful3d.team/{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
 
-	{% if page.comments %}
-		<div id="disqus_thread"></div>
-		<script>
-			/*
-			 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-			 */
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://faithful3d.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>
+		Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+{% endif %}
 
-			var disqus_config = function () {
-			this.page.url = 'https://www.faithful3d.team/{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = 'https://faithful3d.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>
-			Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-		</noscript>
-	{% endif %}
-
-	<!-- count comment script Disqus -->
-	<script id="dsq-count-scr" src="//faithful3d.disqus.com/count.js" async></script>
-</main>
-
-{% unless page.url contains "/article/" %}
-<nav class="lang-navbar navbar navbar-expand-sm navbar-dark">
-    <span class="navbar-brand">
-        <img src="{{site.baseurl}}/image/lang/lang.svg" height="30" class="d-inline-block" alt="">
-        {{ layout.langLbl | default: 'Language' }}
-    </span>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleLangNavbar" aria-label="Menu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="lang-navbar collapse navbar-collapse" id="collapsibleLangNavbar">
-        <ul class="navbar-nav">
-            {% assign link = page.url | remove: '.html' | remove: '/fr' | remove: '/de' | remove: '/pl'  %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/de{{ link }}">
-                  <img src="{{ site.baseurl }}/image/lang/de.png" height="24" class="d-inline-block" alt="Flag">
-                  DE
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}{{ link }}">
-                  <img src="{{ site.baseurl }}/image/lang/en.png" height="24" class="d-inline-block" alt="Flag">
-                  EN
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="{{ site.baseurl }}/es{{ link }}">
-                  <img src="{{ site.baseurl }}/image/lang/es.png" height="24" class="d-inline-block" alt="Flag">
-                  ES
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="{{ site.baseurl }}/fr{{ link }}">
-                  <img src="{{ site.baseurl }}/image/lang/fr.png" height="24" class="d-inline-block" alt="Flag">
-                  FR
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="{{ site.baseurl }}/pl{{ link }}">
-                  <img src="{{ site.baseurl }}/image/lang/pl.png" height="24" class="d-inline-block" alt="Flag">
-                  PL
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-{% endunless %}
-
-<footer>
-  <p>
-    <strong>{{ layout.footerDiscord | default: 'Join us on Discord:' }} <a href="https://discord.gg/GJzgeY7">https://discord.gg/GJzgeY7</a></strong><br>
-    <em>
-        {{ layout.footerAddon | default: 'Addon made by' }} <a href="https://github.com/Progical">Progical</a>, <a href="https://github.com/HowlerMC">Howler</a> & <a href="https://github.com/Juknum">Juknum</a>
-        <br>
-        {{ layout.footerWebsite | default: 'Website made by' }} <a href="https://github.com/Domi04151309">Domi04151309</a> & <a href="https://github.com/Juknum">Juknum</a>
-    </em>
-  </p>
-</footer>
-
-<!-- Cookie Banner -->
-<div class="cookie-container">
-  <p>
-    {{ layout.cookieText | default: 'We use cookies in this website to give you the best experience on our site and show you relevant ads. To find out more, read our'}} <a href="/privacy_policy">{{ layout.cookiePrivacyPolicy | default: 'privacy policy' }}</a> {{ layout.cookieConnector | default: 'and'}} <a href="/cookie_policy">{{ layout.cookieCookiePolicy | default: 'cookie policy' }}</a>.
-  </p>
-
-  <button class="cookie-btn">
-    {{ layout.cookieBtn | default: 'Okay' }}
-  </button>
-</div>
-
-<script src="/js/cookiebanner.js"></script>
-
-</body>
-</html>
+<!-- count comment script Disqus -->
+<script id="dsq-count-scr" src="//faithful3d.disqus.com/count.js" async></script>
