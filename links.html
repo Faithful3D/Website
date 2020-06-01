@@ -1,84 +1,36 @@
 ---
-layout: default
+title: Links
+separatedTitle: Links
+description: Here you can find some links related to the project!
+
+cards:
+  - 1:
+    imgURL: $site.baseurl/image/links/minecraft.jpg
+    imgAlt: Minecraft Screenshot
+    title: Faithful Website
+    text: Official website of the Faithful resource pack, all versions are available for download.
+    btnURL: https://faithful.team/
+    btnText: Link
+  - 2:
+    imgURL: $site.baseurl/image/links/discord.jpg
+    imgAlt: Discord Logo
+    title: Faithful on Discord
+    text: Official Faithful Discord server. Join to stay informed on the latest updates and progress as well as speaking with the artists.
+    btnURL: https://discordapp.com/invite/u2C4pBr
+    btnText: Link
+  - 3:
+    imgURL: $site.baseurl/image/links/discord.jpg
+    imgAlt: Discord Logo
+    title: Faithful Addons on Discord
+    text: Official Faithful Addon Discord server. Join to stay informed on the latest updates and progress as well as speaking with the artists.
+    btnURL: https://discord.gg/qVeDfZw
+    btnText: Link
+  - 4:
+    imgURL: $site.baseurl/image/links/twitter.jpg
+    imgAlt: Twitter Logo
+    title: Faithful on Twitter
+    text: Official Minecraft Partner. <a href="https://twitter.com/search?q=%23Faithful">#Faithful</a> Created by <a href="https://twitter.com/xMrVizzy">@xMrVizzy</a>.
+    btnURL: https://twitter.com/faithfulx32
+    btnText: Link
 ---
-
-<div><canvas id="chart_download"></canvas></div>
-
-<hr>
-
-<img src="/image/home/github_banner.jpg" alt="GitHub Banner" class="links-image">
-<div class="links-content">
-    <h2>Latest</h2>
-    <p align="justify">
-      All the versions below can be found on GitHub in their latest state of development. Everything presented on the site comes from the latest developed version
-    </p>
-  <p align="right">
-    Juknum
-  </p>
-  <p>
-    <a class="btn btn-primary btn-block" href="https://github.com/Faithful3D">GitHub</a>
-  </p>
-</div>
-
-<hr>
-
-<img src="/image/download/1.16.jpg" alt="1.16" class="links-image">
-<div class="links-content">
-  <h2>1.16</h2>
-  <table class="table table-dark table-hover">
-  <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Size</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-        <td>
-            <span class="badge badge-primary">Snapshot</span>
-        </td>
-        <td><a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2938029">Faithful 3D - 1.16 - S1 (20w17a)</a></td>
-        <td>698.07 KB</td>
-      </tr>
-   </tbody>
-   <table>
-</div>
-<hr>
-
-<img src="/image/download/1.15.jpg" alt="1.15" class="links-image">
-<div class="links-content">
-  <h2>1.16</h2>
-  <table class="table table-dark table-hover">
-  <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Size</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-        <td>
-            <span class="badge badge-success">Release</span>
-        </td>
-        <td><a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2877605">Faithful 3D - 1.15.2 - R1</a></td>
-        <td>498.50 KB</td>
-      </tr>
-      <tr>
-        <td>
-            <span class="badge badge-success">Release</span>
-        </td>
-        <td><a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2849351">Faithful 3D - 1.15.1 - R1</a></td>
-        <td>516.48 KB</td>
-      </tr>
-   </tbody>
-   <table>
-</div>
-<hr>
-
-<script>const dateArray = ['November','December','January','Februar','March','April','May']</script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="/js/download.js" defer></script>
-
-<hr>
+{% include cards.html cards=page.cards %}
