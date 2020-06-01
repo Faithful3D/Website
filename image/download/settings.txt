@@ -1,3 +1,2 @@
-size: 1280x720
-background: #18191D
-default camera view in Blockbench, screenshot models & clipboard
+only need to be a square
+html sized : 15px by 15px
