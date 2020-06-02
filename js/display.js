@@ -15,7 +15,7 @@ const imgRenderer = new THREE.WebGLRenderer({
 });
 imgRenderer.setClearColor(0x17191D);
 imgRenderer.setPixelRatio(window.devicePixelRatio);
-imgRenderer.setSize(198, 198);
+imgRenderer.setSize(433, 433);
 imgRenderer.outputEncoding = THREE.sRGBEncoding
 
 const modalRenderer = new THREE.WebGLRenderer({
@@ -24,7 +24,7 @@ const modalRenderer = new THREE.WebGLRenderer({
 });
 modalRenderer.setClearColor(0x17191D);
 modalRenderer.setPixelRatio(window.devicePixelRatio);
-modalRenderer.setSize(4096, 4096);
+modalRenderer.setSize(1080, 1080);
 modalRenderer.outputEncoding = THREE.sRGBEncoding
 
 const camera = new THREE.PerspectiveCamera(30, 1, 1, 128);
