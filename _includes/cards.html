@@ -8,8 +8,8 @@
   {% else %}<p align="justify">
     {{ item.text | replace: '$site.baseurl', site.baseurl }}
   </p>{% endif %}{% if item.btnURL %}
-  <a href="{{ item.btnURL | replace: '$site.baseurl', site.baseurl  }}" class="btn btn-block btn-success" role="button">{{ item.btnText }}</a>{% endif %}{% if item.btn2URL %}
-  <a href="{{ item.btn2URL | replace: '$site.baseurl', site.baseurl  }}" class="btn btn-block btn-success" role="button">{{ item.btn2Text }}</a>{% endif %}
+  <a href="{{ item.btnURL | replace: '$site.baseurl', site.baseurl  }}" class="btn btn-block btn-primary" role="button">{{ item.btnText }}</a>{% endif %}{% if item.btn2URL %}
+  <a href="{{ item.btn2URL | replace: '$site.baseurl', site.baseurl  }}" class="btn btn-block btn-primary" role="button">{{ item.btn2Text }}</a>{% endif %}
 </div>{% endif %}
 <hr>
 {% endfor %}
