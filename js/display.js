@@ -24,7 +24,7 @@ const modalRenderer = new THREE.WebGLRenderer({
 });
 modalRenderer.setClearColor(0x17191D);
 modalRenderer.setPixelRatio(window.devicePixelRatio);
-modalRenderer.setSize(1080, 1080);
+modalRenderer.setSize(4096, 4096);
 modalRenderer.outputEncoding = THREE.sRGBEncoding
 
 const camera = new THREE.PerspectiveCamera(30, 1, 1, 128);
