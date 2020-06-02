@@ -2,144 +2,31 @@
 title: Display
 separatedTitle: Dis&shy;play
 description: Here you can find all blocks, items, and entities in Faithful 3D!
+
+modalTitle: View Model
+modalText: You can rotate the model with your mouse.
+modalBtn: Close
+
+info: Vous pouvez cliquer sur les cadres pour avoir une vue rapprochée du modèle!
+display:
+  - tools:
+  	Title: Tools & Weapons
+  	Credits: Made by Howler
+  	Screenshot: $site.baseurl/image/display/screen_tools.jpg
+
+	big1: $site.baseurl/gltf/tools_and_weapons/netherite_sword.gltf
+	big2: $site.baseurl/gltf/tools_and_weapons/netherite_pickaxe.gltf
+
+	tiny1a: $site.baseurl/gltf/tools_and_weapons/netherite_axe.gltf
+	tiny2a: $site.baseurl/gltf/tools_and_weapons/netherite_shovel.gltf
+
+	tiny1b: $site.baseurl/gltf/tools_and_weapons/bow_pulling_2.gltf
+	tiny2b: $site.baseurl/gltf/tools_and_weapons/crossbow_arrow.gltf
+
+	tiny1c: $site.baseurl/gltf/tools_and_weapons/fishing_rod.gltf
+	tiny2c: $site.baseurl/gltf/tools_and_weapons/carrot_on_a_stick.gltf
+
+	tiny1d: $site.baseurl/gltf/tools_and_weapons/flint_and_steel.gltf
+	tiny2d: $site.baseurl/gltf/tools_and_weapons/netherite_hoe.gltf
 ---
-
-<canvas id="hiddenCanvas" style="display: none;"></canvas>
-
-<div class="container">
-	<h2 align="center">You can click on the cards to look closer and rotate the models</h2>
-
-	<div class="card-body">
-		<h4 class="card-title">Tools & Weapons</h4>
-		<p class="card-text"><small>Made by Howler</small></p>
-	</div>
-
-	<div class="row">
-
-		<div class="col">
-			<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/netherite_sword.gltf">
-			<img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-			</div>
-		</div>
-
-		<div class="col">
-
-			<div class="row">
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/netherite_axe.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/netherite_shovel.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-			</div>
-
-			<hr>
-
-			<div class="row">
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/bow_pulling_2.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/crossbow_arrow.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<hr>
-
-	<div class="row">
-		<div class="col">
-			<img style="width:100%" src="/image/display/screen_tools.jpg" alt="Tools & Weapons Screenshot">
-		</div>
-	</div>
-
-	<hr>
-
-	<div class="row">
-
-		<div class="col">
-
-			<div class="row">
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/fishing_rod.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/flint_and_steel.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-			</div>
-
-			<hr>
-
-			<div class="row">
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/carrot_on_a_stick.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/netherite_hoe.gltf">
-						<img class="card-img-top" src="/image/display/loading.png" alt="Model">
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="col">
-			<div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="/gltf/tools_and_weapons/netherite_pickaxe.gltf">
-			<img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="modelModal">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">View Model</h4>
-      </div>
-      <div class="modal-body">
-        <p>
-          You can rotate the model with your mouse.
-        </p>
-        <canvas id="modalCanvas">
-
-        </canvas>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 3d models script -->
-<script type="module" src="/js/display.js"></script>
+{% include display.html info=page.info display=page.display modalTitle=page.modalTitle modalText=page.modalText modalBtn=page.modalBtn %}
