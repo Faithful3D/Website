@@ -40,33 +40,10 @@
 </head>
 <body>
 
-{% if page.url contains "/article/" %}
-  <style>
-    .display-article {
-      background-image: url({{ page.headerImgURL | replace: '$site.baseurl', site.baseurl }});
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: #fff;
-      text-shadow: 2px 2px 20px #000;
-    }
-    .text-color{
-      color: #fff;
-    }
-  </style>
-
-  <header class="display-article">
-    <h1 class="display-1">{{ page.separatedTitle }}</h1>
-    <p class="text-color">{{ page.description }}</p>
-  </header>
-{% endif %}
-
-{% unless page.url contains "/article/" %}
-  <header>
-    <h1 class="display-1">{{ page.separatedTitle }}</h1>
-    <p>{{ page.description }}</p>
-  </header>
-{% endunless%}
+<header {% if page.url contains "/article/" %} class="display-article" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ page.headerImgURL | replace: '$site.baseurl', site.baseurl }});"{% endif %}>
+  <h1 class="display-1">{{ page.separatedTitle }}</h1>
+  <p>{{ page.description }}</p>
+</header>
 
 <div class="custom-navbar-wrapper">
   <nav class="custom-navbar navbar navbar-expand-sm navbar-dark">

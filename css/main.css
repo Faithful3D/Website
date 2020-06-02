@@ -224,3 +224,12 @@ h2, h3, h4, h5 {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* Article */
+.display-article {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-shadow: 2px 2px 20px #000;
+}
