@@ -2,74 +2,291 @@
 title: Herunterladen
 separatedTitle: He&shy;run&shy;ter&shy;la&shy;den
 description: Hier findest du alle Versioen von Faithful 3D!
-
-cards:
-  - 1:
-    raw: <div><canvas id="chart_download"></canvas></div>
-  - 2:
-    imgURL: $site.baseurl/image/home/github_banner.jpg
-    imgAlt: GitHub Banner
-    title: Neuste
-    rawText: |
-      <p align="justify">
-        Um alles zu genießen, was auf dieser Internetseite präsentiert wird,
-        ist es besser, die GitHub-Version herunterzuladen.
-        Beachte, dass einige ältere Versionen nicht mehr mit neueren Versionen kompatibel sind.
-        Da musst du dich bei Mojang beschweren ;)
-      </p>
-      <p align="right">
-        Juknum
-      </p>
-      <p>
-        <a class="btn btn-primary" href="https://github.com/Faithful3D">GitHub</a>
-      </p>
-  - 3:
-    imgURL: $site.baseurl/image/download/1.16.jpg
-    imgAlt: 1.16
-    title: 1.16
-    rawText: |
-      <p>
-        <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2938029">20w17a - s1</a>
-      </p>
-  - 4:
-    imgURL: $site.baseurl/image/download/1.15.jpg
-    imgAlt: 1.15
-    title: 1.15
-    rawText: |
-      <p>
-        <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2877605">1.15.2 - r1</a>
-      </p>
-      <p>
-        <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2849351">1.15.1 - r1</a>
-      </p>
-      <p>
-        <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2842038">1.15 - r2</a>
-        <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2840966">1.15 - r1</a>
-        <a class="btn btn-primary" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2832299">1.15 - s1</a>
-      </p>
-  - 5:
-    imgURL: $site.baseurl/image/download/1.14.jpg
-    imgAlt: 1.14
-    title: 1.14
-    rawText: |
-      <p>
-         <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2825892">1.14.x - r1</a>
-      </p>
-  - 6:
-    imgURL: $site.baseurl/image/download/1.13.jpg
-    imgAlt: 1.13
-    title: 1.8 - 1.13
-    rawText: |
-      <p align="justify">
-         Alle folgenden Versionen haben den gleichen Inhalt wie 1.14. Sie werden nicht mehr aktualisiert.
-      </p>
-      <p>
-        <a class="btn btn-success" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2952547">1.12.2 - r1</a>
-      </p>
-  - 7:
-    raw: |
-      <script>const dateArray = ['November','Dezember','Januar','Februar','März','April','Mai']</script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script src="$site.baseurl/js/download.js" defer></script>
 ---
-{% include cards.html cards=page.cards %}
+<div class="links-image">
+  <canvas id="chart_download"></canvas>
+</div>
+<div class="links-content">
+  <h2>GitHub</h2>
+  <p align="justify">
+    All the versions below can be found on GitHub in their latest state of development. Everything presented on the site comes from the latest developed version
+  </p>
+  <p align="right">
+    Juknum
+  </p>
+  <p>
+    <a class="btn btn-warning btn-block" href="https://github.com/Faithful3D">GitHub</a>
+  </p>
+</div>
+
+<hr>
+
+<h2><img src="/image/download/1.16.png" alt="1.16" width="25" height="25"> Versions 1.16</h2>
+<div >
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Art</th>
+        <th>Name</th>
+        <th>Größe</th>
+        <th>Veröffentlicht auf</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="badge badge-warning">GitHub</span>
+        </td>
+        <td>
+          <a href="https://github.com/Faithful3D/1.16">Faithful 3D - 1.16 - Github</a>
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="badge badge-primary">Snapshot</span>
+        </td>
+        <td>
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2938029">Faithful 3D - 1.16 - S1 (20w17a)</a>
+        </td>
+        <td>
+          698.07 KB
+        </td>
+        <td>
+          Apr 23, 2020
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><hr>
+
+<h2><img src="/image/download/1.15.png" alt="1.15" width="25" height="25"> Versions 1.15</h2>
+<div >
+  <table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Art</th>
+      <th>Name</th>
+      <th>Größe</th>
+      <th>Veröffentlicht auf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="badge badge-warning">GitHub</span>
+      </td>
+      <td>
+        <a href="https://github.com/Faithful3D/1.15">Faithful 3D - 1.15 - Github</a>
+      </td>
+      <td>
+        -
+      </td>
+      <td>
+        -
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <span class="badge badge-success">Release</span>
+      </td>
+      <td>
+        <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2877605">Faithful 3D - 1.15.2 - R1</a>
+      </td>
+      <td>
+        498.50 KB
+      </td>
+      <td>
+        Feb 8, 2020
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="badge badge-success">Release</span>
+      </td>
+      <td>
+        <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2849351">Faithful 3D - 1.15.1 - R1</a>
+      </td>
+      <td>
+        516.48 KB
+      </td>
+      <td>
+        Dec 25, 2019
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="badge badge-success">Release</span>
+      </td>
+      <td>
+        <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2842038">Faithful 3D - 1.15 - R2</a>
+      </td>
+      <td>
+        487.44 KB
+      </td>
+      <td>
+        Dec 13, 2019
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="badge badge-success">Release</span>
+      </td>
+      <td>
+        <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2840966">Faithful 3D - 1.15 - R1</a>
+      </td>
+      <td>
+        468.68 KB
+      </td>
+      <td>
+        Dec 11, 2019
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <span class="badge badge-primary">Snapshot</span>
+      </td>
+      <td>
+        <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2832299">Faithful 3D - 1.15 - S1 (1.15-pre2)</a>
+      </td>
+      <td>
+        616.89 KB
+      </td>
+      <td>
+        Nov 25, 2019
+      </td>
+    </tr>
+    
+   </tbody>
+  </table>
+</div>
+
+<br><hr>
+
+<h2><img src="/image/download/1.14.png" alt="1.14" width="25" height="25"> Versions 1.14</h2>
+<div >
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Art</th>
+        <th>Name</th>
+        <th>Größe</th>
+        <th>Veröffentlicht auf</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="badge badge-warning">GitHub</span>
+        </td>
+        <td>
+          <a href="https://github.com/Faithful3D/1.14">Faithful 3D - 1.14 - Github</a>
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="badge badge-success">Release</span>
+        </td>
+        <td>
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2825892">Faithful 3D - 1.14.x - R1</a>
+        </td>
+        <td>
+          609.21 KB
+        </td>
+        <td>
+          Nov 11, 2019
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><hr>
+
+<h2><img src="/image/download/1.12.png" alt="1.12" width="25" height="25"> Versions 1.12</h2>
+<div >
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Art</th>
+        <th>Name</th>
+        <th>Größe</th>
+        <th>Veröffentlicht auf</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="badge badge-warning">GitHub</span>
+        </td>
+        <td>
+          <a href="https://github.com/Faithful3D/1.12">Faithful 3D - 1.12 - Github</a>
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          -
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="badge badge-success">Release</span>
+        </td>
+        <td>
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2970066">Faithful 3D - 1.12.x - R2</a>
+        </td>
+        <td>
+          510.35 KB
+        </td>
+        <td>
+          Jun 1, 2020
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <span class="badge badge-success">Release</span>
+        </td>
+        <td>
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2952547">Faithful 3D - 1.12.x - R1</a>
+        </td>
+        <td>
+          510.99 KB
+        </td>
+        <td>
+          May 9, 2020
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><hr>
+
+<script>const dateArray = ['November','Dezember','Januar','Februar','Marz','April','Mai']</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="/js/download.js" defer></script>
+
+<hr>
