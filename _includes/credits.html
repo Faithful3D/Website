@@ -1,6 +1,6 @@
 <div class="container">
 
-  {% if page.A_list %}
+  {%- if page.A_list -%}
   <h2>A :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -14,84 +14,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.A_list %}
+      {%- for category in page.A_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.B_list %}
+  {%- if page.B_list -%}
   <h2>B :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -105,84 +105,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.B_list %}
+      {%- for category in page.B_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.C_list %}
+  {%- if page.C_list -%}
   <h2>C :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -196,84 +196,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.C_list %}
+      {%- for category in page.C_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.D_list %}
+  {%- if page.D_list -%}
   <h2>D :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -287,84 +287,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.D_list %}
+      {%- for category in page.D_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.E_list %}
+  {%- if page.E_list -%}
   <h2>E :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -378,84 +378,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.E_list %}
+      {%- for category in page.E_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.F_list %}
+  {%- if page.F_list -%}
   <h2>F :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -469,84 +469,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.F_list %}
+      {%- for category in page.F_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.G_list %}
+  {%- if page.G_list -%}
   <h2>G :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -560,84 +560,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.G_list %}
+      {%- for category in page.G_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.H_list %}
+  {%- if page.H_list -%}
   <h2>H :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -651,84 +651,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.H_list %}
+      {%- for category in page.H_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.I_list %}
+  {%- if page.I_list -%}
   <h2>I :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -742,84 +742,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.I_list %}
+      {%- for category in page.I_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.J_list %}
+  {%- if page.J_list -%}
   <h2>J :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -833,84 +833,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.J_list %}
+      {%- for category in page.J_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.K_list %}
+  {%- if page.K_list -%}
   <h2>K :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -924,84 +924,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.K_list %}
+      {%- for category in page.K_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.L_list %}
+  {%- if page.L_list -%}
   <h2>L :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1015,84 +1015,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.L_list %}
+      {%- for category in page.L_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.M_list %}
+  {%- if page.M_list -%}
   <h2>M :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1106,84 +1106,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.M_list %}
+      {%- for category in page.M_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.N_list %}
+  {%- if page.N_list -%}
   <h2>N :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1197,84 +1197,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.N_list %}
+      {%- for category in page.N_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.O_list %}
+  {%- if page.O_list -%}
   <h2>O :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1288,84 +1288,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.O_list %}
+      {%- for category in page.O_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.P_list %}
+  {%- if page.P_list -%}
   <h2>P :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1379,84 +1379,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.P_list %}
+      {%- for category in page.P_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.Q_list %}
+  {%- if page.Q_list -%}
   <h2>Q :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1470,84 +1470,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.Q_list %}
+      {%- for category in page.Q_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.R_list %}
+  {%- if page.R_list -%}
   <h2>R :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1561,84 +1561,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.R_list %}
+      {%- for category in page.R_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.S_list %}
+  {%- if page.S_list -%}
   <h2>S :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1652,84 +1652,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.S_list %}
+      {%- for category in page.S_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.T_list %}
+  {%- if page.T_list -%}
   <h2>T :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1743,84 +1743,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.T_list %}
+      {%- for category in page.T_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.U_list %}
+  {%- if page.U_list -%}
   <h2>U :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1834,84 +1834,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.U_list %}
+      {%- for category in page.U_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.V_list %}
+  {%- if page.V_list -%}
   <h2>V :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -1925,84 +1925,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.V_list %}
+      {%- for category in page.V_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.W_list %}
+  {%- if page.W_list -%}
   <h2>W :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -2016,84 +2016,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.W_list %}
+      {%- for category in page.W_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.X_list %}
+  {%- if page.X_list -%}
   <h2>X :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -2107,84 +2107,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.X_list %}
+      {%- for category in page.X_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.Y_list %}
+  {%- if page.Y_list -%}
   <h2>Y :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -2198,84 +2198,84 @@
     </thead>
     <tbody>
 
-      {% for category in page.Y_list %}
+      {%- for category in page.Y_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
-  {% if page.Z_list %}
+  {%- if page.Z_list -%}
   <h2>Z :</h2>
   <table class="table table-dark table-hover">
     <thead>
@@ -2289,81 +2289,81 @@
     </thead>
     <tbody>
 
-      {% for category in page.Z_list %}
+      {%- for category in page.Z_list -%}
 
       <tr>
         <td align="center">
-          {% if category.type == 'Item' %}
+          {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
-          {% endif %}
-          {% if category.type == 'Block' %}
+          {%- endif -%}
+          {%- if category.type == 'Block' -%}
           <span class="badge" style="background-color: #33CA7F; color: #141519;">{{ page.block | default: 'Block' }}</span>
-          {% endif %}
-          {% if category.type == 'Entity' %}
+          {%- endif -%}
+          {%- if category.type == 'Entity' -%}
           <span class="badge" style="background-color: #3F0D12; color: #fff;">{{ page.entity | default: 'Entity' }}</span>
-          {% endif %}
-          {% if category.type == 'Texture' %}
+          {%- endif -%}
+          {%- if category.type == 'Texture' -%}
           <span class="badge" style="background-color: #FC9F5B; color: #141519;">{{ page.texture | default: 'Texture' }}</span>
-          {% endif %}
-          {% if category.type == 'Addon' %}
+          {%- endif -%}
+          {%- if category.type == 'Addon' -%}
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
-          {% endif %}
+          {%- endif -%}
         </td>
         <td align="center">
-          {% if category.displayed %}
+          {%- if category.displayed -%}
 
-            {% if category.displayed == 1 %}
+            {%- if category.displayed == 1 -%}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-            {% if category.displayed == 0 %}
+            {%- if category.displayed == 0 -%}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
-            {% endif %}
+            {%- endif -%}
 
-          {% else %}
+          {%- else -%}
             
-          {% endif %}
+          {%- endif -%}
         </td>
 
         <td>{{ category.name }}</td>
         <td>
-          {% if category.authors contains 'Juknum' %}
+          {%- if category.authors contains 'Juknum' -%}
             <img style="width:25px" src="/image/team/juknum.jpg" alt="Juknum">
             Juknum
-          {% endif %}
-          {% if category.authors contains 'Howler' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Howler' -%}
             <img style="width:25px" src="/image/team/howler.jpg" alt="Howler">
             Howler
-          {% endif %}
-          {% if category.authors contains 'Progical' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Progical' -%}
             <img style="width:25px" src="/image/team/progical.jpg" alt="Progical">
             Progical
-          {% endif %}
-          {% if category.authors contains 'Bentogamin' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Bentogamin' -%}
             <img style="width:25px" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)">
-          {% endif %}
-          {% if category.authors contains 'Nekzuris' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Nekzuris' -%}
             <img style="width:25px" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)">
-          {% endif %}
-          {% if category.authors contains 'Fenix' %}
+          {%- endif -%}
+          {%- if category.authors contains 'Fenix' -%}
             <img style="width:25px" src="/image/team/fenix.gif" alt="Fenix (community)">
-          {% endif %}
+          {%- endif -%}
           {{ category.authors | remove: '(community)' | remove: 'Juknum' | remove: 'Progical' | remove: 'Howler' | remove: '&' }}
         </td>
         <td>
-          {% if category.date %}
+          {%- if category.date -%}
             {{ category.date }}
-          {% else %}
+          {%- else -%}
             -
-          {% endif %}
+          {%- endif -%}
         </td>
       </tr>
 
-      {% endfor %}
+      {%- endfor -%}
 
     </tbody>
   </table>
   <hr>
-  {% endif %}
+  {%- endif -%}
 
 </div>
