@@ -9,209 +9,238 @@
     <p class="card-text"><small>{{ category.Credits | default: 'Category Credits'}}</small></p>
   </div>
 
+  <!-- 
+  1st line 5 elements
+  +-----------+------+------+
+  | big1      |tiny1a|tiny2a|
+  |           +------+------+
+  |           |tiny1b|tiny2b|
+  +-----------+------+------+
+  -->
   <div class="row">
 
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.big1 | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-
-    <div class="col">
-
-      <div class="row">
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1a | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.big1 | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
         </div>
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2a | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
       </div>
 
-      <hr>
+      <div class="col">
 
-      <div class="row">
+        <div class="row">
 
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1b | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1a | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
           </div>
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2a | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
+          </div>
+
         </div>
 
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2b | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+        <hr>
+
+        <div class="row">
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1b | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
           </div>
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2b | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
+          </div>
+
         </div>
 
       </div>
-
-    </div>
   </div>
 
-  <hr>
+  {% if category.number > 14 %}
 
-  {% if category.number > 14 and category.number < 18 %}
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+  <!-- + 4 elements
+    +------+------+------+------+
+    |medium|medium|medium|medium|
+    |1f    |2f    |3f    |4f    |
+    |      |      |      |      |
+    +------+------+------+------+
+  -->
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-  </div>
 
-  <hr>
   {% endif %}
 
-    {% if category.number > 18 %}
+  <!--
+  +---------------------------+
+  |                           |
+  |         Screenshot        |
+  |                           |
+  +---------------------------+
+  -->
   <div class="row">
-
-    <div class="col">
-
-      <div class="row">
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
+      <div class="col">
+        <img style="width:100%" src="{{ category.Screenshot  | replace: '$site.baseurl', site.baseurl }}" alt="Screenshot">
       </div>
-
-      <hr>
-
-      <div class="row">
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4f | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1g | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
   </div>
-
-  <hr>
 
   {% if category.number > 10 %}
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
-  </div>
 
-  <hr>
+  <!-- + 4 elements
+    +------+------+------+------+
+    |medium|medium|medium|medium|
+    |1e    |2e    |3e    |4e    |
+    |      |      |      |      |
+    +------+------+------+------+
+  -->
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4e | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+      </div>
+    </div>
+
   {% endif %}
 
+  <!-- 
+  2nd line 5 elements
+  +------+------+-----------+
+  |tiny1c|tiny2c| big2      |
+  +------+------+           |
+  |tiny1d|tiny2d|           |
+  +------+------+-----------+
+  -->
   <div class="row">
+      <div class="col">
 
-    <div class="col">
+        <div class="row">
 
-      <div class="row">
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1c | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1c | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
           </div>
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2c | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
+          </div>
+
         </div>
 
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2c | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
+        <hr>
 
+        <div class="row">
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1d | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2d | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+              <img class="card-img-top" src="/image/display/loading.png" alt="Model">
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <hr>
-
-      <div class="row">
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny1d | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
+      <div class="col">
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.big2 | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
         </div>
-
-        <div class="col">
-          <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.tiny2d | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-            <img class="card-img-top" src="/image/display/loading.png" alt="Model">
-          </div>
-        </div>
-
       </div>
-
-    </div>
-
-    <div class="col">
-      <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.big2 | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
-      <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
-      </div>
-    </div>
   </div>
-  
-{% endfor %}
 
-</div>
+  {% if category.number > 18 %}
+
+    <!-- + 4 elements
+    +------+------+------+------+
+    |medium|medium|medium|medium|
+    |1g    |2g    |3g    |4g    |
+    |      |      |      |      |
+    +------+------+------+------+
+    -->
+
+    <div class="row">
+      <div class="col">
+        {% if category.medium1g %}
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium1g | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+        {% endif %}
+      </div>
+      <div class="col">
+        {% if category.medium2g %}
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium2g | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+        {% endif %}
+      </div>
+      <div class="col">
+        {% if category.medium3g %}
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium3g | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+        {% endif %}
+      </div>
+      <div class="col">
+        {% if category.medium4g %}
+        <div class="card" style="width:100%" data-toggle="modal" data-target="#modelModal" data-model="{{ category.medium4g | default: '/gltf/question.gltf' | replace: '$site.baseurl', site.baseurl }}">
+        <img class="card-img-top" src="/image/display/loading.png" alt="Model" style="width:100%">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+{% endfor %}
 
 <!-- Modal -->
 <div class="modal fade" id="modelModal">
