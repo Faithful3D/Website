@@ -19,7 +19,4 @@ entity: Entity
 yes_span: 'YES'
 no_span: 'NO'
 na_span: N/A
-
-{% include credits_tab.html %}
-
-{% include credits.html credits=page.credits %}
+---

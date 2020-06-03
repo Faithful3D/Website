@@ -21,3 +21,7 @@ defaults:
       path: "article"
     values:
       layout: "article"
+  - scope:
+      path: "credits"
+    values:
+      layout: "credits"
