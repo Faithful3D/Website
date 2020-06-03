@@ -1,6 +1,6 @@
 <div class="container">
-  <h2>{{ page.Title | default: 'Credits' }}</h2>
-  <p>{{ page.p | default: 'Last update: june 3rd 2020' }}</p>
+  <h2>A :</h2>
+  
   <table class="table table-dark table-hover">
     <thead>
       <tr>
@@ -13,21 +13,21 @@
     </thead>
     <tbody>
 
-      {% for category in page.credits %}
+      {% for category in page.A_list %}
 
       <tr>
         <td align="center">
           {% if category.type == 'Item' %}
-          <span class="badge" style="background-color: #f9ccac;">{{ page.item | default: 'Item' }}</span>
+          <span class="badge" style="background-color: #92BFB1;">{{ page.item | default: 'Item' }}</span>
           {% endif %}
           {% if category.type == 'Block' %}
-          <span class="badge" style="background-color: #f4a688;">{{ page.block | default: 'Block' }}</span>
+          <span class="badge" style="background-color: #F4AC45;">{{ page.block | default: 'Block' }}</span>
           {% endif %}
           {% if category.type == 'Entity' %}
-          <span class="badge" style="background-color: #e0876a;">{{ page.entity | default: 'Entity' }}</span>
+          <span class="badge" style="background-color: #694A38;">{{ page.entity | default: 'Entity' }}</span>
           {% endif %}
           {% if category.type == 'Texture' %}
-          <span class="badge" style="background-color: #fbefcc;">{{ page.texture | default: 'Texture' }}</span>
+          <span class="badge" style="background-color: #DAD6D6;">{{ page.texture | default: 'Texture' }}</span>
           {% endif %}
         </td>
         <td align="center">
@@ -62,4 +62,67 @@
 
     </tbody>
   </table>
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
+        <th style="width:5%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
+        <th>{{ page.Hname | default: 'Name' }}</th>
+        <th>{{ page.Hauthors | default: 'Author(s)' }}</th>
+        <th>{{ page.Hpublished | default: 'Published' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for category in page.B_list %}
+
+      <tr>
+        <td align="center">
+          {% if category.type == 'Item' %}
+          <span class="badge" style="background-color: #92BFB1;">{{ page.item | default: 'Item' }}</span>
+          {% endif %}
+          {% if category.type == 'Block' %}
+          <span class="badge" style="background-color: #F4AC45;">{{ page.block | default: 'Block' }}</span>
+          {% endif %}
+          {% if category.type == 'Entity' %}
+          <span class="badge" style="background-color: #694A38;">{{ page.entity | default: 'Entity' }}</span>
+          {% endif %}
+          {% if category.type == 'Texture' %}
+          <span class="badge" style="background-color: #DAD6D6;">{{ page.texture | default: 'Texture' }}</span>
+          {% endif %}
+        </td>
+        <td align="center">
+          {% if category.displayed %}
+
+            {% if category.displayed == 1 %}
+              <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
+            {% endif %}
+
+            {% if category.displayed == 0 %}
+              <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
+            {% endif %}
+
+          {% else %}
+            <span class="badge badge-secondary">{{ page.na_span | default: 'N/A' }}</span>
+
+          {% endif %}
+        </td>
+
+        <td>{{ category.name }}</td>
+        <td>{{ category.authors }}</td>
+        <td>
+          {% if category.date %}
+            {{ category.date }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+
 </div>
