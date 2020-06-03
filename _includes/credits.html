@@ -32,9 +32,9 @@
         </td>
         <td align="center">
           {% if category.displayed %}
-            {% if category.displayed == 'YES' %}
+            {% if category.displayed == 'yes' %}
             <span class="badge badge-success">YES</span>
-            {% elsif category.displayed == 'NO' %}
+            {% elsif category.displayed == 'no' %}
             <span class="badge badge-danger">NO</span>
             {% endif %}
           {% else %}
@@ -42,9 +42,15 @@
           {% endif %}
         </td>
 
-        <td>{{ category }}</td>
+        <td>{{ category.name }}</td>
         <td>{{ category.authors }}</td>
-        <td>{{ category.date }}</td>
+        <td>
+          {% if category.date %}
+            {{ category.date }}
+          {% else %}
+            -
+          {% endif %}
+        </td>
       </tr>
 
       {% endfor %}
