@@ -5,11 +5,11 @@
   <table class="table table-dark table-hover">
     <thead>
       <tr>
-        <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
-        <th style="width:5%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
-        <th>{{ page.Hname | default: 'Name' }}</th>
-        <th>{{ page.Hauthors | default: 'Author(s)' }}</th>
-        <th>{{ page.Hpublished | default: 'Published' }}</th>
+        <th style="width:5%">{{ page.type | default: 'Type' }}</th>
+        <th style="width:5%">{{ page.displayed | default: 'Displayed' }}</th>
+        <th>{{ page.name | default: 'Name' }}</th>
+        <th>{{ page.authors | default: 'Author(s)' }}</th>
+        <th>{{ page.published | default: 'Published' }}</th>
       </tr>
     </thead>
     <tbody>
@@ -35,15 +35,15 @@
           {% if category.displayed %}
 
             {% if category.displayed == 1 %}
-              <span class="badge badge-success">{{ page.span_yes | default: 'YES' }}</span>
+              <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
             {% endif %}
 
             {% if category.displayed == 0 %}
-              <span class="badge badge-danger">{{ page.span_no | default: 'NO' }}</span>
+              <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
             {% endif %}
 
           {% else %}
-            <span class="badge badge-secondary">{{ page.span_na | default: 'N/A' }}</span>
+            <span class="badge badge-secondary">{{ page.na_span | default: 'N/A' }}</span>
 
           {% endif %}
         </td>
