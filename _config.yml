@@ -24,4 +24,4 @@ defaults:
   - scope:
       path: "credits"
     values:
-      layout: "credits_tab"
+      layout: "credits"
