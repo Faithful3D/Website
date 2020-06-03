@@ -32,13 +32,18 @@
         </td>
         <td align="center">
           {% if category.displayed %}
-            {% if category.displayed == 'yes' %}
-            <span class="badge badge-success">YES</span>
-            {% elsif category.displayed == 'no' %}
-            <span class="badge badge-danger">NO</span>
+
+            {% if category.displayed == true %}
+              <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
             {% endif %}
+
+            {% if category.displayed == false %}
+              <span class="badge badge-success">{{ page.no_span | default: 'NO' }}</span>
+            {% endif %}
+
           {% else %}
-            <span class="badge badge-secondary">N/A</span>
+            <span class="badge badge-success">{{ page.na_span | default: 'N/A' }}</span>
+
           {% endif %}
         </td>
 
