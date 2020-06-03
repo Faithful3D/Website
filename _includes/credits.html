@@ -1,0 +1,98 @@
+
+<div class="container">
+  <h2>Models</h2>        
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th style="width:5%">Type</th>
+        <th style="width:5%">Displayed</th>
+        <th>Name</th>
+        <th>Authors</th>
+        <th>Published</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for category in include.credits %}
+
+      <tr>
+        <td align="center">
+          {% if category.type == 'Item' %}
+          <span class="badge badge-warning">Item</span>
+          {% endif %}
+          {% if category.type == 'Block' %}
+          <span class="badge badge-warning">Block</span>
+          {% endif %}
+          {% if category.type == 'Entity' %}
+          <span class="badge badge-warning">Entity</span>
+          {% endif %}
+          {% if category.type == 'Texture' %}
+          <span class="badge badge-warning">Texture</span>
+          {% endif %}
+        </td>
+        <td align="center">
+          {% if category.displayed %}
+            {% if category.displayed == 'YES' %}
+            <span class="badge badge-success">YES</span>
+            {% elsif category.displayed == 'NO' %}
+            <span class="badge badge-danger">NO</span>
+            {% endif %}
+          {% else %}
+            <span class="badge badge-secondary">N/A</span>
+          {% endif %}
+        </td>
+
+        <td>{{ category }}</td>
+        <td>{{ category.authors }}</td>
+        <td>{{ category.date }}</td>
+      </tr>
+
+      {% endfor %}
+
+    <!--
+      <tr>
+        <td align="center"><span class="badge badge-warning">Item</span></td>
+        <td align="center"><span class="badge badge-danger">NO</span></td>
+        <td>acacia_door</td>
+        <td>Juknum</td>
+        <td>feb 7, 2020</td>
+      </tr>
+      <tr>
+        <td align="center"><span class="badge badge-info">Block</span></td>
+        <td align="center"><span class="badge badge-secondary">N/A</span></td>
+        <td>acacia_door_bottom</td>
+        <td>Juknum</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td align="center"><span class="badge badge-info">Block</span></td>
+        <td align="center"><span class="badge badge-secondary">N/A</span></td>
+        <td>acacia_door_bottom_hinge</td>
+        <td>Juknum</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td align="center"><span class="badge badge-success">Texture</span></td>
+        <td align="center"><span class="badge badge-secondary">N/A</span></td>
+        <td>acacia_door_special</td>
+        <td>Juknum</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td align="center"><span class="badge badge-info">Block</span></td>
+        <td align="center"><span class="badge badge-secondary">N/A</span></td>
+        <td>acacia_door_top</td>
+        <td>Juknum</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td align="center"><span class="badge badge-info">Block</span></td>
+        <td align="center"><span class="badge badge-secondary">N/A</span></td>
+        <td>acacia_door_top_hinge</td>
+        <td>Juknum</td>
+        <td>-</td>
+      </tr>
+    -->
+    </tbody>
+  </table>
+</div>
