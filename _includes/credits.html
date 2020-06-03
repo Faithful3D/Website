@@ -1,6 +1,7 @@
 <div class="container">
+
+  {% if page.A_list %}
   <h2>A :</h2>
-  
   <table class="table table-dark table-hover">
     <thead>
       <tr>
@@ -62,7 +63,10 @@
 
     </tbody>
   </table>
+  {% endif %}
 
+  {% if page.B_list %}
+  <h2>B :</h2>
   <table class="table table-dark table-hover">
     <thead>
       <tr>
@@ -124,5 +128,6 @@
 
     </tbody>
   </table>
-
+  {% endif %}
+  
 </div>
