@@ -1,14 +1,14 @@
 
 <div class="container">
-  <h2>Models</h2>        
+  <h2>Credits</h2>        
   <table class="table table-dark table-hover">
     <thead>
       <tr>
-        <th style="width:5%">Type</th>
-        <th style="width:5%">Displayed</th>
-        <th>Name</th>
-        <th>Authors</th>
-        <th>Published</th>
+        <th style="width:5%">{{ page.type | default: 'Type' }}</th>
+        <th style="width:5%">{{ page.displayed | default: 'Displayed' }}</th>
+        <th>{{ page.name | default: 'Name' }}</th>
+        <th>{{ page.authors | default: 'Author(s)' }}</th>
+        <th>{{ page.published | default: 'Published' }}</th>
       </tr>
     </thead>
     <tbody>
@@ -33,11 +33,11 @@
         <td align="center">
           {% if category.displayed %}
 
-            {% if category.displayed == true %}
+            {% if category.displayed == 1 %}
               <span class="badge badge-success">{{ page.yes_span | default: 'YES' }}</span>
             {% endif %}
 
-            {% if category.displayed == false %}
+            {% if category.displayed == 0 %}
               <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
             {% endif %}
 
