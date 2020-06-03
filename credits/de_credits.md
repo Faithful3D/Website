@@ -1,9 +1,10 @@
 ---
+permalink: /de/credits
 title: Credits
 separatedTitle: Cre&shy;dits
 description: Here you can find out who made which model for Faithful 3D!
 
-p: 'Last update: june 3rd 2020'
+p: 'Last update: june 3rd 2020 // WIP not translated yet'
 
 Htype: Type
 Hdisplayed: Displayed
