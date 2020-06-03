@@ -38,11 +38,11 @@
             {% endif %}
 
             {% if category.displayed == false %}
-              <span class="badge badge-success">{{ page.no_span | default: 'NO' }}</span>
+              <span class="badge badge-danger">{{ page.no_span | default: 'NO' }}</span>
             {% endif %}
 
           {% else %}
-            <span class="badge badge-success">{{ page.na_span | default: 'N/A' }}</span>
+            <span class="badge badge-secondary">{{ page.na_span | default: 'N/A' }}</span>
 
           {% endif %}
         </td>
