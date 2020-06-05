@@ -791,6 +791,7 @@ D_list:
   - door_display:
     name: door_display
     authors: Juknum & Progical
+    type: Item
     date: Feb 7, 2020
 
   - dragon_breath:
