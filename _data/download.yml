@@ -6,7 +6,7 @@ v_1_16:
 
   - 1_16_s1:
     type: Snapshot
-    name: Faithful 3D 1.16 - s1 (20w17a)
+    name: Faithful 3D 1.16 - S1 (20w17a)
     file_size: 698.07 KB
     date: Apr 23, 2020
     url_number: 2938029
@@ -54,7 +54,7 @@ v_1_15:
 
   - 1_15_s1:
     type: Snapshot
-    name: Faithful 3D 1.15 - S1
+    name: Faithful 3D 1.15 - S1 (1.15-pre2)
     file_size: 616.89 KB
     date: Nov 25, 2019
     url_number: 2840966
