@@ -473,38 +473,8 @@ C_list:
     type: Texture
     date: Oct 28, 2019
 
-  - chest_base:
-    name: chest_base
-    authors: Juknum
-    type: Entity
-
-  - chest_knob:
-    name: chest_knob
-    authors: Juknum
-    type: Entity
-
   - chest_large:
     name: chest_large
-    authors: Juknum
-    type: Entity
-
-  - chest_large_base:
-    name: chest_large_base
-    authors: Juknum
-    type: Entity
-
-  - chest_large_knob:
-    name: chest_large_knob
-    authors: Juknum
-    type: Entity
-
-  - chest_large_lid:
-    name: chest_large_lid
-    authors: Juknum
-    type: Entity
-
-  - chest_lid:
-    name: chest_lid
     authors: Juknum
     type: Entity
 
