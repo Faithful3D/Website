@@ -34,16 +34,9 @@ v_1_15:
   - 1_15_1_r1:
     type: Release
     name: Faithful 3D 1.15.1 - R1
-    file_size: 498.50 KB
-    date: Feb 8, 2020
-    url_number: 2849351
-
-  - 1_15_r1:
-    type: Release
-    name: Faithful 3D 1.15 - R1
     file_size: 516.48 KB
     date: Dec 25, 2019
-    url_number: 2842038
+    url_number: 2849351
 
   - 1_15_r2:
     type: Release
@@ -60,7 +53,7 @@ v_1_15:
     url_number: 2840966
 
   - 1_15_s1:
-    type: Release
+    type: Snapshot
     name: Faithful 3D 1.15 - S1
     file_size: 616.89 KB
     date: Nov 25, 2019
@@ -88,13 +81,13 @@ v_1_12:
   - 1_12_x_r2:
     type: Release
     name: Faithful 3D 1.12.x - R2
-    file_size: 609.21 KB
+    file_size: 510.35 KB
     date: Jun 1, 2020
     url_number: 2970066
 
   - 1_12_x_r1:
     type: Release
     name: Faithful 3D 1.12.x - R1
-    file_size: 609.21 KB
+    file_size: 510.99 KB
     date: May 9, 2020
     url_number: 2952547
