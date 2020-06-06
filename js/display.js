@@ -89,7 +89,7 @@ function loadBlob(blob) {
 function onImgLoad() {
   URL.revokeObjectURL(url);
   array.shift();
-  loadModelsToImgs(array);
+  loadModelsToImgs();
 }
 
 window.loadModelToModal = function(model) {
