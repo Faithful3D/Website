@@ -465,6 +465,7 @@ C_list:
     name: chest
     authors: Juknum
     type: Entity
+    date: Jun 6, 2020
     displayed: 0
 
   - chest_texture:
@@ -476,6 +477,7 @@ C_list:
   - chest_large:
     name: chest_large
     authors: Juknum
+    date: Jun 6, 2020
     type: Entity
 
   - chest_minecart:
@@ -484,6 +486,12 @@ C_list:
     type: Item
     date: Oct 28, 2019
     displayed: 0
+
+  - chicken:
+    name: chicken
+    authors: Juknum
+    date: Jun 6, 2020
+    type: Entity
 
   - chiseled_stone_bricks:
     name: chiseled_stone_bricks
@@ -786,7 +794,29 @@ D_list:
     authors: Juknum & Progical
     type: Block
 
+E_list:
+  - ender_chest:
+    name: ender_chest
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
 H_list:
+  - head_skeleton:
+    name: head_skeleton
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
+  - head_wither_skeleton:
+    name: head_wither_skeleton
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
   - hive/0:
     name: hive/0
     authors: Fenix (community)
@@ -822,6 +852,13 @@ H_list:
     authors: Fenix (community)
     type: Addon
     date: May 10, 2020
+
+I_list:
+  - iron_golem:
+    name: iron_golem
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
 
 N_list:
   - nest/0:
@@ -859,3 +896,76 @@ N_list:
     authors: Fenix (community)
     type: Addon
     date: May 10, 2020
+
+S_list:
+  - skeleton:
+    name: skeleton
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
+  - skeleton_body:
+    name: skeleton_body
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+
+  - skeleton_head:
+    name: skeleton_head
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+
+  - stray:
+    name: stray
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
+  - stray_body:
+    name: stray_body
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+
+  - stray_head:
+    name: stray_head
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+
+T_list:
+  - trapped_chest:
+    name: trapped_chest
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
+  - trapped_chest_large:
+    name: trapped_chest_large
+    authors: Juknum
+    type: Entity
+    date: Jun 6, 2020
+
+W_list:
+  - wither_skeleton:
+    name: wither_skeleton
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+    displayed: 0
+
+  - wither_skeleton_body:
+    name: wither_skeleton_body
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
+
+  - wither_skeleton_head:
+    name: wither_skeleton_head
+    authors: Juknum & Howler
+    type: Entity
+    date: Jun 6, 2020
