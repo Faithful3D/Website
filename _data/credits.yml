@@ -1,5 +1,5 @@
 list:
-  -A:
+  - A:
     - acacia_boat:
       name: acacia_boat
       date: Oct 28, 2019
@@ -78,7 +78,7 @@ list:
       date: Feb 7, 2020
       displayed: 0
 
-  -B:
+  - B:
     - barrel:
       name: barrel
       authors: Howler
@@ -326,7 +326,7 @@ list:
       type: Block
       displayed: 1
 
-  -C:
+  - C:
     - cactus:
       name: cactus
       authors: Juknum
@@ -649,7 +649,7 @@ list:
       type: Item
       date: Feb 24, 2020
 
-  -D:
+  - D:
     - dark_oak_boat:
       name: dark_oak_boat
       authors: Juknum
@@ -795,7 +795,7 @@ list:
       authors: Juknum & Progical
       type: Block
 
-  -E:
+  - E:
     - ender_chest:
       name: ender_chest
       authors: Juknum
@@ -803,7 +803,7 @@ list:
       date: Jun 6, 2020
       displayed: 0
 
-  -H:
+  - H:
     - head_skeleton:
       name: head_skeleton
       authors: Juknum
@@ -854,7 +854,7 @@ list:
       type: Addon
       date: May 10, 2020
 
-  -I:
+  - I:
     - iron_golem:
       name: iron_golem
       authors: Juknum
@@ -862,7 +862,7 @@ list:
       date: Jun 6, 2020
       displayed: 0
 
-  -N:
+  - N:
     - nest/0:
       name: nest/0
       authors: Fenix (community)
@@ -899,7 +899,7 @@ list:
       type: Addon
       date: May 10, 2020
 
-  -S:
+  - S:
     - skeleton:
       name: skeleton
       authors: Juknum & Howler
@@ -938,7 +938,7 @@ list:
       type: Entity
       date: Jun 6, 2020
 
-  -T:
+  - T:
     - trapped_chest:
       name: trapped_chest
       authors: Juknum
@@ -952,7 +952,7 @@ list:
       type: Entity
       date: Jun 6, 2020
 
-  -W:
+  - W:
     - wither_skeleton:
       name: wither_skeleton
       authors: Juknum & Howler
