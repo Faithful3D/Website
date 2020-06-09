@@ -14,7 +14,7 @@
     </thead>
     <tbody>
 
-      {%- for category in letter.first -%}
+      {%- for letterspace in letter.first -%}{%- for category in letterspace -%}
       <!-- {{ category }} -->
       <tr>
         <td align="center">
@@ -80,7 +80,7 @@
         </td>
       </tr>
 
-      {%- endfor -%}
+      {%- endfor -%}{%- endfor -%}
 
     </tbody>
   </table>
