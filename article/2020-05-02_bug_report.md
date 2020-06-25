@@ -31,18 +31,18 @@ short_text: Discover how to report a bug!
 			<li>
 				<strong>Resource pack :</strong>
 				<ul>
-					<li><a href="https://github.com/Faithful3D/1.16/issues/new/choose"><strong>1.16</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.15/issues/new/choose"><strong>1.15</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.14/issues/new/choose"><strong>1.14</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.13/issues/new/choose"><strong>1.13</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.12/issues/new/choose"><strong>1.12</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.11/issues/new/choose"><strong>1.11</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.10/issues/new/choose"><strong>1.10</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.9/issues/new/choose"><strong>1.9</strong> report bug</a></li>
-					<li><a href="https://github.com/Faithful3D/1.8/issues/new/choose"><strong>1.8</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.16/issues/new/choose"><strong>1.16</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.15/issues/new/choose"><strong>1.15</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.14/issues/new/choose"><strong>1.14</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.13/issues/new/choose"><strong>1.13</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.12/issues/new/choose"><strong>1.12</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.11/issues/new/choose"><strong>1.11</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.10/issues/new/choose"><strong>1.10</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.9/issues/new/choose"><strong>1.9</strong></a></li>
+					<li><a href="https://github.com/Faithful3D/1.8/issues/new/choose"><strong>1.8</strong></a></li>
 				</ul>
 			</li>
-			<li><a href="https://github.com/Faithful3D/Website/issues/new/choose"><strong>Website</strong> report bug</a></li>
+			<li><a href="https://github.com/Faithful3D/Website/issues/new/choose"><strong>Website</strong></a></li>
 		</ul>
 	</p>
 
