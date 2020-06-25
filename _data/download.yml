@@ -72,6 +72,12 @@ v_1_14:
     date: Nov 11, 2019
     url_number: 2825892
 
+v_1_13:
+  - 1_11_github:
+    type: GitHub
+    name: Faithful 3D 1.13 - GitHub
+    url: https://github.com/Faithful3D/1.13
+
 v_1_12:
   - 1_12_github:
     type: GitHub
@@ -91,3 +97,34 @@ v_1_12:
     file_size: 510.99 KB
     date: May 9, 2020
     url_number: 2952547
+
+v_1_11:
+  - 1_11_github:
+    type: GitHub
+    name: Faithful 3D 1.11 - GitHub
+    url: https://github.com/Faithful3D/1.11
+
+v_1_10:
+  - 1_10_github:
+    type: GitHub
+    name: Faithful 3D 1.10 - GitHub
+    url: https://github.com/Faithful3D/1.10
+
+v_1_9:
+  - 1_9_github:
+    type: GitHub
+    name: Faithful 3D 1.9 - GitHub
+    url: https://github.com/Faithful3D/1.9
+
+v_1_8:
+  - 1_8_github:
+    type: GitHub
+    name: Faithful 3D 1.8 - GitHub
+    url: https://github.com/Faithful3D/1.8
+
+  - 1_8_r1:
+    type: Release
+    name: Faithful 3D 1.8.x - R1
+    file_size: 479.88 KB
+    date: Jun 25, 2020
+    url_number: 2988355
