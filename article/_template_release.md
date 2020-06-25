@@ -35,4 +35,5 @@ removed:
   - Nothing
 
 downloadURL: https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/...
+githubVersion: mc version (ex: 1.8 or 1.15 dont do 1.15.2)
 ---
