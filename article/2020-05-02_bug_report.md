@@ -28,8 +28,21 @@ short_text: Discover how to report a bug!
 	<p align="justify">
 		Well, the answer is simple: You just have to use the following links and open an issue.
 		<ul>
-			<li><a href="https://github.com/Juknum/Faithful-3D/issues"><strong>Resource pack</strong> report bug</a></li>
-			<li><a href="https://github.com/Juknum/faithful3d.github.io/issues"><strong>Website</strong> report bug</a></li>
+			<li>
+				<strong>Resource pack :</strong>
+				<ul>
+					<li><a href="https://github.com/Faithful3D/1.16/issues/new/choose"><strong>1.16</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.15/issues/new/choose"><strong>1.15</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.14/issues/new/choose"><strong>1.14</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.13/issues/new/choose"><strong>1.13</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.12/issues/new/choose"><strong>1.12</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.11/issues/new/choose"><strong>1.11</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.10/issues/new/choose"><strong>1.10</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.9/issues/new/choose"><strong>1.9</strong> report bug</a></li>
+					<li><a href="https://github.com/Faithful3D/1.8/issues/new/choose"><strong>1.8</strong> report bug</a></li>
+				</ul>
+			</li>
+			<li><a href="https://github.com/Faithful3D/Website/issues/new/choose"><strong>Website</strong> report bug</a></li>
 		</ul>
 	</p>
 
