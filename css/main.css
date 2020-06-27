@@ -225,19 +225,6 @@ h2, h3, h4, h5 {
   cursor: pointer;
 }
 
-/* Alert Info */
-.alert-btn {
-  text-align: center;
-  background: #0000;
-  border: 0;
-  color: #000;
-  font-size: 16px;
-}
-
-.alert-container {
-  text-align: left;
-}
-
 /* Article */
 .display-article {
   background-position: center;
