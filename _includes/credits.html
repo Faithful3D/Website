@@ -101,10 +101,10 @@ $(document).ready(function(){
     $("#table-search tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
-    $("#table-tittle").filter(function() {
+    $("#table-tittle h2").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
-    $("#table-head").filter(function() {
+    $("#table-head tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
