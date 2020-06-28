@@ -242,5 +242,6 @@ h2, h3, h4, h5 {
 
 /* Table */
 .table-tittle {
-  background-color: #0000;
+  background-color: #141519;
+  text-align: center;
 }
