@@ -5,7 +5,6 @@
   <br>
 
   {%- for letter in site.data.credits.list -%}
-  {{ letter }}
   <table style="width:100%" class="table table-dark table-hover">
     <thead id="table-head">
       <tr>
@@ -57,26 +56,26 @@
         <td style="width:40%">{{ category[1].name | replace: "_", "&#8203;_"}}</td>
         <td style="width:24%">
           {%- if category[1].authors contains 'Juknum' -%}
-            <a data-toggle="tooltip" title="Juknum"><img class="credits-author" src="/image/team/juknum.jpg" alt="Juknum"></a>
+            <a data-toggle="tooltip" title="Juknum"><img class="credits-author" src="{{ site.baseurl }}/image/team/juknum.jpg" alt="Juknum"></a>
           {%- endif -%}
           {%- if category[1].authors contains 'Howler' -%}
-            <a data-toggle="tooltip" title="Howler"><img class="credits-author" src="/image/team/howler.jpg" alt="Howler"></a>
+            <a data-toggle="tooltip" title="Howler"><img class="credits-author" src="{{ site.baseurl }}/image/team/howler.jpg" alt="Howler"></a>
           {%- endif -%}
           {%- if category[1].authors contains 'Progical' -%}
-            <a data-toggle="tooltip" title="Progical"><img class="credits-author" src="/image/team/progical.jpg" alt="Progical"></a>
+            <a data-toggle="tooltip" title="Progical"><img class="credits-author" src="{{ site.baseurl }}/image/team/progical.jpg" alt="Progical"></a>
           {%- endif -%}
           {%- if category[1].authors contains 'Bentogamin' -%}
-            <a data-toggle="tooltip" title="Bentogamin (community)"><img class="credits-author" src="/image/team/bentogamin.jpg" alt="Bentogamin (community)"></a>
+            <a data-toggle="tooltip" title="Bentogamin (community)"><img class="credits-author" src="{{ site.baseurl }}/image/team/bentogamin.jpg" alt="Bentogamin (community)"></a>
           {%- endif -%}
           {%- if category[1].authors contains 'Nekzuris' -%}
-            <a data-toggle="tooltip" title="Nekzuris (community)"><img class="credits-author" src="/image/team/nekzuris.jpg" alt="Nekzuris (community)"></a>
+            <a data-toggle="tooltip" title="Nekzuris (community)"><img class="credits-author" src="{{ site.baseurl }}/image/team/nekzuris.jpg" alt="Nekzuris (community)"></a>
           {%- endif -%}
           {%- if category[1].authors contains 'Fenix' -%}
-            <a data-toggle="tooltip" title="Fenix (community)"><img class="credits-author" src="/image/team/fenix.gif" alt="Fenix (community)"></a>
+            <a data-toggle="tooltip" title="Fenix (community)"><img class="credits-author" src="{{ site.baseurl }}/image/team/fenix.gif" alt="Fenix (community)"></a>
           {%- endif -%}
         </td>
         <td class="detailed" style="width:28%">
-          {{ categor[1].date | default: '-' }}
+          {{ category[1].date | default: '-' }}
         </td>
       </tr>
 
