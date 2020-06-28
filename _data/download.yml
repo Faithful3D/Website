@@ -1,6 +1,7 @@
 list:
   - 1_16:
     - image: $site.baseurl/image/download/1.16.png
+
     - 1_16_github:
       type: GitHub
       name: Faithful 3D 1.16 - GitHub
@@ -29,6 +30,7 @@ list:
 
   - 1_15:
     - image: $site.baseurl/image/download/1.15.png
+
     - 1_15_github:
       type: GitHub
       name: Faithful 3D 1.15 - GitHub
@@ -78,6 +80,7 @@ list:
 
   - 1_14:
     - image: $site.baseurl/image/download/1.14.png
+
     - 1_14_github:
       type: GitHub
       name: Faithful 3D 1.14 - GitHub
@@ -92,6 +95,7 @@ list:
 
   - 1_13:
     - image: $site.baseurl/image/download/1.13.png
+
     - 1_11_github:
       type: GitHub
       name: Faithful 3D 1.13 - GitHub
@@ -99,6 +103,7 @@ list:
 
   - 1_12:
     - image: $site.baseurl/image/download/1.12.png
+
     - 1_12_github:
       type: GitHub
       name: Faithful 3D 1.12 - GitHub
@@ -120,6 +125,7 @@ list:
 
   - 1_11:
     - image: $site.baseurl/image/download/1.11.png
+
     - 1_11_github:
       type: GitHub
       name: Faithful 3D 1.11 - GitHub
@@ -127,6 +133,7 @@ list:
 
   - 1_10:
     - image: $site.baseurl/image/download/1.10.png
+
     - 1_10_github:
       type: GitHub
       name: Faithful 3D 1.10 - GitHub
@@ -134,6 +141,7 @@ list:
 
   - 1_9:
     - image: $site.baseurl/image/download/1.19.png
+
     - 1_9_github:
       type: GitHub
       name: Faithful 3D 1.9 - GitHub
@@ -141,6 +149,7 @@ list:
 
   - 1_8:
     - image: $site.baseurl/image/download/1.18.png
+    
     - 1_8_github:
       type: GitHub
       name: Faithful 3D 1.8 - GitHub
