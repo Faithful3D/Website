@@ -11,18 +11,18 @@
         <th colspan="5" class="table-tittle"><h2 class="display-4">{{ letter.first | pop}}</h2></th>
       </tr>
       <tr>
-        <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
-        <th class="detailed" style="width:5%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
-        <th style="width:30%">{{ page.Hname | default: 'Name' }}</th>
-        <th style="width:30%">{{ page.Hauthors | default: 'Author(s)' }}</th>
-        <th class="detailed" style="width:30%">{{ page.Hpublished | default: 'Published' }}</th>
+        <th style="width:4%">{{ page.Htype | default: 'Type' }}</th>
+        <th class="detailed" style="width:4%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
+        <th style="width:40%">{{ page.Hname | default: 'Name' }}</th>
+        <th style="width:24%">{{ page.Hauthors | default: 'Author(s)' }}</th>
+        <th class="detailed" style="width:28%">{{ page.Hpublished | default: 'Published' }}</th>
       </tr>
     </thead>
     <tbody id="table-search">
 
       {%- for letterspace in letter.first offset:1 -%}{%- for category in letterspace -%}
       <tr>
-        <td style="width:5%" align="center">
+        <td style="width:4%" align="center">
           {%- if category.type == 'Item' -%}
           <span class="badge" style="background-color: #6BCEA9; color: #141519;">{{ page.item | default: 'Item' }}</span>
           {%- endif -%}
@@ -39,7 +39,7 @@
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
           {%- endif -%}
         </td>
-        <td class="detailed" style="width:5%" align="center">
+        <td class="detailed" style="width:4%" align="center">
           {%- if category.displayed -%}
 
             {%- if category.displayed == 1 -%}
@@ -55,8 +55,8 @@
           {%- endif -%}
         </td>
 
-        <td style="width:35%">{{ category.name }}</td>
-        <td style="width:25%">
+        <td style="width:40%">{{ category.name }}</td>
+        <td style="width:24%">
           {%- if category.authors contains 'Juknum' -%}
             <a data-toggle="tooltip" title="Juknum"><img class="credits-author" src="/image/team/juknum.jpg" alt="Juknum"></a>
           {%- endif -%}
@@ -76,7 +76,7 @@
             <a data-toggle="tooltip" title="Fenix (community)"><img class="credits-author" src="/image/team/fenix.gif" alt="Fenix (community)"></a>
           {%- endif -%}
         </td>
-        <td class="detailed" style="width:30%">
+        <td class="detailed" style="width:28%">
           {%- if category.date -%}
             {{ category.date }}
           {%- else -%}
