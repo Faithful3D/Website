@@ -140,7 +140,7 @@ list:
       url: https://github.com/Faithful3D/1.10
 
   1-9:
-    image: $site.baseurl/image/download/1.19.png
+    image: $site.baseurl/image/download/1.9.png
 
     1_9_github:
       type: GitHub
@@ -148,7 +148,7 @@ list:
       url: https://github.com/Faithful3D/1.9
 
   1-8:
-    image: $site.baseurl/image/download/1.18.png
+    image: $site.baseurl/image/download/1.8.png
 
     1_8_github:
       type: GitHub

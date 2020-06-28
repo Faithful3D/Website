@@ -15,7 +15,7 @@
 </div>
 <hr>
 {%- for version in site.data.download.list -%}
-<h2><img src="{{ version[1].image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version[0] }}" width="25" height="25"> {{ version[0] }}</h2>
+<h2><img src="{{ version[1].image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version[0] }}" width="25" height="25"> Version {{ version[0] | replace: '-', '.'}}</h2>
 <div>
   <table class="table table-dark table-hover">
     <thead>
