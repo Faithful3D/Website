@@ -33,6 +33,7 @@
     </thead>
     <tbody>
       {%- for category in version[1] offset: 1 -%}
+      <!-- {{ category }} -->
       <tr>
         <td align="center">
           {%- if category.type == 'GitHub' -%}
