@@ -14,7 +14,64 @@
   </p>
 </div>
 
+{{ site.data.download }}
+
 <hr>
+{% comment %}
+{%- for version in site.data.download.list -%}
+<h2><img src="{{ version.image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version.first }}" width="25" height="25"> {{ page.title_1_16 | default: 'Versions 1.16'}}</h2>
+<div>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
+        <th style="width:60%">{{ page.Hname | default: 'Name' }}</th>
+        <th class="detailed" style="width:12.25%">{{ page.Hsize | default: 'Size' }}</th>
+        <th style="width:12.25%">{{ page.Hpublished | default: 'Published' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for category in site.data.download.v_1_16 -%}
+      <tr>
+        <td align="center">
+          {%- if category.type == 'GitHub' -%}
+            <span class="badge badge-warning">GitHub</span>
+          {%- endif -%}
+          {%- if category.type == 'Release' -%}
+            <span class="badge badge-success">Release</span>
+          {%- endif -%}
+          {%- if category.type == 'Snapshot' -%}
+            <span class="badge badge-primary">Snapshot</span>
+          {%- endif -%}
+        </td>
+        <td>
+        {%- if category.type == 'GitHub' -%}
+          <a href="{{ category.url }}">{{ category.name }}</a>
+        {%- else -%}
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/{{ category.url_number }}">{{ category.name }}</a>
+        {%- endif -%}
+        </td>
+        <td class="detailed">
+        {%- if category.file_size -%}
+        {{ category.file_size }}
+        {%- else -%}
+        -
+        {%- endif -%}
+        </td>
+        <td>
+        {%- if category.date -%}
+        {{ category.date }}
+        {%- else -%}
+        -
+        {%- endif -%}
+        </td>
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>
+<br><hr>
+{%- endfor -%}
 
 <h2><img src="{{ site.baseurl }}/image/download/1.16.png" alt="1.16" width="25" height="25"> {{ page.title_1_16 | default: 'Versions 1.16'}}</h2>
 <div>
@@ -492,6 +549,7 @@
   </table>
 </div>
 <br><hr>
+{% endcomment %}
 
 <script>
   const dateArray = ['{{ page.month11 | default: 'November'}}','{{ page.month12 | default: 'December'}}','{{ page.month1 | default: 'January'}}','{{ page.month2 | default: 'February'}}','{{ page.month3 | default: 'March'}}','{{ page.month4 | default: 'April'}}','{{ page.month5 | default: 'May'}}','{{ page.month6 | default: 'June'}}']
