@@ -55,7 +55,7 @@
           {%- endif -%}
         </td>
 
-        <td style="width:40%">{{ category.name }}</td>
+        <td style="width:40%">{{ category.name | replace: "_", "&#8203;_"}}</td>
         <td style="width:24%">
           {%- if category.authors contains 'Juknum' -%}
             <a data-toggle="tooltip" title="Juknum"><img class="credits-author" src="/image/team/juknum.jpg" alt="Juknum"></a>
