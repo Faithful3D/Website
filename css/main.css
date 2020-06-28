@@ -195,10 +195,12 @@ h2, h3, h4, h5 {
 .search-bar {
   background-color: #0e0e0e;
   border: 1px solid #000;
+  color: #fff;
 }
-.search-bar:focus {
+.form-control:focus {
   background-color: #1e1e1e;
   border: 1px solid #000;
+  color: #fff;
 }
 
 .detailed {
