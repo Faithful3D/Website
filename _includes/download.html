@@ -17,9 +17,8 @@
 {{ site.data.download }}
 
 <hr>
-{% comment %}
 {%- for version in site.data.download.list -%}
-<h2><img src="{{ version.image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version.first }}" width="25" height="25"> {{ page.title_1_16 | default: 'Versions 1.16'}}</h2>
+<h2><img src="{{ version.first.first.image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version.first.pop }}" width="25" height="25"> {{ page.title_1_16 | default: 'Versions 1.16'}}</h2>
 <div>
   <table class="table table-dark table-hover">
     <thead>
@@ -31,7 +30,7 @@
       </tr>
     </thead>
     <tbody>
-      {%- for category in site.data.download.v_1_16 -%}
+      {%- for category in version.first.shift -%}
       <tr>
         <td align="center">
           {%- if category.type == 'GitHub' -%}
@@ -73,6 +72,7 @@
 <br><hr>
 {%- endfor -%}
 
+{% comment %}
 <h2><img src="{{ site.baseurl }}/image/download/1.16.png" alt="1.16" width="25" height="25"> {{ page.title_1_16 | default: 'Versions 1.16'}}</h2>
 <div>
   <table class="table table-dark table-hover">
