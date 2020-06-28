@@ -18,6 +18,9 @@
 
 <hr>
 {%- for version in site.data.download.list -%}
+{{ version }}<br><br>
+{{ version.first }}<br><br>
+{{ version.last }}<br><br>
 <h2><img src="{{ version.last | replace: '$site.baseurl', site.baseurl }}" alt="{{ version.first.first }}" width="25" height="25"> {{ version.first.first }}</h2>
 <div>
   <table class="table table-dark table-hover">
