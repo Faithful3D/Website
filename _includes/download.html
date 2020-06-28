@@ -13,12 +13,8 @@
     <a class="btn btn-warning btn-block" href="https://github.com/Faithful3D">GitHub</a>
   </p>
 </div>
-
-{{ site.data.download }}
-
 <hr>
 {%- for version in site.data.download.list -%}
-{{ version }}<br><br>
 <h2><img src="{{ version[1].image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version[0] }}" width="25" height="25"> {{ version[0] }}</h2>
 <div>
   <table class="table table-dark table-hover">
@@ -32,7 +28,6 @@
     </thead>
     <tbody>
       {%- for category in version[1] offset: 1 -%}
-      <!-- {{ category[1] }} -->
       <tr>
         <td align="center">
           {%- if category[1].type == 'GitHub' -%}
@@ -53,18 +48,10 @@
         {%- endif -%}
         </td>
         <td class="detailed">
-        {%- if category[1].file_size -%}
-        {{ category[1].file_size }}
-        {%- else -%}
-        -
-        {%- endif -%}
+        {{ category[1].file_size | default: '-' }}
         </td>
         <td>
-        {%- if category[1].date -%}
-        {{ category[1].date }}
-        {%- else -%}
-        -
-        {%- endif -%}
+        {{ category[1].date | default: '-' }}
         </td>
       </tr>
       {%- endfor -%}
