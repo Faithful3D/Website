@@ -19,7 +19,6 @@
 <hr>
 {%- for version in site.data.download.list -%}
 {{ version }}<br><br>
-{{ version[0] }}<br><br>
 <h2><img src="{{ version[1].image | replace: '$site.baseurl', site.baseurl }}" alt="{{ version[0] }}" width="25" height="25"> {{ version[0] }}</h2>
 <div>
   <table class="table table-dark table-hover">
@@ -33,36 +32,36 @@
     </thead>
     <tbody>
       {%- for category in version[1] offset: 1 -%}
-      <!-- {{ category }} -->
+      <!-- {{ category[1] }} -->
       <tr>
         <td align="center">
-          {%- if category.type == 'GitHub' -%}
+          {%- if category[1].type == 'GitHub' -%}
             <span class="badge badge-warning">GitHub</span>
           {%- endif -%}
-          {%- if category.type == 'Release' -%}
+          {%- if category[1].type == 'Release' -%}
             <span class="badge badge-success">Release</span>
           {%- endif -%}
-          {%- if category.type == 'Snapshot' -%}
+          {%- if category[1].type == 'Snapshot' -%}
             <span class="badge badge-primary">Snapshot</span>
           {%- endif -%}
         </td>
         <td>
-        {%- if category.type == 'GitHub' -%}
-          <a href="{{ category.url }}">{{ category.name }}</a>
+        {%- if category[1].type == 'GitHub' -%}
+          <a href="{{ category.url }}">{{ category[1].name }}</a>
         {%- else -%}
-          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/{{ category.url_number }}">{{ category.name }}</a>
+          <a href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/{{ category.url_number }}">{{ category[1].name }}</a>
         {%- endif -%}
         </td>
         <td class="detailed">
-        {%- if category.file_size -%}
-        {{ category.file_size }}
+        {%- if category[1].file_size -%}
+        {{ category[1].file_size }}
         {%- else -%}
         -
         {%- endif -%}
         </td>
         <td>
-        {%- if category.date -%}
-        {{ category.date }}
+        {%- if category[1].date -%}
+        {{ category[1].date }}
         {%- else -%}
         -
         {%- endif -%}
