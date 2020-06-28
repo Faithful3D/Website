@@ -7,8 +7,8 @@
   {%- for letter in site.data.credits.list -%}
   <table class="table table-dark table-hover">
     <thead id="table-head">
-      <tr class="table-tittle">
-        <th>{{ letter.first | pop}}</th>
+      <tr>
+        <th colspan="3" class="table-tittle"><h2>{{ letter.first | pop}}</h2></th>
       </tr>
       <tr>
         <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>

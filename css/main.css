@@ -239,3 +239,8 @@ h2, h3, h4, h5 {
   width: 25px;
   margin-right: 6px;
 }
+
+/* Table */
+.table-tittle {
+  background-color: #0000;
+}
