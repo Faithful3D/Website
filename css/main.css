@@ -245,3 +245,9 @@ h2, h3, h4, h5 {
   background-color: #141519;
   text-align: center;
 }
+
+/* Form control in credits (search bar) */
+.form-control {
+  background-color: #0e0e0e;
+  border: 1px solid #000;
+}

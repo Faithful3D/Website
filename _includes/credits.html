@@ -1,6 +1,6 @@
 <div class="container">
 
-  <input class="form-control" id="input" type="text" placeholder="Search..">
+  <input class="form-control" id="input" type="text" placeholder="{{ page.Search | default: 'Search..'}}">
 
   <br>
 
@@ -8,7 +8,7 @@
   <table style="width:100%" class="table table-dark table-hover">
     <thead id="table-head">
       <tr>
-        <th colspan="5" class="table-tittle"><h2 class="display-4"><br>{{ letter.first | pop}}</h2></th>
+        <th colspan="5" class="table-tittle"><h2 class="display-4">{{ letter.first | pop}}</h2></th>
       </tr>
       <tr>
         <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
@@ -89,7 +89,9 @@
 
     </tbody>
   </table>
+  <br>
   <hr>
+  <br>
   {%- endfor -%}
 
 </div>
