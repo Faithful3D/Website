@@ -12,10 +12,10 @@
       </tr>
       <tr>
         <th style="width:5%">{{ page.Htype | default: 'Type' }}</th>
-        <th style="width:5%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
+        <th class="detailed" style="width:5%">{{ page.Hdisplayed | default: 'Displayed' }}</th>
         <th style="width:30%">{{ page.Hname | default: 'Name' }}</th>
         <th style="width:30%">{{ page.Hauthors | default: 'Author(s)' }}</th>
-        <th style="width:30%">{{ page.Hpublished | default: 'Published' }}</th>
+        <th class="detailed" style="width:30%">{{ page.Hpublished | default: 'Published' }}</th>
       </tr>
     </thead>
     <tbody id="table-search">
@@ -39,7 +39,7 @@
           <span class="badge" style="background-color: #0A2342; color: #fff;">{{ page.addon | default: 'Addon' }}</span>
           {%- endif -%}
         </td>
-        <td style="width:5%" align="center">
+        <td class="detailed" style="width:5%" align="center">
           {%- if category.displayed -%}
 
             {%- if category.displayed == 1 -%}
@@ -76,7 +76,7 @@
             <a data-toggle="tooltip" title="Fenix (community)"><img class="credits-author" src="/image/team/fenix.gif" alt="Fenix (community)"></a>
           {%- endif -%}
         </td>
-        <td style="width:30%">
+        <td class="detailed" style="width:30%">
           {%- if category.date -%}
             {{ category.date }}
           {%- else -%}
