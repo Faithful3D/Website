@@ -116,7 +116,6 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
                     <a class="btn btn-primary" href="{{ site.baseurl }}{{ article.url | remove: '.html' }}">Lesen</a>
                 </p>
             </div>
-
         {% endif %}
 
         {% if article.release == false %}
@@ -143,6 +142,20 @@ description: Da ist sie! Die offizielle selbstgemachte Internetseite!
         {% endif %}
 
         <hr>
+
+        {% if article.ads == true %}
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-f9+4w+7x-eg+3a"
+                 data-ad-client="ca-pub-4201446553802903"
+                 data-ad-slot="9103608137"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <hr>
+        {% endif %}
     {% endif %}
 {% endfor %}
 
