@@ -11,6 +11,8 @@ version: mc version this release is for
 id: use mc version (if no one already exist, else add a letter)
 comments: true
 
+ads: false #Does it needs ads after it ? (in index.html)
+
 author: you
 date: Nov 11, 2019
 

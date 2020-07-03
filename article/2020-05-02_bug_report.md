@@ -10,6 +10,8 @@ description: Discover how to report a bug!
 id: report_bug
 comments: true
 
+ads: false
+
 author: Juknum
 date: May 2, 2020
 

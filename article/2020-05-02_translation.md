@@ -10,6 +10,8 @@ description: We need your help!
 id: translation
 comments: true
 
+ads: false
+
 author: Juknum
 date: May 2, 2020
 

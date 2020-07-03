@@ -10,6 +10,8 @@ description: This is a cool description
 id: same as title
 comments: true
 
+ads: false #Does it needs ads after it ? (in index.html)
+
 author: you
 date: Nov 11, 2019
 
