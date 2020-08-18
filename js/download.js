@@ -4,7 +4,7 @@ if (dateArray) {
   dates = dateArray;
 } 
 else {
-  dates = ['11','12','1','2','3','4','5','6'];
+  dates = ['11','12','1','2','3','4','5','6','7','8'];
   console.log("No translation of months available. Falling back to numbers.");
 }
 
