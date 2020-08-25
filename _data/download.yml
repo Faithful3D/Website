@@ -7,6 +7,13 @@ list:
       name: Faithful 3D 1.16 - GitHub
       url: https://github.com/Faithful3D/1.16
 
+    1_16_2_r1:
+      type: Release
+      name: Faithful 3D 1.16.2 - R1
+      file_size: 974.80 KB
+      date: Aug 18, 2020
+      url_number: 3036111
+
     1_16_r1:
       type: Release
       name: Faithful 3D 1.16 & 1.16.1 - R1
