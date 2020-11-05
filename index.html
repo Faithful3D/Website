@@ -3,7 +3,7 @@ title: Home
 separatedTitle: Home
 description: There it is! The official Website made by hand!
 ---
-<div id="demo" class="carousel slide links-image" data-ride="carousel">
+<div id="demo" class="carousel slide links-image" style="width: auto;" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -51,27 +51,6 @@ description: There it is! The official Website made by hand!
         <span class="sr-only">Next</span>
     </a>
 
-</div>
-
-<div class="links-content">
-  <h2>Latest Versions</h2>
-  <ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-        <a class="nav-link active" href="https://github.com/Faithful3D">GitHub</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2877605">1.15.2</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2825892">1.14.4</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled" href="#">1.13</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="https://www.curseforge.com/minecraft/texture-packs/faithful-3d/files/2952547">1.12.2</a>
-    </li>
-  </ul>
 </div>
 
 <hr>
@@ -142,20 +121,6 @@ description: There it is! The official Website made by hand!
         {% endif %}
 
         <hr>
-
-        {% if article.ads == true %}
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="fluid"
-                 data-ad-layout-key="-f9+4w+7x-eg+3a"
-                 data-ad-client="ca-pub-4201446553802903"
-                 data-ad-slot="9103608137"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            <hr>
-        {% endif %}
     {% endif %}
 {% endfor %}
 
